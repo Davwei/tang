@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<BorderPane fx:id="bigBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.101" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Davi.poems.gui.Controller">
+    <top>
+        <MenuBar prefHeight="24.0" prefWidth="659.0" BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="文件">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#toMainFrame" text="诗句匹配" />
+                        <MenuItem mnemonicParsing="false" onAction="#toPairFrame" text="对偶匹配" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="编辑">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="保存结果" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="音乐">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#playOrStopBGM" text="关闭&amp;开启音乐" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="帮助">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="关于" />
+                        <MenuItem mnemonicParsing="false" text="Readme" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <Pane fx:id="welcomePane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <TableView fx:id="resultTableP" layoutY="26.0" onMouseClicked="#getOnePair" prefHeight="350.0" prefWidth="600.0">
+                    <columns>
+                        <TableColumn fx:id="authorColumnP" prefWidth="64.0" text="诗人" />
+                        <TableColumn fx:id="titleColumnP" prefWidth="103.0" text="题目" />
+                        <TableColumn fx:id="pairColumn" prefWidth="432.0" text="对偶句" />
+                    </columns>
+                </TableView>
+                <Label alignment="CENTER" layoutX="-1.0" prefHeight="26.0" prefWidth="601.0" text="结果集">
+                    <font>
+                        <Font name="Microsoft YaHei UI" size="18.0" />
+                    </font>
+                </Label>
+            </children></Pane>
+    </center>
+    <left>
+        <Pane fx:id="searchPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <TextField fx:id="pairFieldArea" layoutX="15.0" layoutY="56.0" prefHeight="23.0" prefWidth="171.0" />
+                <Label alignment="CENTER" layoutY="14.0" prefHeight="27.0" prefWidth="200.0" text="匹配对偶句" textFill="#ff2f06" />
+                <Button fx:id="clearPairFieldArea" layoutX="109.0" layoutY="271.0" mnemonicParsing="false" onAction="#toClearPairFieldArea" prefHeight="40.0" prefWidth="77.0" text="清空" />
+                <Label layoutX="7.0" layoutY="98.0" prefHeight="103.0" prefWidth="187.0" wrapText="true" />
+                <Label layoutX="7.0" layoutY="194.0" prefHeight="33.0" prefWidth="183.0" wrapText="true" />
+                <Button layoutX="15.0" layoutY="271.0" mnemonicParsing="false" onAction="#pairsSearch" prefHeight="41.0" prefWidth="78.0" text="对偶查找" />
+            </children></Pane>
+    </left>
+</BorderPane>
