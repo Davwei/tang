@@ -12,18 +12,18 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import sun.audio.AudioData;
 import sun.audio.AudioPlayer;
 import sun.audio.AudioStream;
 import sun.audio.ContinuousAudioDataStream;
 
 import java.awt.*;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Properties;
 
 
 public class Controller {
@@ -42,7 +42,8 @@ public class Controller {
     @FXML private TableColumn<tableData,String> authorColumn,titleColumn,contextColumn;
     @FXML private TableColumn<pairData,String> authorColumnP,titleColumnP,pairColumn;
     @FXML private Label exampleLabel;
-    //ContinuousAudioDataStream cads;
+    Media media;
+    MediaPlayer mp;
     static boolean bgmIsOn = false;
 
 
@@ -198,15 +199,42 @@ public class Controller {
             throw new myException("空输入");
 
     }
-    @FXML public void playOrStopBGM() {
-        String PATH = "src/main/resources/Loveless.mp3";
+    @FXML public void playOrStopBGM() throws IOException {
+        //String PATH = "A:/ssdworkspace/tang/src/main/resources/Loveless.mp3";
+        /*System.out.println(System.getProperty("user.dir"));
+        String dir = System.getProperty("user.dir");
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < dir.length(); i++) {
+
+            if (dir.charAt(i) == '\\'){
+                sb.append('/');
+            }else {
+                sb.append(dir.charAt(i));
+            }
+        }
+        System.out.println(sb.toString());
+        String path = sb.toString()+ "/Loveless.mp3";*/
+        String path = this.getClass().getResource("/Loveless.mp3").toString();
+
         if (!bgmIsOn) {
             bgmIsOn = true;
+            //media = new Media("file:////"+path);
+            media = new Media(path);
+            mp = new MediaPlayer(media);
+            mp.play();
 
 
-
+        }else{
+            bgmIsOn = false;
+            mp.pause();
         }
+
     }
+
+    public static void main(String[] args) {
+
+    }
+
 
 
 }

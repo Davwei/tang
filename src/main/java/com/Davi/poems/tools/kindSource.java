@@ -17,14 +17,15 @@ import java.util.ArrayList;
  * Created by David on 2017/3/21.
  */
 public class kindSource {
-    private final String PATH = "src/main/resources/zifenlei.xml";
+    //private final String PATH = "src/main/resources/zifenlei.xml";
     private ArrayList<wordClass> wordClassArrayList;
     public kindSource(){
+        String path = this.getClass().getResource("/zifenlei.xml").toString();
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 
         try {
             DocumentBuilder db = dbf.newDocumentBuilder();
-            Document doc = db.parse(PATH);
+            Document doc = db.parse(path);
 
             wordClassArrayList = new ArrayList<wordClass>();
 

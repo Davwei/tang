@@ -20,14 +20,15 @@ import java.util.Iterator;
 public class tangSource {
     private ArrayList<tangClass> tangClassArrayList;
     //private final String PATH = "A:/ssdworkspace/tangUI/src/com/Davi/poems/source/fullshici.xml";
-    private final String PATH = "src/main/resources/fullshici.xml";
+    //private final String PATH = "src/main/resources/fullshici.xml";
     public tangSource(){
+        String path = this.getClass().getResource("/fullshici.xml").toString();
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 
         try {
             DocumentBuilder db = dbf.newDocumentBuilder();
 
-            Document doc = db.parse(PATH);
+            Document doc = db.parse(path);
 
             NodeList tangList = doc.getElementsByTagName("唐诗");
 

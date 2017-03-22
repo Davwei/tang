@@ -19,14 +19,15 @@ import java.util.Iterator;
  */
 public class wordSource {
     //private String PATH = "A:/ssdworkspace/tangUI/src/com/Davi/poems/source/pingyinzidian.xml";
-    private String PATH = "src/main/resources/pingyinzidian.xml";
+    //private String PATH = "src/main/resources/pingyinzidian.xml";
     private ArrayList<wordClass> wordClassArrayList;
     public wordSource(){
+        String path = this.getClass().getResource("/pingyinzidian.xml").toString();
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 
         try {
             DocumentBuilder db = dbf.newDocumentBuilder();
-            Document doc = db.parse(PATH);
+            Document doc = db.parse(path);
             NodeList wordList = doc.getElementsByTagName("pingzezidian");
             wordClassArrayList = new ArrayList<wordClass>();
 

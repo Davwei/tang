@@ -21,10 +21,10 @@ public class authorSource {
 
     private ArrayList<author> authorArrayList;
     //private final String PATH = "A:/ssdworkspace/tangUI/src/com/Davi/poems/source/authors.xml";
-    private final String PATH = "src/main/resources/authors.xml";
+    //private final String PATH = "src/main/resources/authors.xml";
     public authorSource(){
 
-        String path = this.PATH;
+        String path = this.getClass().getResource("/authors.xml").toString();
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
         try{
             DocumentBuilder db = dbf.newDocumentBuilder();

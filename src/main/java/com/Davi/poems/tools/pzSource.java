@@ -19,16 +19,17 @@ import java.util.Iterator;
  */
 public class pzSource {
     //private String PATH="A:/ssdworkspace/tangUI/src/com/Davi/poems/source/pingze.xml";
-    private String PATH="src/main/resources/pingze.xml";
+    //private String PATH="src/main/resources/pingze.xml";
     private ArrayList<wordClass> wordClassArrayList;
     public pzSource(){
+        String path = this.getClass().getResource("/pingze.xml").toString();
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 
 
         DocumentBuilder db = null;
         try {
             db = dbf.newDocumentBuilder();
-            Document doc = db.parse(PATH);
+            Document doc = db.parse(path);
             NodeList wordList = doc.getElementsByTagName("字符");
             wordClassArrayList = new ArrayList<wordClass>();
             //System.out.println(wordList.getLength());

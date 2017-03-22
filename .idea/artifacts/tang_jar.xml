@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="tang:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/tang_jar</output-path>
+    <root id="archive" name="tang.jar">
+      <element id="module-output" name="tang" />
+    </root>
+  </artifact>
+</component>
