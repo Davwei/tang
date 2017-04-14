@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="bigBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.101" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Davi.poems.gui.Controller">
+<BorderPane fx:id="pairBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.101" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Davi.poems.gui.Controller">
     <top>
         <MenuBar prefHeight="24.0" prefWidth="659.0" BorderPane.alignment="CENTER">
             <menus>
@@ -20,7 +20,7 @@
                     <items>
                         <MenuItem mnemonicParsing="false" onAction="#toMainFrame" text="诗句匹配" />
                         <MenuItem mnemonicParsing="false" onAction="#toPairFrame" text="对偶匹配" />
-                        <MenuItem mnemonicParsing="false" onAction="#toGetPairs" text="对偶匹配" />
+                        <MenuItem mnemonicParsing="false" onAction="#toGetPairs" text="对偶生成" />
                     </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="编辑">
@@ -45,11 +45,9 @@
     <center>
         <Pane fx:id="welcomePane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
             <children>
-                <TableView fx:id="resultTableP" layoutY="26.0" onMouseClicked="#getOnePair" prefHeight="350.0" prefWidth="600.0">
+                <TableView fx:id="resultTableGP" layoutY="26.0" onMouseClicked="#getPairFromGP" prefHeight="350.0" prefWidth="600.0">
                     <columns>
-                        <TableColumn fx:id="authorColumnP" prefWidth="64.0" text="诗人" />
-                        <TableColumn fx:id="titleColumnP" prefWidth="103.0" text="题目" />
-                        <TableColumn fx:id="pairColumn" prefWidth="432.0" text="对偶句" />
+                        <TableColumn fx:id="pairColumnGP" prefWidth="598.0" text="对偶句" />
                     </columns>
                 </TableView>
                 <Label alignment="CENTER" layoutX="-1.0" prefHeight="26.0" prefWidth="601.0" text="结果集">
@@ -62,12 +60,12 @@
     <left>
         <Pane fx:id="searchPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
             <children>
-                <TextField fx:id="pairFieldArea" layoutX="15.0" layoutY="56.0" prefHeight="23.0" prefWidth="171.0" />
-                <Label alignment="CENTER" layoutY="14.0" prefHeight="27.0" prefWidth="200.0" text="匹配对偶句" textFill="#ff2f06" />
-                <Button fx:id="clearPairFieldArea" layoutX="109.0" layoutY="271.0" mnemonicParsing="false" onAction="#toClearPairFieldArea" prefHeight="40.0" prefWidth="77.0" text="清空" />
+                <TextField fx:id="getPairFieldArea" layoutX="15.0" layoutY="56.0" prefHeight="23.0" prefWidth="171.0" />
+                <Label alignment="CENTER" layoutY="14.0" prefHeight="27.0" prefWidth="200.0" text="生成对偶句(测试)" textFill="#ff2f06" />
+                <Button layoutX="109.0" layoutY="271.0" mnemonicParsing="false" onAction="#toClearGetPairsFieldArea" prefHeight="40.0" prefWidth="77.0" text="清空" />
                 <Label layoutX="7.0" layoutY="98.0" prefHeight="103.0" prefWidth="187.0" wrapText="true" />
                 <Label layoutX="7.0" layoutY="194.0" prefHeight="33.0" prefWidth="183.0" wrapText="true" />
-                <Button layoutX="15.0" layoutY="271.0" mnemonicParsing="false" onAction="#pairsSearch" prefHeight="41.0" prefWidth="78.0" text="对偶查找" />
+                <Button layoutX="15.0" layoutY="271.0" mnemonicParsing="false" onAction="#getPairs" prefHeight="41.0" prefWidth="78.0" text="对偶生成" />
             </children></Pane>
     </left>
 </BorderPane>

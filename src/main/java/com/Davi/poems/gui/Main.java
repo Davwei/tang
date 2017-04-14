@@ -4,6 +4,7 @@ package com.Davi.poems.gui;
 import com.Davi.poems.basic.pairData;
 import com.Davi.poems.basic.tableData;
 import com.Davi.poems.basic.tangClass;
+import com.Davi.poems.net.netServer;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -12,6 +13,7 @@ import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import org.apache.log4j.Logger;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -19,6 +21,7 @@ import java.util.Iterator;
 
 
 public class Main extends Application {
+    static  Logger logger = Logger.getLogger(Main.class);
     private Stage stage;
     private ObservableList<tableData> tData = FXCollections.observableArrayList();
     private ObservableList<pairData> pData = FXCollections.observableArrayList();
@@ -66,6 +69,14 @@ public class Main extends Application {
         }
 
     }
+    public void getPairsFrame(){
+        try {
+            Controller controller = replaceSceneContent("/getPairs.fxml");
+            controller.setApp(this);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
 
 
@@ -97,7 +108,6 @@ public class Main extends Application {
             tData.add(new tableData(tmp));
         }
     }
-
     public ObservableList<pairData> getpData(){return  pData;}
     public void ObservableListPairInit(ArrayList<tangClass> input){
         pData.clear();
@@ -110,6 +120,14 @@ public class Main extends Application {
 
 
     public static void main(String[] args) {
-        launch(args);
+        if (args.length == 0)
+            launch(args);
+        else if (args.length == 2 && args[0].equals("server")){
+            String port = args[1];
+            //create net server
+            netServer ns = new netServer(port);
+        }else {
+            logger.error("未知参数");
+        }
     }
 }

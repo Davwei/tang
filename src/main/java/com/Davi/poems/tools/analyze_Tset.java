@@ -1,10 +1,19 @@
 package com.Davi.poems.tools;
 
+import com.Davi.poems.basic.event;
+import com.Davi.poems.basic.operation;
+import com.Davi.poems.basic.wordClass;
+
+import java.io.*;
+import java.util.ArrayList;
+
+import org.apache.log4j.Logger;
 /**
  * Created by wei on 2017/2/27.
  */
 public class analyze_Tset {
     public static void main(String[] args) throws myException {
+        Logger logger = Logger.getLogger(analyze_Tset.class);
         //两种分隔符
         /*analyze ana = new analyze("李白|杜甫&123456");
         for(int i = 0;i < ana.getAuthor().length;i++) {
@@ -85,6 +94,11 @@ public class analyze_Tset {
             System.out.println("pmatched!");
         }
 
+        //System.out.println(ana3.PMatch("樱花").size());
+
+
+
+
 
 
         //ana3.judge("*(guang)","光");
@@ -121,7 +135,22 @@ public class analyze_Tset {
 
         System.out.println("----------------------");
 
+        System.out.println(ana3.getPair("床前明月光"));
 
+        /*ArrayList<String> testArray = new ArrayList<>();
+        testArray.add("nh");
+        StringBuilder sb = new StringBuilder();
+        if (testArray.contains(sb.append('n').append('h').toString())){
+            System.out.println("yes");
+        }
+        System.out.println(testArray.indexOf("nh"));
+        ArrayList<wordClass> testWordArray = new ArrayList<>();
+        testWordArray.add(new wordClass("你",0));
+        testWordArray.get(0).setCount(3);
+        System.out.println(testWordArray.get(0).getCount());*/
+
+        System.out.println(ana3.getPair("无法无天"));
+        logger.debug("succeed");
 
 
 

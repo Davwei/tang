@@ -1,9 +1,11 @@
 package com.Davi.poems.basic;
 
+import java.io.Serializable;
+
 /**
  * Created by David on 2017/3/6.
  */
-public class tangClass {
+public class tangClass implements Serializable{
     private String auther;
     private String dynasty;
     private String context;

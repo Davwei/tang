@@ -10,6 +10,8 @@ public class wordClass {
     private int pingZe;
     private int yunbu;
     private int kind;
+    //出现频度
+    private int count;
 
     public wordClass(String word,int pinZe,int yunbu,int kind){
         this.word = word;
@@ -29,6 +31,10 @@ public class wordClass {
         this.word = word;
         this.pingZe = pinZe;
         this.yunbu = yunbu;
+    }
+    public wordClass(String word,int count){
+        this.word = word;
+        this.count = count;
     }
     public wordClass(){}
 
@@ -84,5 +90,13 @@ public class wordClass {
 
     public void setKind(int kind) {
         this.kind = kind;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
     }
 }

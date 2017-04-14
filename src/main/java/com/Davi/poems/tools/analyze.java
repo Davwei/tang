@@ -5,30 +5,41 @@ package com.Davi.poems.tools;
 import com.Davi.poems.basic.author;
 import com.Davi.poems.basic.tangClass;
 import com.Davi.poems.basic.wordClass;
+import org.apache.log4j.Logger;
+import sun.rmi.runtime.Log;
 
+import javax.swing.text.html.HTMLDocument;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map;
 
 /**
  * Created by wei on 2017/2/27.
  */
 public class analyze {
 
-    private static wordSource wc = new wordSource();
+    Logger logger = Logger.getLogger(analyze.class);
+
+    private static wordSource wordSource = new wordSource();
     private static pzSource pzSource = new pzSource();
     private static kindSource ks = new kindSource();
     private static authorSource as = new authorSource();
     private static tangSource ts = new tangSource();
+    private static createOrderWordsList cowl = new createOrderWordsList();
 
     private char[] SET = {'？', '?', '|', '&', '[', ']', '{', '}', '*', '(', ')', '（', '）', '+'};
 
     private char[] spliter = {'？', '?', '。', '，', '\n'};
 
+    private static ArrayList<wordClass> pingLists;
+    private static ArrayList<wordClass> zeLists;
+
     public analyze() {
     }
 
     /**
+     * 获取精确查找时的字符串长度
      * @param s 查询语句不包括诗人
      * @return
      * @throws myException
@@ -96,6 +107,13 @@ public class analyze {
         }
 
     }
+
+    /**
+     * 获取诗句的长度
+     * @param s
+     * @return
+     * @throws myException
+     */
 
     public int getLengthFromRubbish(String s) throws myException {
         int result = 0;
@@ -174,6 +192,12 @@ public class analyze {
         }
     }
 
+    /**
+     * 将诗句中的文字进行hashMap的映射没便于逐字匹配
+     * @param s
+     * @return
+     * @throws myException
+     */
 
     public HashMap<Integer, String> getTagetFromRubbish(String s) throws myException {
         HashMap<Integer, String> result = new HashMap<>();
@@ -300,6 +324,7 @@ public class analyze {
 
 
     /**
+     * 判断1个字符与一个关键字约束是否匹配
      * @param a 搜索规则，已经逐字解析
      * @param b 数据语句单字
      * @return
@@ -313,7 +338,7 @@ public class analyze {
             return true;
         } else if (a.equals(b.trim())) {
             return true;
-        } else if (a.equals("P") || a.equals("p")) {
+        } else if (a.equals("P") || a.equals("p")) { //平仄约束
             if (getPZ(b).equals("P")) {
                 return true;
             }
@@ -361,14 +386,13 @@ public class analyze {
             //无拼音约束
             isPinYin = true;
         }
-        //3 平仄约束pz,这里要判断词性，读音和平仄的关系
-        //todo: 完成平仄约束
-        boolean isPingZe = true;
-
+        //3 判断词性
+        //todo: 完成词性
+        boolean isCiXing = true;
 
 
         //拼音约束与字约束同时满足
-        if (word && isPinYin && isPingZe) {
+        if (word && isPinYin && isCiXing) {
             return true;
         } else {
             return false;
@@ -379,12 +403,12 @@ public class analyze {
 
     /**
      *
-     *
+     *  获得一个字符的全部读音
      * @param b
      * @return
      */
     public String[] pinYinIs(String b) {
-        Iterator<wordClass> iterator = wc.getWordClassArrayList().iterator();
+        Iterator<wordClass> iterator = wordSource.getWordClassArrayList().iterator();
         while (iterator.hasNext()){
             wordClass word = iterator.next();
             if (word.getWord().equals(b)){
@@ -452,6 +476,7 @@ public class analyze {
         ArrayList<tangClass> resultArray = new ArrayList<tangClass>();
         if (isMutiLength(input)) {
             //变长度匹配
+            logger.error("变长度匹配");
             throw new myException("变长度匹配");
         } else {
             //固定长度匹配
@@ -491,8 +516,10 @@ public class analyze {
 
                 }
 
-                if (!hasFound)
+                if (!hasFound){
+                    logger.error("输入作者有误或者未收录");
                     throw new myException("输入作者有误或者未收录");
+                }
                 else {
                     //缩小查询data范围
                     Iterator<tangClass> iterator = ts.getTangClassArrayListWithAuthor(authors).iterator();
@@ -518,6 +545,7 @@ public class analyze {
     }
 
     /**
+     *  精确匹配的方法，负责比对一句话与待匹配句子
      * @param input   待匹配诗句不含诗人名字
      * @param context 带比较诗句
      * @return
@@ -580,9 +608,11 @@ public class analyze {
      */
     public boolean possiblyMatch(String input, String context) throws myException {
         if (input.contains("&")) {
+            logger.error("输入的匹配字符中含有&");
             throw new myException("匹配字符中含有&");
         }
         if (input == "") {
+            logger.error("空输入，无法匹配");
             throw new myException("空输入");
         }
         String[] tmpArray = context.split("？|，|。|\\?|,|\\n|、");
@@ -652,6 +682,7 @@ public class analyze {
     }
 
     /**
+     *  获得一个字符串的关键字位置，关键字为需要匹配的字符约束
      * @param input
      * @return
      */
@@ -712,6 +743,13 @@ public class analyze {
     }
 
     //TODO 模糊匹配拼音匹配无法进行
+
+    /**
+     * 模糊匹配的入口方法
+     * @param str
+     * @return
+     * @throws myException
+     */
     public ArrayList<tangClass> PMatch(String str) throws myException {
         String[] authors = this.getAuthor(str);
         ArrayList<tangClass> resultArray = new ArrayList<tangClass>();
@@ -745,8 +783,10 @@ public class analyze {
 
             }
 
-            if (!hasFound)
+            if (!hasFound){
+                logger.error("输入作者有误或者未收录");
                 throw new myException("输入作者有误或者未收录");
+            }
             else {
                 //缩小查询data范围
                 Iterator<tangClass> iterator = ts.getTangClassArrayListWithAuthor(authors).iterator();
@@ -768,6 +808,13 @@ public class analyze {
         }
 
     }
+
+    /**
+     * 对偶匹配的主要方法，目前词性文件问题导致匹配问题
+     * @param str
+     * @return
+     * @throws myException
+     */
 
     public ArrayList<tangClass> pairMatch(String str) throws myException{
         ArrayList<tangClass> result = new ArrayList<tangClass>();
@@ -838,6 +885,12 @@ public class analyze {
         return result;
     }
 
+    /**
+     * 获取一个字符串的词属性
+     * @param str
+     * @return
+     */
+
     public HashMap<Integer,Integer> getKindsFromRubbish(String str) {
         HashMap<Integer, Integer> result = new HashMap<>();
         int length = 0;
@@ -880,8 +933,114 @@ public class analyze {
         if (result >= 0){
             return result;
         }else{
+            logger.error("数字相与结果小于0");
             throw new myException("输入异常");
         }
 
     }
+
+    /**
+     * 获得自动生成的对偶句
+     * 注释掉的是随机声称pz对字，新方法采用统计学方法，对于全部数据的字出现频率进行统计，随机生成的单字不仅照顾平仄，而且照顾出现概率
+     * TODO: 下一步增加分词的功能，将分词后的诗句进行对偶生成
+     * @param input
+     * @return
+     */
+    public String getPair(String input) throws myException {
+        StringBuilder result = new StringBuilder();
+        HashMap<Integer,String> arraylist = getTagetFromRubbish(input);
+        for (int i = 0; i < arraylist.size(); i++) {
+            //get i 是从1开始计数的
+            //result.append(getPZPair(arraylist.get(i+1)));
+            if (i == 0){
+                result.append(getPZPairByPossible(arraylist.get(i+1),""));
+            }else{
+                result.append(getPZPairByPossible(arraylist.get(i+1),arraylist.get(i)));
+            }
+        }
+        return result.toString();
+    }
+    public void createPZList(){
+        Iterator<wordClass> iterator = pzSource.getWordClassArrayList().iterator();
+        pingLists = new ArrayList<wordClass>();
+        zeLists = new ArrayList<wordClass>();
+        while (iterator.hasNext()){
+            wordClass tmp = iterator.next();
+            switch (tmp.getPingZe()){
+                case 0:
+                    pingLists.add(tmp);
+                    break;
+                case 1:
+                    zeLists.add(tmp);
+                    break;
+                case 2:
+                    zeLists.add(tmp);
+                    break;
+                case 3:
+                    zeLists.add(tmp);
+                    break;
+                default:
+            }
+        }
+
+    }
+    public String getPZPair(String word) throws myException {
+        if (pingLists == null || zeLists == null){
+            this.createPZList();
+        }
+        String wordPz = getPZ(word);
+        // [0,1)
+        double randomInt = Math.random();
+        if (wordPz.equals("P")){
+            int size = pingLists.size();
+            //int size = cowl.result.size();
+            int result = (int)Math.floor(randomInt*size);
+            return pingLists.get(result).getWord();
+        }else if (wordPz.equals("Z")){
+            int size = zeLists.size();
+            int result = (int)Math.floor(randomInt*size);
+            return zeLists.get(result).getWord();
+        }else {
+            logger.error("字：" + word + " 没有平仄数据");
+            throw new myException("字：" + word + " 没有平仄数据");
+        }
+
+    }
+
+    public String getPZPairByPossible(String word,String before){
+
+        int size = cowl.size;
+        System.out.println(size);
+        double randomInt = Math.random();
+        Iterator<wordClass> iterator = cowl.result.iterator();
+        if (before == "" || before.equals("")){
+            int random = (int)Math.floor(randomInt*size);
+            System.out.println("random"+random);
+            int count = 0;
+            while (iterator.hasNext()){
+                wordClass tmp = iterator.next();
+                count = count + tmp.getCount();
+                if (count >= random && getPZ(word).equals(getPZ(tmp.getWord()))){
+                    System.out.println("word "+tmp.getWord()+" count "+count);
+                    return tmp.getWord();
+                }
+            }
+        }else{
+            int random = (int)Math.floor(randomInt*size);
+            System.out.println("random"+random);
+            int count = 0;
+            while (iterator.hasNext()){
+                wordClass tmp = iterator.next();
+                count = count + tmp.getCount();
+                if (count >= random && !tmp.getWord().equals(before) && getPZ(word).equals(getPZ(tmp.getWord()))){
+                    System.out.println("word "+tmp.getWord()+" count "+count);
+                    return tmp.getWord();
+                }
+            }
+        }
+        return null;
+    }
+
+
+
 }
