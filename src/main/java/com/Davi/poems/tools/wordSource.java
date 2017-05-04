@@ -2,6 +2,7 @@ package com.Davi.poems.tools;
 
 
 import com.Davi.poems.basic.wordClass;
+import org.apache.log4j.Logger;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -18,10 +19,15 @@ import java.util.Iterator;
  * Created by David on 2017/3/17.
  */
 public class wordSource {
+
+    Logger logger = Logger.getLogger(wordSource.class);
     //private String PATH = "A:/ssdworkspace/tangUI/src/com/Davi/poems/source/pingyinzidian.xml";
     //private String PATH = "src/main/resources/pingyinzidian.xml";
     private ArrayList<wordClass> wordClassArrayList;
     public wordSource(){
+
+        long start = System.currentTimeMillis();
+
         String path = this.getClass().getResource("/pingyinzidian.xml").toString();
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 
@@ -94,6 +100,9 @@ public class wordSource {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        long end = System.currentTimeMillis();
+        logger.info("用时 "+ (end - start)+"ms");
     }
     public ArrayList<wordClass> getWordClassArrayList(){
         return this.wordClassArrayList;

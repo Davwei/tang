@@ -6,6 +6,7 @@ import com.Davi.poems.basic.wordClass;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import org.apache.log4j.Logger;
 /**
@@ -65,6 +66,7 @@ public class analyze_Tset {
         }*/
 
 
+        /*
         String context = "日照香炉生紫烟";
         if (ana3.possiblyMatch("日照",context)){
             System.out.println("matcheed!!!");
@@ -93,6 +95,7 @@ public class analyze_Tset {
         if (ana3.possiblyMatch("床前***（guang）","床前明月光")){
             System.out.println("pmatched!");
         }
+        */
 
         //System.out.println(ana3.PMatch("樱花").size());
 
@@ -112,7 +115,7 @@ public class analyze_Tset {
         */
 
         String strPinYin = "*（guang）";
-        System.out.println(ana3.getPinYin(strPinYin));
+        //System.out.println(ana3.getPinYin(strPinYin));
 
 
         String pairInput = "春眠不觉晓123";
@@ -120,7 +123,7 @@ public class analyze_Tset {
         //System.out.println(ana3.getKindsFromRubbish(pairInput).size());
 
 
-        System.out.println(ana3.isPair(2,(1<<31)-1));
+        //System.out.println(ana3.isPair(2,(1<<31)-1));
         //System.out.println((Integer.toBinaryString((1<<31)-1)));
 
         /*
@@ -135,7 +138,7 @@ public class analyze_Tset {
 
         System.out.println("----------------------");
 
-        System.out.println(ana3.getPair("床前明月光"));
+        System.out.println(ana3.getPair(ana3.nomalSegment("大地在打工")));
 
         /*ArrayList<String> testArray = new ArrayList<>();
         testArray.add("nh");
@@ -149,8 +152,12 @@ public class analyze_Tset {
         testWordArray.get(0).setCount(3);
         System.out.println(testWordArray.get(0).getCount());*/
 
-        System.out.println(ana3.getPair("无法无天"));
-        logger.debug("succeed");
+        //System.out.println(ana3.getPair("无法无天"));
+        //logger.debug("succeed");
+
+        /*HashMap<Integer,String> testMap = new HashMap<>(3);
+        testMap.put(Integer.valueOf("0"),"123");
+        System.out.println(testMap.get(Integer.valueOf("0")));*/
 
 
 

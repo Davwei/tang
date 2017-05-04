@@ -35,8 +35,7 @@
                 </Menu>
                 <Menu mnemonicParsing="false" text="帮助">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="关于" />
-                        <MenuItem mnemonicParsing="false" text="Readme" />
+                        <MenuItem mnemonicParsing="false" onAction="#readMe" text="Readme" />
                     </items>
                 </Menu>
             </menus>
@@ -65,10 +64,12 @@
             <Button fx:id="startSearch" layoutX="15.0" layoutY="244.0" mnemonicParsing="false" onAction="#isSearch" prefHeight="41.0" prefWidth="75.0" text="精确查找" />
             <TextField fx:id="searchFieldArea" layoutX="15.0" layoutY="56.0" prefHeight="23.0" prefWidth="171.0" />
             <Label alignment="CENTER" layoutY="14.0" prefHeight="27.0" prefWidth="200.0" text="匹配诗句" textFill="#ff2f06" />
-            <Button fx:id="clear" layoutX="109.0" layoutY="271.0" mnemonicParsing="false" onAction="#toClearTextArea" prefHeight="40.0" prefWidth="77.0" text="清空" />
-            <Label layoutX="7.0" layoutY="98.0" prefHeight="103.0" prefWidth="187.0" text="示例 * 为任意通配符 ; []可以选择其中任一字符 ; {}可以限制其中词性; ()可以输入拼音但是必须跟在*之后; | 分割作者表示任一 ;  &amp;分割作者与诗句; 汉字平仄使用英文字母PZ表示，每一个字符站位为一" wrapText="true" />
-            <Label layoutX="7.0" layoutY="194.0" prefHeight="33.0" prefWidth="183.0" text="李白|杜甫&amp;床前pz*(guang)" wrapText="true" />
-            <Button layoutX="14.0" layoutY="298.0" mnemonicParsing="false" onAction="#possibleSearch" prefHeight="41.0" prefWidth="78.0" text="关键词查找" />
+            <Button fx:id="clear" layoutX="123.0" layoutY="303.0" mnemonicParsing="false" onAction="#toClearTextArea" prefHeight="54.0" prefWidth="65.0" text="清空" />
+            <Label layoutX="7.0" layoutY="98.0" prefHeight="119.0" prefWidth="187.0" text="示例 * 为任意通配符 ; []可以选择其中任一字符 ;()可以输入拼音但是必须跟在*之后; | 分割作者表示任一 ;  &amp;分割作者与诗句; 汉字平仄使用英文字母PZ表示，每一个字符站位为一; a修饰前一个字符表示与其一致，a在句首等于*" wrapText="true" />
+            <Label layoutX="9.0" layoutY="211.0" prefHeight="33.0" prefWidth="183.0" text="李白|杜甫&amp;床前pz*(guang)" wrapText="true" />
+            <Button layoutX="108.0" layoutY="244.0" mnemonicParsing="false" onAction="#possibleSearch" prefHeight="41.0" prefWidth="78.0" text="关键词查找" />
+            <Button layoutX="14.0" layoutY="304.0" mnemonicParsing="false" onAction="#backTolastIsSearch" text="上一次精确查找" />
+            <Button layoutX="14.0" layoutY="336.0" mnemonicParsing="false" onAction="#backTolastPossibleSearch" text="上一次模糊查找" />
          </children></Pane>
    </left>
 </BorderPane>

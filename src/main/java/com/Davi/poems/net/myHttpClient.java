@@ -21,7 +21,7 @@ import java.net.URLEncoder;
  *
  */
 public class myHttpClient {
-    public String clientPort = "http://127.0.0.1:8888";
+    public String clientPort = "http://192.168.168.102:8888";
     public myHttpClient() throws UnsupportedEncodingException {
         Logger logger = Logger.getLogger(myHttpClient.class);
         CloseableHttpClient httpclient = HttpClients.createDefault();
@@ -42,7 +42,7 @@ public class myHttpClient {
         //request.setHeader("Content-Type","text/xml; charset=utf-8");
         try {
             CloseableHttpResponse response = httpclient.execute(request);
-            //TODO 解析response
+            //解析response
             InputStream bis = response.getEntity().getContent();
             ObjectInputStream ois = new ObjectInputStream(bis);
             event e = (event) ois.readObject();

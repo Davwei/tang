@@ -2,6 +2,7 @@ package com.Davi.poems.tools;
 
 
 import com.Davi.poems.basic.wordClass;
+import org.apache.log4j.Logger;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -17,9 +18,11 @@ import java.util.ArrayList;
  * Created by David on 2017/3/21.
  */
 public class kindSource {
+    Logger logger = Logger.getLogger(kindSource.class);
     //private final String PATH = "src/main/resources/zifenlei.xml";
     private ArrayList<wordClass> wordClassArrayList;
     public kindSource(){
+        long start = System.currentTimeMillis();
         String path = this.getClass().getResource("/zifenlei.xml").toString();
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 
@@ -57,6 +60,9 @@ public class kindSource {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        long end = System.currentTimeMillis();
+        logger.info("用时 "+ (end - start)+"ms");
+
     }
 
 

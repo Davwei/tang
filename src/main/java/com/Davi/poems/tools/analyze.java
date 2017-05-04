@@ -1,18 +1,21 @@
 package com.Davi.poems.tools;
 
 
-
 import com.Davi.poems.basic.author;
 import com.Davi.poems.basic.tangClass;
 import com.Davi.poems.basic.wordClass;
+import com.hankcs.hanlp.HanLP;
+import com.hankcs.hanlp.corpus.tag.Nature;
+import com.hankcs.hanlp.seg.Dijkstra.DijkstraSegment;
+import com.hankcs.hanlp.seg.NShort.NShortSegment;
+import com.hankcs.hanlp.seg.Segment;
+import com.hankcs.hanlp.seg.common.Term;
+import com.hankcs.hanlp.tokenizer.NLPTokenizer;
 import org.apache.log4j.Logger;
 import sun.rmi.runtime.Log;
 
 import javax.swing.text.html.HTMLDocument;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by wei on 2017/2/27.
@@ -21,12 +24,13 @@ public class analyze {
 
     Logger logger = Logger.getLogger(analyze.class);
 
-    private static wordSource wordSource = new wordSource();
-    private static pzSource pzSource = new pzSource();
-    private static kindSource ks = new kindSource();
-    private static authorSource as = new authorSource();
-    private static tangSource ts = new tangSource();
-    private static createOrderWordsList cowl = new createOrderWordsList();
+    private wordSource wordSource;
+    private pzSource pzSource;
+    private kindSource ks;
+    private authorSource as;
+    private tangSource ts;
+    //private createOrderWordsList cowl;
+    private wordCountSource wcs;
 
     private char[] SET = {'？', '?', '|', '&', '[', ']', '{', '}', '*', '(', ')', '（', '）', '+'};
 
@@ -36,10 +40,18 @@ public class analyze {
     private static ArrayList<wordClass> zeLists;
 
     public analyze() {
+        wordSource = new wordSource();
+        pzSource = new pzSource();
+        ks = new kindSource();
+        as = new authorSource();
+        ts = new tangSource();
+        wcs = new wordCountSource();
+        //cowl = new createOrderWordsList(); 这个初始化十分消耗时间
     }
 
     /**
      * 获取精确查找时的字符串长度
+     *
      * @param s 查询语句不包括诗人
      * @return
      * @throws myException
@@ -110,6 +122,7 @@ public class analyze {
 
     /**
      * 获取诗句的长度
+     *
      * @param s
      * @return
      * @throws myException
@@ -152,7 +165,7 @@ public class analyze {
                         i = s.indexOf(')', i);
                         break;
                     case '（':
-                        i = s.indexOf('）',i);
+                        i = s.indexOf('）', i);
                         break;
                     case '[':
                         j = i;
@@ -194,6 +207,7 @@ public class analyze {
 
     /**
      * 将诗句中的文字进行hashMap的映射没便于逐字匹配
+     *
      * @param s
      * @return
      * @throws myException
@@ -211,7 +225,7 @@ public class analyze {
     }
 
     public static boolean isChinese(char c) {
-        return c >= 0x4E00 && c <= 0x9FA5;// 根据字节码判断
+        return c >= 0x4E00 && c <= 0x9FBB;// 根据字节码判断  old return c >= 0x4E00 && c <= 0x9FA5
     }
 
 
@@ -223,7 +237,7 @@ public class analyze {
      */
     public String[] getAuthor(String s) throws myException {
         //不含诗人条件
-        if (s == "" || s == null){
+        if (s == "" || s == null) {
             throw new myException("无诗人输入");
         }
         if (!s.contains("&")) {
@@ -239,9 +253,9 @@ public class analyze {
         if (subString[0].contains("|")) {
             String[] subAuthor = subString[0].split("\\|");
             return subAuthor;
-        } else if ( s.charAt(0) == '&'){
+        } else if (s.charAt(0) == '&') {
             throw new myException("空作者输入");
-        }else{
+        } else {
             String[] result = {subString[0]};
             return result;
         }
@@ -300,7 +314,7 @@ public class analyze {
      */
     public String getPinYin(String tmp) throws myException {
         String result = "";
-        if ((tmp.contains("(") && tmp.contains(")")) ||(tmp.contains("（") && tmp.contains("）"))) {
+        if ((tmp.contains("(") && tmp.contains(")")) || (tmp.contains("（") && tmp.contains("）"))) {
             int first = -1, end = -1;
             //获得唯一的（）子句index
             for (int i = 0; i < tmp.length(); i++) {
@@ -322,15 +336,21 @@ public class analyze {
         return result;
     }
 
+    private void formate(String keyWord) {
+        String input = keyWord.toLowerCase();
+
+    }
+
 
     /**
      * 判断1个字符与一个关键字约束是否匹配
+     *
      * @param a 搜索规则，已经逐字解析
      * @param b 数据语句单字
      * @return
      * @throws myException
      */
-    public boolean judge(String a, String b) throws myException {
+    public boolean judge(String a, String b,String before) throws myException {
         if (a == null) return false;
         if (b == null) return false;
         if (a == "") return false;
@@ -349,6 +369,20 @@ public class analyze {
             }
             return false;
         }
+        if (a.equals("a")){
+            if (before.equals("")){
+                return true;
+            }else if ( b.equals(before)){
+                return true;
+            }
+        }
+        if (a.equals("b")){
+            if (before.equals("")){
+                return true;
+            }else if ( b.equals(before)){
+                return true;
+            }
+        }
 
         //b是复杂约束
         //1 []约束，任选约束
@@ -362,7 +396,7 @@ public class analyze {
             }
         }
         //如果是 *() *{}这类的词，直接通过
-        if (a.contains("*")){
+        if (a.contains("*")) {
             word = true;
         }
         //2 ()约束,拼音约束
@@ -373,7 +407,7 @@ public class analyze {
             for (String s : pinYinIs(b)) {
                 //拼音有后缀声调
 
-                if (s.length() >= length ) {
+                if (s.length() >= length) {
 
                     //System.out.print(b);
                     if (s.subSequence(0, length).equals(PinYin)) {
@@ -402,16 +436,16 @@ public class analyze {
     }
 
     /**
+     * 获得一个字符的全部读音
      *
-     *  获得一个字符的全部读音
      * @param b
      * @return
      */
     public String[] pinYinIs(String b) {
         Iterator<wordClass> iterator = wordSource.getWordClassArrayList().iterator();
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             wordClass word = iterator.next();
-            if (word.getWord().equals(b)){
+            if (word.getWord().equals(b)) {
                 return word.getPinYin();
             }
         }
@@ -435,7 +469,6 @@ public class analyze {
      */
 
     /**
-     *
      * 因为平仄对仗有着较为严格的规范，所以数据中存储上述数据为对比规范
      *
      * @param b
@@ -444,10 +477,10 @@ public class analyze {
 
     private String getPZ(String b) {
         Iterator<wordClass> iterator = pzSource.getWordClassArrayList().iterator();
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             wordClass word = iterator.next();
-            if (word.getWord().equals(b)){
-                switch (word.getPingZe()){
+            if (word.getWord().equals(b)) {
+                switch (word.getPingZe()) {
                     case 0:
                         return "P";
                     case 1:
@@ -516,11 +549,10 @@ public class analyze {
 
                 }
 
-                if (!hasFound){
+                if (!hasFound) {
                     logger.error("输入作者有误或者未收录");
                     throw new myException("输入作者有误或者未收录");
-                }
-                else {
+                } else {
                     //缩小查询data范围
                     Iterator<tangClass> iterator = ts.getTangClassArrayListWithAuthor(authors).iterator();
                     //获取第二部分，纯匹配
@@ -545,7 +577,8 @@ public class analyze {
     }
 
     /**
-     *  精确匹配的方法，负责比对一句话与待匹配句子
+     * 精确匹配的方法，负责比对一句话与待匹配句子
+     *
      * @param input   待匹配诗句不含诗人名字
      * @param context 带比较诗句
      * @return
@@ -578,7 +611,7 @@ public class analyze {
                 for (int i = 0; i < length; i++) {
                     //待测试b的输入，不匹配的话matched > 0；
 
-                    if (!judge(map.get(i + 1), map1.get(i + 1))) {
+                    if (!judge(map.get(i + 1), map1.get(i + 1),map1.get(i) == null?"":map1.get(i))) {
                         matched++;
                     }
                 }
@@ -627,7 +660,7 @@ public class analyze {
         for (String s : tmpArray) {
             // 匹配每一个句子
             count++;
-            if (getLengthFromRubbish(s) < getLength(input)){
+            if (getLengthFromRubbish(s) < getLength(input)) {
                 return false;
             }
 
@@ -648,7 +681,7 @@ public class analyze {
 
             for (int i = 0; i <= length - maxInArray; i++) {
                 for (int j = 0; j < keyWordSize; j++) {
-                    if (judge(map.get(keyWord[j]), map1.get(keyWord[j] + i))) {
+                    if (judge(map.get(keyWord[j]), map1.get(keyWord[j] + i),(j - 1) < 0?"":map1.get(keyWord[j - 1] + i))) {
                         isFound[i][j] = 1;
                     }
                 }
@@ -682,7 +715,8 @@ public class analyze {
     }
 
     /**
-     *  获得一个字符串的关键字位置，关键字为需要匹配的字符约束
+     * 获得一个字符串的关键字位置，关键字为需要匹配的字符约束
+     *
      * @param input
      * @return
      */
@@ -699,7 +733,7 @@ public class analyze {
                     i = input.indexOf(')', i);
                     break;
                 case '（':
-                    i = input.indexOf('）',i);
+                    i = input.indexOf('）', i);
                     break;
                 case '[':
                     i = input.indexOf(']', i);
@@ -742,10 +776,11 @@ public class analyze {
         return tmpMax;
     }
 
-    //TODO 模糊匹配拼音匹配无法进行
+    //模糊匹配拼音匹配已解决
 
     /**
      * 模糊匹配的入口方法
+     *
      * @param str
      * @return
      * @throws myException
@@ -756,17 +791,17 @@ public class analyze {
         int authorMount = 0;
         if (authors != null)
             authorMount = authors.length;
-        if (authorMount == 0 && !str.contains("&")){
-        Iterator<tangClass> tangIterator = ts.getTangClassArrayList().iterator();
-        //int length = this.getLenth(input);
-        while (tangIterator.hasNext()) {
-            tangClass tmp = tangIterator.next();
-            if (possiblyMatch(str, tmp.getContext())) {
-                resultArray.add(tmp);
+        if (authorMount == 0 && !str.contains("&")) {
+            Iterator<tangClass> tangIterator = ts.getTangClassArrayList().iterator();
+            //int length = this.getLenth(input);
+            while (tangIterator.hasNext()) {
+                tangClass tmp = tangIterator.next();
+                if (possiblyMatch(str, tmp.getContext())) {
+                    resultArray.add(tmp);
+                }
             }
-        }
-        return resultArray;
-    }else {
+            return resultArray;
+        } else {
             //存在作者约束，目前仅有或者选项，先按照作者对数据项进行筛选
             //可能有作者未收录
             Iterator<author> authorIterator = as.getAtc().iterator();
@@ -783,11 +818,10 @@ public class analyze {
 
             }
 
-            if (!hasFound){
+            if (!hasFound) {
                 logger.error("输入作者有误或者未收录");
                 throw new myException("输入作者有误或者未收录");
-            }
-            else {
+            } else {
                 //缩小查询data范围
                 Iterator<tangClass> iterator = ts.getTangClassArrayListWithAuthor(authors).iterator();
                 //获取第二部分，纯匹配
@@ -811,21 +845,22 @@ public class analyze {
 
     /**
      * 对偶匹配的主要方法，目前词性文件问题导致匹配问题
+     *
      * @param str
      * @return
      * @throws myException
      */
 
-    public ArrayList<tangClass> pairMatch(String str) throws myException{
+    public ArrayList<tangClass> pairMatch(String str) throws myException {
         ArrayList<tangClass> result = new ArrayList<tangClass>();
 
         Iterator<tangClass> iterator = ts.getTangClassArrayList().iterator();
 
-        HashMap<Integer,Integer> integerMap = getKindsFromRubbish(str);
-        HashMap<Integer,String> stringMap = getTagetFromRubbish(str);
+        HashMap<Integer, Integer> integerMap = getKindsFromRubbish(str);
+        HashMap<Integer, String> stringMap = getTagetFromRubbish(str);
 
 
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             tangClass tmp = iterator.next();
             String context = tmp.getContext();
             String[] tmpArray = context.split("？|，|。|\\?|,|\\n|、");
@@ -833,42 +868,42 @@ public class analyze {
                 //匹配目标诗句
                 int length = getLengthFromRubbish(tmpArray[i]);
                 int pairsWeight = 0;
-                if ( length == getLengthFromRubbish(str)){
-                    HashMap<Integer,Integer> integerBMap = getKindsFromRubbish(tmpArray[i]);
-                    HashMap<Integer,String> stringBMap = getTagetFromRubbish(tmpArray[i]);
+                if (length == getLengthFromRubbish(str)) {
+                    HashMap<Integer, Integer> integerBMap = getKindsFromRubbish(tmpArray[i]);
+                    HashMap<Integer, String> stringBMap = getTagetFromRubbish(tmpArray[i]);
                     boolean[] weight = new boolean[length];
                     boolean[] pingZebooleans = new boolean[length];
                     for (int j = 0; j < length; j++) {
                         //逐字判断对偶
                         //1.词性对偶部分
-                        int wordWeight = isPair(integerMap.get(j+1),integerBMap.get(j+1));
-                        if (wordWeight > 0){
-                           weight[j] = true;
-                           pairsWeight = pairsWeight + wordWeight;
-                        }else{
-                           weight[j] = false;
+                        int wordWeight = isPair(integerMap.get(j + 1), integerBMap.get(j + 1));
+                        if (wordWeight > 0) {
+                            weight[j] = true;
+                            pairsWeight = pairsWeight + wordWeight;
+                        } else {
+                            weight[j] = false;
                         }
-                        if ((getPZ(stringMap.get(j+1)) == "P" && getPZ(stringBMap.get(j+1)) == "Z")||(getPZ(stringMap.get(j+1)) == "Z" && getPZ(stringBMap.get(j+1)) == "P")){
+                        if ((getPZ(stringMap.get(j + 1)) == "P" && getPZ(stringBMap.get(j + 1)) == "Z") || (getPZ(stringMap.get(j + 1)) == "Z" && getPZ(stringBMap.get(j + 1)) == "P")) {
                             pingZebooleans[j] = true;
-                        }else{
+                        } else {
                             pingZebooleans[j] = false;
                         }
 
                     }
                     boolean passAttr = true;
                     for (int j = 0; j < length; j++) {
-                        if (weight[j] == false){
+                        if (weight[j] == false) {
                             passAttr = false;
                         }
                     }
                     boolean passPZ = true;
                     for (int j = 0; j < length; j++) {
-                        if (pingZebooleans[j] == false){
+                        if (pingZebooleans[j] == false) {
                             passPZ = false;
                         }
                     }
 
-                    if (passAttr && passPZ){
+                    if (passAttr && passPZ) {
                         tangClass intoResult = new tangClass();
                         intoResult.setAuther(tmp.getAuther());
                         intoResult.setTitle(tmp.getTitle());
@@ -877,7 +912,7 @@ public class analyze {
                         intoResult.setPairsWeight(pairsWeight);
                         result.add(intoResult);
                     }
-                }else {
+                } else {
                     continue;
                 }
             }
@@ -887,11 +922,12 @@ public class analyze {
 
     /**
      * 获取一个字符串的词属性
+     *
      * @param str
      * @return
      */
 
-    public HashMap<Integer,Integer> getKindsFromRubbish(String str) {
+    public HashMap<Integer, Integer> getKindsFromRubbish(String str) {
         HashMap<Integer, Integer> result = new HashMap<>();
         int length = 0;
         for (int i = 0; i < str.length(); i++) {
@@ -900,17 +936,17 @@ public class analyze {
                 ++length;
                 Iterator<wordClass> iterator = ks.getWordClassArrayList().iterator();
                 boolean found = false;
-                while (iterator.hasNext()){
+                while (iterator.hasNext()) {
                     wordClass tmp = iterator.next();
-                    if (tmp.getWord().equals(word)){
+                    if (tmp.getWord().equals(word)) {
                         result.put(length, tmp.getKind());
                         found = true;
                         break;
                     }
                 }
-                if (!found){
+                if (!found) {
                     //System.out.println(word + " 没找到");
-                    result.put(length,(1<<30)-1);
+                    result.put(length, (1 << 30) - 1);
                 }
 
             }
@@ -919,20 +955,20 @@ public class analyze {
     }
 
 
-
     /**
      * 判断两个字是否在词性上对偶，int越大对偶性越强
+     *
      * @param a
      * @param b
      * @return
      * @throws myException
      */
-    public int isPair(int a,int b) throws myException {
-        int result = a&b;
+    public int isPair(int a, int b) throws myException {
+        int result = a & b;
         //System.out.println(result);
-        if (result >= 0){
+        if (result >= 0) {
             return result;
-        }else{
+        } else {
             logger.error("数字相与结果小于0");
             throw new myException("输入异常");
         }
@@ -942,31 +978,33 @@ public class analyze {
     /**
      * 获得自动生成的对偶句
      * 注释掉的是随机声称pz对字，新方法采用统计学方法，对于全部数据的字出现频率进行统计，随机生成的单字不仅照顾平仄，而且照顾出现概率
-     * TODO: 下一步增加分词的功能，将分词后的诗句进行对偶生成
+     * TODO: 下一步增加分词的功能，将分词后的诗句进行对偶生成，com.Davi.poems.segment
+     *
      * @param input
      * @return
      */
     public String getPair(String input) throws myException {
         StringBuilder result = new StringBuilder();
-        HashMap<Integer,String> arraylist = getTagetFromRubbish(input);
+        HashMap<Integer, String> arraylist = getTagetFromRubbish(input);
         for (int i = 0; i < arraylist.size(); i++) {
             //get i 是从1开始计数的
             //result.append(getPZPair(arraylist.get(i+1)));
-            if (i == 0){
-                result.append(getPZPairByPossible(arraylist.get(i+1),""));
-            }else{
-                result.append(getPZPairByPossible(arraylist.get(i+1),arraylist.get(i)));
+            if (i == 0) {
+                result.append(getPZPairByPossible(arraylist.get(i + 1), ""));
+            } else {
+                result.append(getPZPairByPossible(arraylist.get(i + 1), arraylist.get(i)));
             }
         }
         return result.toString();
     }
-    public void createPZList(){
+
+    public void createPZList() {
         Iterator<wordClass> iterator = pzSource.getWordClassArrayList().iterator();
         pingLists = new ArrayList<wordClass>();
         zeLists = new ArrayList<wordClass>();
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             wordClass tmp = iterator.next();
-            switch (tmp.getPingZe()){
+            switch (tmp.getPingZe()) {
                 case 0:
                     pingLists.add(tmp);
                     break;
@@ -984,61 +1022,300 @@ public class analyze {
         }
 
     }
+
     public String getPZPair(String word) throws myException {
-        if (pingLists == null || zeLists == null){
+        if (pingLists == null || zeLists == null) {
             this.createPZList();
         }
         String wordPz = getPZ(word);
         // [0,1)
         double randomInt = Math.random();
-        if (wordPz.equals("P")){
+        if (wordPz.equals("P")) {
             int size = pingLists.size();
             //int size = cowl.result.size();
-            int result = (int)Math.floor(randomInt*size);
+            int result = (int) Math.floor(randomInt * size);
             return pingLists.get(result).getWord();
-        }else if (wordPz.equals("Z")){
+        } else if (wordPz.equals("Z")) {
             int size = zeLists.size();
-            int result = (int)Math.floor(randomInt*size);
+            int result = (int) Math.floor(randomInt * size);
             return zeLists.get(result).getWord();
-        }else {
+        } else {
             logger.error("字：" + word + " 没有平仄数据");
             throw new myException("字：" + word + " 没有平仄数据");
         }
 
     }
 
-    public String getPZPairByPossible(String word,String before){
-
-        int size = cowl.size;
-        System.out.println(size);
+    public String getPZPairByPossible(String word, String before) {
+        /*if (cowl == null) {
+            long start = System.currentTimeMillis();
+            logger.info("createOrderWordList");
+            cowl = new createOrderWordsList();
+            long end = System.currentTimeMillis();
+            logger.info("用时: " + (end - start));
+        }*/
+        ArrayList<wordClass> tmpList = wcs.getWordClassArrayList();
+        Iterator<wordClass> iterator = tmpList.iterator();
+        int countSum = wcs.getCountSum();
+        //logger.info("排序所有字出现的次数: "+size);
         double randomInt = Math.random();
-        Iterator<wordClass> iterator = cowl.result.iterator();
-        if (before == "" || before.equals("")){
-            int random = (int)Math.floor(randomInt*size);
-            System.out.println("random"+random);
+        if (before == "" || before.equals("")) {
+            int random = (int) Math.floor(randomInt * countSum);
+            //System.out.println("random" + random);
             int count = 0;
-            while (iterator.hasNext()){
+            while (iterator.hasNext()) {
                 wordClass tmp = iterator.next();
                 count = count + tmp.getCount();
-                if (count >= random && getPZ(word).equals(getPZ(tmp.getWord()))){
-                    System.out.println("word "+tmp.getWord()+" count "+count);
+                if (count >= random && !getPZ(word).equals(getPZ(tmp.getWord()))) {
+                    //System.out.println("word " + tmp.getWord() + " count " + count);
                     return tmp.getWord();
                 }
             }
-        }else{
-            int random = (int)Math.floor(randomInt*size);
-            System.out.println("random"+random);
+        } else {
+            int random = (int) Math.floor(randomInt * countSum);
+            //System.out.println("random" + random);
             int count = 0;
-            while (iterator.hasNext()){
+            while (iterator.hasNext()) {
                 wordClass tmp = iterator.next();
                 count = count + tmp.getCount();
-                if (count >= random && !tmp.getWord().equals(before) && getPZ(word).equals(getPZ(tmp.getWord()))){
-                    System.out.println("word "+tmp.getWord()+" count "+count);
+                if (count >= random && !tmp.getWord().equals(before) && !getPZ(word).equals(getPZ(tmp.getWord()))) {
+                    //System.out.println("word " + tmp.getWord() + " count " + count);
                     return tmp.getWord();
                 }
             }
         }
         return null;
+    }
+
+    /**
+     * NomalSegment分词实现的对偶生成
+     */
+    public String nomalSegment(String input) throws myException {
+        List<Term> resultTmp = HanLP.segment(input);
+        List<String> resultString = new LinkedList<>();
+        long start = System.currentTimeMillis();
+        for (int i = 0; i < resultTmp.size(); i++) {
+            //System.out.print(t.word + " & ");
+            String tmp = "";
+
+            while (true) {
+                tmp = getPair(resultTmp.get(i).word);
+                System.out.println("tmp word is"+tmp+" "+ HanLP.segment(tmp).size());
+                System.out.println(HanLP.segment(tmp).get(0) + "  "+resultTmp.get(i)+resultTmp.get(i).nature );
+                if (i == resultTmp.size() - 1){
+                    //TODO 此处在生成诗句的时候可以限制首颔颈尾的韵脚情况
+                    if (isSameSubject(HanLP.segment(tmp).get(0).nature, resultTmp.get(i).nature)) {
+                        break;
+                    }
+
+                }else if (HanLP.segment(tmp).size() == 1) {
+                        if (isSameSubject(HanLP.segment(tmp).get(0).nature, resultTmp.get(i).nature)) {
+                            break;
+                        }
+                }
+
+            }
+
+            resultString.add(tmp);
+
+        }
+
+
+        long end = System.currentTimeMillis();
+
+        logger.info("normalSegment生成对偶句所用时间 Time " + (end - start) + "ms");
+
+        StringBuilder sb = new StringBuilder();
+        for (String s : resultString) {
+            sb.append(s);
+        }
+
+        return sb.toString();
+    }
+
+    /**
+     *
+     * @param input
+     * @return
+     * @throws myException
+     */
+    public String NLPSegment(String input) throws myException{
+        List<Term> resultTmp = NLPTokenizer.segment(input);
+        List<String> resultString = new LinkedList<>();
+        long start = System.currentTimeMillis();
+        for (int i = 0; i < resultTmp.size(); i++) {
+            //System.out.print(t.word + " & ");
+            String tmp = "";
+
+            while (true) {
+                tmp = getPair(resultTmp.get(i).word);
+                //System.out.println(HanLP.segment(tmp).size());
+                //System.out.println(HanLP.segment(tmp).get(0));
+                if (i == resultTmp.size() - 1){
+                    //TODO 此处在生成诗句的时候可以限制首颔颈尾的韵脚情况
+                    if (isSameSubject(NLPTokenizer.segment(tmp).get(0).nature, resultTmp.get(i).nature)) {
+                        break;
+                    }
+                }else if (HanLP.segment(tmp).size() == 1) {
+                    if (isSameSubject(NLPTokenizer.segment(tmp).get(0).nature, resultTmp.get(i).nature)) {
+                        break;
+                    }
+                }
+
+            }
+
+            resultString.add(tmp);
+
+        }
+
+
+        long end = System.currentTimeMillis();
+
+        logger.info("NLPSegment生成对偶句所用时间 Time " + (end - start) + "ms");
+
+        StringBuilder sb = new StringBuilder();
+        for (String s : resultString) {
+            sb.append(s);
+        }
+
+        return sb.toString();
+    }
+
+    public String NshortSegment(String input) throws myException {
+        Segment nShortSegment = new NShortSegment().enableCustomDictionary(false).enablePlaceRecognize(true).enableOrganizationRecognize(true);
+        List<Term> resultTmp = nShortSegment.seg(input);
+        List<String> resultString = new LinkedList<>();
+        long start = System.currentTimeMillis();
+        for (int i = 0; i < resultTmp.size(); i++) {
+            //System.out.print(t.word + " & ");
+            String tmp = "";
+
+            while (true) {
+                tmp = getPair(resultTmp.get(i).word);
+                //System.out.println(HanLP.segment(tmp).size());
+                //System.out.println(HanLP.segment(tmp).get(0));
+                if (i == resultTmp.size() - 1){
+                    //TODO 此处在生成诗句的时候可以限制首颔颈尾的韵脚情况
+                    if (isSameSubject(nShortSegment.seg(tmp).get(0).nature, resultTmp.get(i).nature)) {
+                        break;
+                    }
+                }else if (HanLP.segment(tmp).size() == 1) {
+                    if (isSameSubject(nShortSegment.seg(tmp).get(0).nature, resultTmp.get(i).nature)) {
+                        break;
+                    }
+                }
+
+            }
+
+            resultString.add(tmp);
+
+        }
+
+
+        long end = System.currentTimeMillis();
+
+        logger.info("NshrotSegment生成对偶句所用时间 Time " + (end - start) + "ms");
+
+        StringBuilder sb = new StringBuilder();
+        for (String s : resultString) {
+            sb.append(s);
+        }
+
+        return sb.toString();
+
+
+
+    }
+    public String DijkstraShortSegment(String input)throws myException{
+        Segment DijkstraSegment = new DijkstraSegment().enableCustomDictionary(false).enablePlaceRecognize(true).enableOrganizationRecognize(true);
+        List<Term> resultTmp = DijkstraSegment.seg(input);
+        List<String> resultString = new LinkedList<>();
+        long start = System.currentTimeMillis();
+        for (int i = 0; i < resultTmp.size(); i++) {
+            //System.out.print(t.word + " & ");
+            String tmp = "";
+
+            while (true) {
+                tmp = getPair(resultTmp.get(i).word);
+                //System.out.println(HanLP.segment(tmp).size());
+                //System.out.println(HanLP.segment(tmp).get(0));
+                if (i == resultTmp.size() - 1){
+                    //TODO 此处在生成诗句的时候可以限制首颔颈尾的韵脚情况
+                    if (isSameSubject(DijkstraSegment.seg(tmp).get(0).nature, resultTmp.get(i).nature)) {
+                        break;
+                    }
+                }else if (HanLP.segment(tmp).size() == 1) {
+                    if (isSameSubject(DijkstraSegment.seg(tmp).get(0).nature, resultTmp.get(i).nature)) {
+                        break;
+                    }
+                }
+
+            }
+
+            resultString.add(tmp);
+
+        }
+
+
+        long end = System.currentTimeMillis();
+
+        logger.info("DjistraShrotSegment生成对偶句所用时间 Time " + (end - start) + "ms");
+
+        StringBuilder sb = new StringBuilder();
+        for (String s : resultString) {
+            sb.append(s);
+        }
+
+        return sb.toString();
+    }
+    /**
+     * 判断两个分词的词性是否一致
+     *
+     * @param a
+     * @param b
+     * @return
+     */
+    public static boolean isSameSubject(Nature a, Nature b) {
+        if (a.equals(b)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     * 平仄前提已相等
+     * 根据平水韵，相同韵部在+-5以内
+     * 这个方法是诗句的上下句韵脚部分
+     * @param a
+     * @param b
+     * @return
+     */
+    public boolean isSameYunbuSimple(String a,String b){
+        Iterator<wordClass> iterator = pzSource.getWordClassArrayList().iterator();
+        int aYun = -1 ,bYun = -1;
+        int aPZ = -1, bPZ = -1;
+        while (iterator.hasNext()){
+            wordClass tmp = iterator.next();
+            if (tmp.getWord().equals(a)){
+                aPZ = tmp.getPingZe();
+                aYun = tmp.getYunbu();
+            }
+            if (tmp.getWord().equals(b)){
+                bPZ = tmp.getPingZe();
+                bYun = tmp.getYunbu();
+            }
+        }
+        if (aYun == -1 || bYun == -1){
+            return true; //超出平水韵
+        }else if (aPZ != bPZ){
+            return false;
+        }else if (Math.abs(bYun-aYun) <= 3){
+            return true;
+        }else {
+            return false;
+        }
+
     }
 
 

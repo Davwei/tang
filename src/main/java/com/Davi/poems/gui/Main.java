@@ -34,7 +34,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         //Parent root = FXMLLoader.load(getClass().getResource("welcome.fxml"));
         stage = primaryStage;
-        stage.setTitle("First Job");
+        stage.setTitle("中文诗词集句系统");
         //primaryStage.setScene(new Scene(root, 600, 400));
         stage.setMinHeight(WINDOW_HEIGH);
         stage.setMinWidth(WINDOW_WIDTH);

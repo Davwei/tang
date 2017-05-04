@@ -26,15 +26,17 @@ import sun.audio.ContinuousAudioDataStream;
 
 import java.awt.*;
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Properties;
+import java.lang.reflect.Array;
+import java.util.*;
+
+import static java.lang.Thread.sleep;
 
 
 public class Controller {
     Logger logger = Logger.getLogger(Controller.class);
 
     private Main application;
+    private analyze az = new analyze();
 
 
     public void setApp(Main application) {
@@ -50,6 +52,8 @@ public class Controller {
     @FXML
     private TextField getPairFieldArea;
     @FXML
+    private TextField numberArea;
+    @FXML
     private TableView<tableData> resultTable;
     @FXML
     private TableView<pairData> resultTableP;
@@ -60,22 +64,36 @@ public class Controller {
     @FXML
     private TableColumn<pairData, String> authorColumnP, titleColumnP, pairColumn;
     @FXML
-    private TableColumn<pairData,String> pairColumnGP;
+    private TableColumn<pairData, String> pairColumnGP;
     @FXML
     private Label exampleLabel;
+
+
     private ArrayList<tangClass> resultArray;
+    private HashMap<Integer, ArrayList<tangClass>> history = new HashMap<>(9);
+    private int[] isSearch = new int[3];
+    private int[] possibleSearch = new int[3];
+    private int[] pairSearch = new int[3];
+    private int pointIsSearch = 0;
+    private int pointPossibleSearch = 0;
+    private int pointPairSearch = 0;
+    private int lastPoint;
     public static Media media;
     public static MediaPlayer mp;
     public static boolean bgmIsOn = false;
+    protected getResultSetThread result1;
 
     protected MusicThread m = new MusicThread(this);
     protected threadPool threadPools = new threadPool();
+
+    private int pairsNumber = 5;
 
 
     @FXML
     protected void toMainFrame(ActionEvent event) throws Exception {
         //welcomePane.getChildren().clear();
         application.mainFrame();
+
     }
 
     @FXML
@@ -90,6 +108,7 @@ public class Controller {
         this.pairFieldArea.setText("");
         //this.resultTableP.refresh();
     }
+
     @FXML
     protected void toClearGetPairsFieldArea(ActionEvent event) throws Exception {
         this.getPairFieldArea.setText("");
@@ -97,69 +116,61 @@ public class Controller {
     }
 
 
-
     @FXML
     protected void toPairFrame(ActionEvent event) throws Exception {
         application.pairFrame();
     }
+
     @FXML
-    protected  void toGetPairs(ActionEvent event )throws Exception{
+    protected void toGetPairs(ActionEvent event) throws Exception {
         application.getPairsFrame();
     }
 
     @FXML
     protected void isSearch(ActionEvent event) throws Exception {
         String input = this.searchFieldArea.getText().trim();
-        System.out.println(input);
-        logger.info("输入字符串 "+input);
-        analyze az = new analyze();
-        try {
-            resultArray = az.match(input);
+        logger.info("输入字符串 " + input);
+        resultArray = new ArrayList<>();
 
-            System.out.println("----------------------");
-            System.out.println("精确匹配结果数量： " + resultArray.size());
-            logger.info("精确匹配结果数量： " + resultArray.size());
-            Iterator<tangClass> iterator1 = resultArray.iterator();
-            int count = 0;
-            while (iterator1.hasNext()) {
+        result1 = new getResultSetThread(this,input);
+        //resultArray = az.match(input);
+        result1.run();
+
+        /*while (iterator1.hasNext()) {
                 count++;
-                System.out.println(iterator1.next().toString());
-            }
-            System.out.println("----------------------");
+                iterator1.next();
+                //System.out.println(iterator1.next().toString());
+                }*/
 
-            application.ObservableListInit(resultArray);
-            this.resultTable.setItems(application.gettData());
+        //application.ObservableListInit(resultArray);
+        //this.resultTable.setItems(application.gettData());
 
 
-            authorColumn.setCellValueFactory(cellData -> cellData.getValue().authorProperty());
-            titleColumn.setCellValueFactory(cellData -> cellData.getValue().titleProperty());
-            contextColumn.setCellValueFactory(cellData -> cellData.getValue().contextProperty());
-
-            new AlertBox().display("诗词数量", "", "查询结果共有 " + count + " 首");
-        } catch (myException m) {
-            new AlertBox().display("错误", "", m.getMessage());
-        }
+        //authorColumn.setCellValueFactory(cellData -> cellData.getValue().authorProperty());
+        //titleColumn.setCellValueFactory(cellData -> cellData.getValue().titleProperty());
+        //contextColumn.setCellValueFactory(cellData -> cellData.getValue().contextProperty());
 
 
     }
+
 
     @FXML
     protected void possibleSearch(ActionEvent event) throws Exception {
         String input = this.searchFieldArea.getText().trim();
         System.out.println(input);
-        analyze az = new analyze();
         try {
             resultArray = az.PMatch(input);
-            System.out.println("----------------------");
+            int point = (pointIsSearch + pointPairSearch + pointPossibleSearch) % 9;
+            possibleSearch[pointPossibleSearch % 3] = point;
+            pointPossibleSearch++;
+            history.put(point, resultArray);
+            //System.out.println("----------------------");
             logger.info("模糊匹配结果数量： " + resultArray.size());
-            System.out.println("模糊匹配结果数量： " + resultArray.size());
-            Iterator<tangClass> iterator1 = resultArray.iterator();
-            int count = 0;
-            while (iterator1.hasNext()) {
-                count++;
-                System.out.println(iterator1.next().toString());
-            }
-            System.out.println("----------------------");
+            //System.out.println("模糊匹配结果数量： " + resultArray.size());
+            //Iterator<tangClass> iterator1 = resultArray.iterator();
+            int count = resultArray.size();
+
+            //System.out.println("----------------------");
 
             application.ObservableListInit(resultArray);
             this.resultTable.setItems(application.gettData());
@@ -167,11 +178,9 @@ public class Controller {
             titleColumn.setCellValueFactory(cellData -> cellData.getValue().titleProperty());
             contextColumn.setCellValueFactory(cellData -> cellData.getValue().contextProperty());
 
-            new AlertBox().display("诗词数量", "", "查询结果共有 " + count + " 首");
-
-
+            new AlertBox().display("查询结果共有: " + count + " 首");
         } catch (myException m) {
-            new AlertBox().display("错误", "", m.getMessage());
+            new AlertBox().display("错误: " + m.getMessage());
         }
 
 
@@ -179,24 +188,23 @@ public class Controller {
 
     @FXML
     protected void pairsSearch(ActionEvent event) throws Exception {
-        //选择线程进行table刷新
 
         String input = this.pairFieldArea.getText().trim();
         System.out.println(input);
-        analyze az = new analyze();
         try {
             resultArray = az.pairMatch(input);
+            int point = (pointIsSearch + pointPairSearch + pointPossibleSearch) % 9;
+            pairSearch[pointPairSearch % 3] = point;
+            pointPairSearch++;
+            history.put(point, resultArray);
 
-            System.out.println("----------------------");
+            //System.out.println("----------------------");
             logger.info("对偶匹配结果数量： " + resultArray.size());
-            System.out.println("对偶匹配结果数量： " + resultArray.size());
-            Iterator<tangClass> iterator1 = resultArray.iterator();
-            int count = 0;
-            while (iterator1.hasNext()) {
-                count++;
-                System.out.println(iterator1.next().toString());
-            }
-            System.out.println("----------------------");
+            //System.out.println("对偶匹配结果数量： " + resultArray.size());
+            //Iterator<tangClass> iterator1 = resultArray.iterator();
+            int count = resultArray.size();
+
+            //System.out.println("----------------------");
 
             application.ObservableListPairInit(resultArray);
             this.resultTableP.setItems(application.getpData());
@@ -204,24 +212,28 @@ public class Controller {
             titleColumnP.setCellValueFactory(cellData -> cellData.getValue().titleProperty());
             pairColumn.setCellValueFactory(cellData -> cellData.getValue().pairProperty());
 
-            new AlertBox().display("对偶句数量", "", "查询结果共有 " + count + " 首");
-
-
+            new AlertBox().display("查询结果共有: " + count + " 首");
         } catch (myException m) {
-            new AlertBox().display("错误", "", m.getMessage());
+            new AlertBox().display("错误: " + m.getMessage());
         }
 
 
     }
+
     @FXML
-    public void getPairs(ActionEvent event) throws myException {
-        analyze az = new analyze();
+    public void getPairsNormal(ActionEvent event) throws myException {
         ArrayList<tangClass> result = new ArrayList<tangClass>();
+        //TODO 规范输入值
+        if (isNumeric(numberArea.getText().trim()))
+            pairsNumber = Integer.valueOf(numberArea.getText().trim());
+        else
+            new AlertBox().display("请输入数字");
         String input = this.getPairFieldArea.getText().trim();
+
         try {
-            for (int i = 0; i < 10; i++) {
+            for (int i = 0; i < pairsNumber; i++) {
                 tangClass tmp = new tangClass();
-                tmp.setPairs(az.getPair(input));
+                tmp.setPairs(az.nomalSegment(input));
                 result.add(tmp);
             }
 
@@ -229,25 +241,104 @@ public class Controller {
             this.resultTableGP.setItems(application.getpData());
 
             pairColumnGP.setCellValueFactory(cellData -> cellData.getValue().pairProperty());
-        }catch (myException m){
-            new AlertBox().display("错误","",m.getMessage());
+        } catch (myException m) {
+            new AlertBox().display("错误: " + m.getMessage());
         }
     }
+
+    @FXML
+    public void getPairsNLP(ActionEvent event) throws myException {
+        ArrayList<tangClass> result = new ArrayList<tangClass>();
+        if (isNumeric(numberArea.getText().trim()))
+            pairsNumber = Integer.valueOf(numberArea.getText().trim());
+        else
+            new AlertBox().display("请输入数字");
+        String input = this.getPairFieldArea.getText().trim();
+        try {
+            for (int i = 0; i < pairsNumber; i++) {
+                tangClass tmp = new tangClass();
+                tmp.setPairs(az.NLPSegment(input));
+                result.add(tmp);
+            }
+
+            this.application.ObservableListPairInit(result);
+            this.resultTableGP.setItems(application.getpData());
+
+            pairColumnGP.setCellValueFactory(cellData -> cellData.getValue().pairProperty());
+        } catch (myException m) {
+            new AlertBox().display("错误: " + m.getMessage());
+        }
+    }
+
+    @FXML
+    public void getPairsNShort(ActionEvent event) throws myException {
+        ArrayList<tangClass> result = new ArrayList<tangClass>();
+        if (isNumeric(numberArea.getText().trim()))
+            pairsNumber = Integer.valueOf(numberArea.getText().trim());
+        else
+            new AlertBox().display("请输入数字");
+        String input = this.getPairFieldArea.getText().trim();
+        try {
+            for (int i = 0; i < pairsNumber; i++) {
+                tangClass tmp = new tangClass();
+                tmp.setPairs(az.NshortSegment(input));
+                result.add(tmp);
+            }
+
+            this.application.ObservableListPairInit(result);
+            this.resultTableGP.setItems(application.getpData());
+
+            pairColumnGP.setCellValueFactory(cellData -> cellData.getValue().pairProperty());
+        } catch (myException m) {
+            new AlertBox().display("错误: " + m.getMessage());
+        }
+    }
+
+    @FXML
+    public void getPairsDijstra(ActionEvent event) throws myException {
+        ArrayList<tangClass> result = new ArrayList<tangClass>();
+        if (isNumeric(numberArea.getText().trim()))
+            pairsNumber = Integer.valueOf(numberArea.getText().trim());
+        else
+            new AlertBox().display("请输入数字");
+        String input = this.getPairFieldArea.getText().trim();
+        try {
+            for (int i = 0; i < pairsNumber; i++) {
+                tangClass tmp = new tangClass();
+                tmp.setPairs(az.DijkstraShortSegment(input));
+                result.add(tmp);
+            }
+
+            this.application.ObservableListPairInit(result);
+            this.resultTableGP.setItems(application.getpData());
+
+            pairColumnGP.setCellValueFactory(cellData -> cellData.getValue().pairProperty());
+        } catch (myException m) {
+            new AlertBox().display("错误: " + m.getMessage());
+        }
+    }
+
 
     @FXML
     public void getOnePorm(javafx.scene.input.MouseEvent e) throws Exception {
 
         tableData td = this.resultTable.getSelectionModel().getSelectedItem();
-
+        if (td == null) {
+            throw new myException("空输入");
+        }
         String author = td.getAuthor();
         String title = td.getTitle();
         String context = td.getContext();
-        if (author != null && title != null && context != null)
-            new AlertBox().display(title, author, context);
-        else{
+        if (author != null && title != null && context != null) {
+            tangClass tmp = new tangClass();
+            tmp.setAuther(author);
+            tmp.setTitle(title);
+            tmp.setContext(context);
+            new AlertBox().displayPorms(tmp);
+
+        } else {
             throw new myException("空输入");
         }
-
 
 
     }
@@ -257,32 +348,42 @@ public class Controller {
 
         pairData pd = this.resultTableP.getSelectionModel().getSelectedItem();
 
+        if (pd == null) {
+            throw new myException("空输入");
+        }
         String author = pd.getAuthor();
         String title = pd.getTitle();
         String context = pd.getPair();
-        if (author != null && title != null && context != null)
-            new AlertBox().display(title, author, context);
-        else if (author != null && title != null && context != null){
-            new AlertBox().display("","",context);
-        }else
+        if (author != null && title != null && context != null) {
+            tangClass tmp = new tangClass();
+            tmp.setAuther(author);
+            tmp.setTitle(title);
+            tmp.setContext(context);
+            new AlertBox().displayPorms(tmp);
+        } else
             throw new myException("空输入");
 
     }
+
     @FXML
     public void getPairFromGP(javafx.scene.input.MouseEvent e) throws Exception {
 
         pairData pd = this.resultTableGP.getSelectionModel().getSelectedItem();
 
-        String context = pd.getPair();
-        if (context != null)
-            new AlertBox().display("", "", context);
-        else
+        if (pd != null) {
+            String context = pd.getPair();
+            tangClass tmp = new tangClass();
+            tmp.setTitle("对偶生成");
+            tmp.setContext(context);
+            new AlertBox().displayPorms(tmp);
+        } else
             throw new myException("空输入");
 
     }
 
 
-    @FXML public void playOrStopBGM() throws IOException {
+    @FXML
+    public void playOrStopBGM() throws IOException {
         //String PATH = "A:/ssdworkspace/tang/src/main/resources/Loveless.mp3";
 
         if (bgmIsOn) {
@@ -295,26 +396,177 @@ public class Controller {
 
 
     }
+
     @FXML
-    public void createFile(){
+    public void createFile() {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("选择文件路径");
+        fileChooser.setInitialFileName("诗词结果.txt");
+
         Stage windows = new Stage();
         windows.setTitle("文件选择");
         windows.initModality(Modality.APPLICATION_MODAL);
         windows.setMinWidth(400);
         windows.setMinHeight(300);
-        File file = fileChooser.showOpenDialog(windows);
-        if (file != null){
+        //File file = fileChooser.showOpenDialog(windows);
+        File file = fileChooser.showSaveDialog(windows);
+
+        if (file != null) {
             toTextFile toTextFile = new toTextFile(resultArray);
             try {
                 toTextFile.fillFile(file);
-                logger.info("生成文件:"+file.getName()+" 文件路径:"+file.getPath());
+                logger.info("生成文件:" + file.getName() + " 文件路径:" + file.getPath());
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
     }
+
+    @FXML
+    public void clearHistory(ActionEvent event) {
+        pointIsSearch = pointPairSearch = pointPossibleSearch = 0;
+    }
+
+    @FXML
+    public void backTolastIsSearch(ActionEvent event) {
+        if (pointIsSearch <= 0) {
+            new AlertBox().display("无历史记录");
+            return;
+        }
+        if (pointIsSearch == 1) {
+            new AlertBox().display("仅有一条记录");
+            return;
+        }
+        lastPoint = pointIsSearch - 2;
+        pointIsSearch--;
+        //logger.info("lastPoint is "+lastPoint);
+        int historyPoint = isSearch[lastPoint % 3];
+        //logger.info("historyPoint is " + historyPoint);
+        resultArray = history.get(Integer.valueOf(historyPoint));
+        //logger.info("result size is "+resultArray.size());
+
+        int count = resultArray.size();
+
+        application.ObservableListInit(resultArray);
+        this.resultTable.setItems(application.gettData());
+
+
+        authorColumn.setCellValueFactory(cellData -> cellData.getValue().authorProperty());
+        titleColumn.setCellValueFactory(cellData -> cellData.getValue().titleProperty());
+        contextColumn.setCellValueFactory(cellData -> cellData.getValue().contextProperty());
+
+        new AlertBox().display("查询结果共有 " + count + " 首");
+    }
+
+    @FXML
+    public void backTolastPossibleSearch(ActionEvent event) {
+        if (pointPossibleSearch <= 0) {
+            new AlertBox().display("无历史记录");
+            return;
+        }
+        if (pointPossibleSearch == 1) {
+            new AlertBox().display("仅有一条记录");
+            return;
+        }
+        lastPoint = pointPossibleSearch - 2;
+        pointPossibleSearch--;
+        //logger.info("lastPoint is "+lastPoint);
+        int historyPoint = possibleSearch[lastPoint % 3];
+        //logger.info("historyPoint is " + historyPoint);
+        resultArray = history.get(Integer.valueOf(historyPoint));
+        //logger.info("result size is "+resultArray.size());
+
+        int count = resultArray.size();
+
+        application.ObservableListInit(resultArray);
+        this.resultTable.setItems(application.gettData());
+
+
+        authorColumn.setCellValueFactory(cellData -> cellData.getValue().authorProperty());
+        titleColumn.setCellValueFactory(cellData -> cellData.getValue().titleProperty());
+        contextColumn.setCellValueFactory(cellData -> cellData.getValue().contextProperty());
+
+        new AlertBox().display("查询结果共有 " + count + " 首");
+    }
+
+    @FXML
+    public void readMe(ActionEvent event) {
+        String str = "本软件由Davi与2017年制作完成，@copyright reserved \n本软件有网络服务模式与单机客户端模式两种，在启动程序jar包时，\n对应后边加入-jar **.jar server 端口号可以启用网络模式，\n发送端demo位于com.Davi.poems.net.myHttpClient.java \n"
+                + "更多问题欢迎email wangwei3791@163.com 谢谢";
+        new AlertBox().display(str);
+    }
+
+    public static boolean isNumeric(String str) {
+        if (str == null)
+            return false;
+        for (int i = 0; i < str.length(); i++) {
+            if (!Character.isDigit(str.charAt(i))) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+
+    class getResultSetThread implements Runnable {
+        protected com.Davi.poems.gui.Controller c;
+        String input;
+
+        getResultSetThread(Controller c,String input) {
+            this.c = c;
+            this.input = input;
+        }
+
+
+        private void method(String input) throws myException {
+
+            synchronized (c.resultArray){
+                long start = System.currentTimeMillis();
+                //TODO 检查方法类卡住页面的原因，并改进
+                c.resultArray = c.az.match(input);
+                logger.info("执行开始时间差"+(System.currentTimeMillis()-start) + "ms");
+                int point = (c.pointIsSearch + c.pointPairSearch + c.pointPossibleSearch) % 9;
+                logger.info("point is " + point);
+                c.isSearch[c.pointIsSearch % 3] = point;
+                c.pointIsSearch++;
+                c.history.put(point, c.resultArray);
+                //System.out.println("精确匹配结果数量： " + resultArray.size());
+                logger.info("精确匹配结果数量： " + c.resultArray.size());
+                //Iterator<tangClass> iterator1 = resultArray.iterator();
+                //new AlertBox().display("精确匹配结果数量： " + c.resultArray.size());
+
+            }
+        }
+        private void methodFlush(){
+
+            synchronized (c.resultArray){
+
+            c.application.ObservableListInit(c.resultArray);
+            c.resultTable.setItems(c.application.gettData());
+
+            c.authorColumn.setCellValueFactory(cellData -> cellData.getValue().authorProperty());
+            c.titleColumn.setCellValueFactory(cellData -> cellData.getValue().titleProperty());
+            c.contextColumn.setCellValueFactory(cellData -> cellData.getValue().contextProperty());
+            new AlertBox().display("精确匹配结果数量： " + c.resultArray.size());
+            }
+        }
+
+        @Override
+        public void run() {
+            try {
+                long start = System.currentTimeMillis();
+                method(input);
+                logger.info("执行开始时间差"+(System.currentTimeMillis()-start) + "ms");
+
+
+            } catch (myException e) {
+                logger.error(e.getMessage());
+            }
+            methodFlush();
+
+        }
+    }
+
 
 
     public static void main(String[] args) {

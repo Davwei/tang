@@ -1,6 +1,5 @@
 package com.Davi.poems.tools;
 
-
 import com.Davi.poems.basic.wordClass;
 import org.apache.log4j.Logger;
 import org.w3c.dom.Document;
@@ -16,19 +15,19 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 /**
- * Created by David on 2017/3/20.
+ * Created by David on 2017/4/16.
  */
-public class pzSource {
-    Logger logger = Logger.getLogger(pzSource.class);
-    //private String PATH="A:/ssdworkspace/tangUI/src/com/Davi/poems/source/pingze.xml";
-    //private String PATH="src/main/resources/pingze.xml";
-    private ArrayList<wordClass> wordClassArrayList;
-    public pzSource(){
-        String path = this.getClass().getResource("/pingze.xml").toString();
-        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+public class wordCountSource {
 
+    Logger logger = Logger.getLogger(wordCountSource.class);
+
+    private ArrayList<wordClass> wordClassArrayList;
+
+    public wordCountSource(){
         long start = System.currentTimeMillis();
-        DocumentBuilder db = null;
+        DocumentBuilder db;
+        String path = this.getClass().getResource("/wordCountList.xml").toString();
+        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
         try {
             db = dbf.newDocumentBuilder();
             Document doc = db.parse(path);
@@ -42,16 +41,11 @@ public class pzSource {
                 String word;
                 word = node.getFirstChild().getNodeValue();
                 wc.setWord(word);
-
                 for (int j = 0; j < children.getLength(); j++) {
 
-                    if (children.item(j).getNodeType() == Node.ELEMENT_NODE){
-                        if (children.item(j).getNodeName().equals("上平去入")){
-                            wc.setPingZe(Integer.valueOf(children.item(j).getFirstChild().getNodeValue()));
-                            //System.out.println(children.item(j).getFirstChild().getNodeValue());
-                        }
-                        if (children.item(j).getNodeName().equals("韵部")){
-                            wc.setYunbu(Integer.valueOf(children.item(j).getFirstChild().getNodeValue()));
+                    if (children.item(j).getNodeType() == Node.ELEMENT_NODE) {
+                        if (children.item(j).getNodeName().equals("出现次数")) {
+                            wc.setCount(Integer.valueOf(children.item(j).getFirstChild().getNodeValue()));
                             //System.out.println(children.item(j).getFirstChild().getNodeValue());
                         }
 
@@ -61,7 +55,6 @@ public class pzSource {
                 wordClassArrayList.add(wc);
 
             }
-
 
 
         } catch (ParserConfigurationException e) {
@@ -75,22 +68,17 @@ public class pzSource {
         logger.info("用时 "+ (end - start)+"ms");
 
     }
-    public ArrayList<wordClass> getWordClassArrayList(){
-        return this.wordClassArrayList;
-    }
 
-    public static void main(String[] args) {
-        pzSource pz = new pzSource();
-        Iterator<wordClass> iterator = pz.getWordClassArrayList().iterator();
+
+    public ArrayList<wordClass> getWordClassArrayList() {
+        return wordClassArrayList;
+    }
+    public int getCountSum(){
+        int countSum = 0;
+        Iterator<wordClass> iterator = getWordClassArrayList().iterator();
         while (iterator.hasNext()){
-            wordClass word = iterator.next();
-            if (word.getWord().equals("光")){
-                System.out.println("matched!!");
-                System.out.println(word.getWord());
-                System.out.println(word.getPingZe());
-                System.out.println(word.getYunbu());
-                break;
-            }
+            countSum = countSum + iterator.next().getCount();
         }
+        return countSum;
     }
 }

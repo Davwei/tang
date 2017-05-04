@@ -47,7 +47,7 @@ public class threadPool {
                 result = az.PMatch(input);
                 status = "FINISH";
             } catch (myException e) {
-                new AlertBox().display("错误","",e.getMessage());
+                new AlertBox().display(e.getMessage());
             }
 
         }
@@ -62,6 +62,7 @@ public class threadPool {
         ArrayList<tangClass> result = new ArrayList<>();
         analyze az = new analyze();
         String input ;
+
         public isSearchThread(String input){
             this.input = input;
         }
@@ -69,6 +70,7 @@ public class threadPool {
         public void run() {
             try {
                 result = az.match(input);
+
             } catch (myException e) {
                 e.printStackTrace();
             }

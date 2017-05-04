@@ -33,7 +33,7 @@ import static com.Davi.poems.basic.operation.possibleSearch;
 public class netServer {
     Logger log = Logger.getLogger(netServer.class);
     String jetty_home = "tang";
-    String host = "127.0.0.1";
+    //String host = "127.0.0.1";
     Server server;
     handler handler1 = new handler();
     public netServer(String p){
@@ -59,11 +59,12 @@ public class netServer {
                 }
             }
         }*/
-        int port = Integer.valueOf(p);
+        String[] args = p.split(":");
+        int port = Integer.valueOf(args[1]);
 
         server = new Server();
         Connector connector = new SelectChannelConnector();
-        connector.setHost(host);
+        connector.setHost(args[0]);
         connector.setPort(port);
         server.addConnector(connector);
 
@@ -128,10 +129,10 @@ public class netServer {
         }
     }
     //ssl内容
-    private static class SocketConnector extends SslSocketConnector {
+    private static class socketConnector extends SslSocketConnector {
         private final List<String> excludedProtocols;
 
-        SocketConnector(List<String> excludedProtocols) {
+        socketConnector(List<String> excludedProtocols) {
             this.excludedProtocols = excludedProtocols;
         }
 

@@ -2,6 +2,7 @@ package com.Davi.poems.tools;
 
 
 import com.Davi.poems.basic.tangClass;
+import org.apache.log4j.Logger;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -18,10 +19,14 @@ import java.util.Iterator;
  * Created by David on 2017/3/7.
  */
 public class tangSource {
+
+    Logger logger = Logger.getLogger(tangSource.class);
     private ArrayList<tangClass> tangClassArrayList;
     //private final String PATH = "A:/ssdworkspace/tangUI/src/com/Davi/poems/source/fullshici.xml";
     //private final String PATH = "src/main/resources/fullshici.xml";
     public tangSource(){
+
+        long start = System.currentTimeMillis();
         String path = this.getClass().getResource("/fullshici.xml").toString();
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 
@@ -69,6 +74,8 @@ public class tangSource {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        long end = System.currentTimeMillis();
+        logger.info("用时 "+ (end - start)+"ms");
     }
 
     /**

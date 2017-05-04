@@ -35,8 +35,7 @@
                 </Menu>
                 <Menu mnemonicParsing="false" text="帮助">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="关于" />
-                        <MenuItem mnemonicParsing="false" text="Readme" />
+                        <MenuItem mnemonicParsing="false" onAction="#readMe" text="Readme" />
                     </items>
                 </Menu>
             </menus>
@@ -61,11 +60,14 @@
         <Pane fx:id="searchPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
             <children>
                 <TextField fx:id="getPairFieldArea" layoutX="15.0" layoutY="56.0" prefHeight="23.0" prefWidth="171.0" />
-                <Label alignment="CENTER" layoutY="14.0" prefHeight="27.0" prefWidth="200.0" text="生成对偶句(测试)" textFill="#ff2f06" />
-                <Button layoutX="109.0" layoutY="271.0" mnemonicParsing="false" onAction="#toClearGetPairsFieldArea" prefHeight="40.0" prefWidth="77.0" text="清空" />
-                <Label layoutX="7.0" layoutY="98.0" prefHeight="103.0" prefWidth="187.0" wrapText="true" />
-                <Label layoutX="7.0" layoutY="194.0" prefHeight="33.0" prefWidth="183.0" wrapText="true" />
-                <Button layoutX="15.0" layoutY="271.0" mnemonicParsing="false" onAction="#getPairs" prefHeight="41.0" prefWidth="78.0" text="对偶生成" />
+                <Label alignment="CENTER" layoutY="14.0" prefHeight="27.0" prefWidth="200.0" text="生成对偶句" textFill="#ff2f06" />
+                <Button layoutX="14.0" layoutY="275.0" mnemonicParsing="false" onAction="#toClearGetPairsFieldArea" prefHeight="26.0" prefWidth="170.0" text="清空" />
+                <Button layoutX="15.0" layoutY="126.0" mnemonicParsing="false" onAction="#getPairsNormal" prefHeight="28.0" prefWidth="168.0" text="Normal对偶生成" />
+            <Button layoutX="14.0" layoutY="165.0" mnemonicParsing="false" onAction="#getPairsNLP" prefHeight="23.0" prefWidth="169.0" text="NLP对偶生成" />
+            <Button layoutX="15.0" layoutY="199.0" mnemonicParsing="false" onAction="#getPairsNShort" prefHeight="23.0" prefWidth="168.0" text="NShort对偶生成" />
+            <Button layoutX="14.0" layoutY="233.0" mnemonicParsing="false" onAction="#getPairsDijstra" prefHeight="27.0" prefWidth="170.0" text="DijstarShort生成" />
+            <TextField fx:id="numberArea" layoutX="127.0" layoutY="90.0" prefHeight="26.0" prefWidth="58.0" />
+            <Label layoutX="15.0" layoutY="88.0" prefHeight="28.0" prefWidth="104.0" text="数量(建议 &lt;10)" />
             </children></Pane>
     </left>
 </BorderPane>

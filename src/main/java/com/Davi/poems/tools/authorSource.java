@@ -2,6 +2,7 @@ package com.Davi.poems.tools;
 
 
 import com.Davi.poems.basic.author;
+import org.apache.log4j.Logger;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -18,12 +19,13 @@ import java.util.Iterator;
  * Created by David on 2017/3/3.
  */
 public class authorSource {
+    Logger logger = Logger.getLogger(authorSource.class);
 
     private ArrayList<author> authorArrayList;
     //private final String PATH = "A:/ssdworkspace/tangUI/src/com/Davi/poems/source/authors.xml";
     //private final String PATH = "src/main/resources/authors.xml";
     public authorSource(){
-
+        long start = System.currentTimeMillis();
         String path = this.getClass().getResource("/authors.xml").toString();
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
         try{
@@ -67,6 +69,8 @@ public class authorSource {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        long end = System.currentTimeMillis();
+        logger.info("用时 "+ (end - start)+"ms");
     }
     public  ArrayList<author> getAtc(){
         return this.authorArrayList;
