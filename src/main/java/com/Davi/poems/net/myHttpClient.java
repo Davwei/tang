@@ -21,7 +21,7 @@ import java.net.URLEncoder;
  *
  */
 public class myHttpClient {
-    public String clientPort = "http://192.168.168.102:8888";
+    public String clientPort = "http://192.168.2.224:8888";
     public myHttpClient() throws UnsupportedEncodingException {
         Logger logger = Logger.getLogger(myHttpClient.class);
         CloseableHttpClient httpclient = HttpClients.createDefault();
@@ -35,7 +35,7 @@ public class myHttpClient {
 
         request.addHeader("OPERATION","isSearch");
 
-        request.addHeader("INPUT", URLEncoder.encode("床前***", "UTF-8"));
+        request.addHeader("INPUT", URLEncoder.encode("李白|杜甫&桃花*****", "UTF-8"));
 
 
         logger.info(request.getHeaders("INPUT")[0]);
@@ -49,6 +49,7 @@ public class myHttpClient {
 
             logger.info(e.toString());
             int status = response.getStatusLine().getStatusCode();
+
             logger.info("返回 "+status);
             System.out.println(status);
             httpclient.close();

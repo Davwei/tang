@@ -4822,3 +4822,3498 @@
 
 
 2017-05-01 23:56:12,256INFO[com.Davi.poems.net.myHttpClient]-返回 200
+
+
+2017-05-08 22:46:20,980INFO[com.Davi.poems.tools.wordSource]-用时 337ms
+
+
+2017-05-08 22:46:21,056INFO[com.Davi.poems.tools.pzSource]-用时 74ms
+
+
+2017-05-08 22:46:21,106INFO[com.Davi.poems.tools.kindSource]-用时 49ms
+
+
+2017-05-08 22:46:21,131INFO[com.Davi.poems.tools.authorSource]-用时 24ms
+
+
+2017-05-08 22:46:22,153INFO[com.Davi.poems.tools.tangSource]-用时 1021ms
+
+
+2017-05-08 22:46:22,180INFO[com.Davi.poems.tools.wordCountSource]-用时 26ms
+
+
+2017-05-11 21:39:54,199INFO[com.Davi.poems.tools.wordSource]-用时 266ms
+
+
+2017-05-11 21:39:54,246INFO[com.Davi.poems.tools.pzSource]-用时 45ms
+
+
+2017-05-11 21:39:54,288INFO[com.Davi.poems.tools.kindSource]-用时 41ms
+
+
+2017-05-11 21:39:54,321INFO[com.Davi.poems.tools.authorSource]-用时 32ms
+
+
+2017-05-11 21:39:55,309INFO[com.Davi.poems.tools.tangSource]-用时 984ms
+
+
+2017-05-11 21:39:55,340INFO[com.Davi.poems.tools.wordCountSource]-用时 28ms
+
+
+2017-05-11 21:40:01,922INFO[com.Davi.poems.tools.wordSource]-用时 34ms
+
+
+2017-05-11 21:40:01,947INFO[com.Davi.poems.tools.pzSource]-用时 25ms
+
+
+2017-05-11 21:40:01,960INFO[com.Davi.poems.tools.kindSource]-用时 13ms
+
+
+2017-05-11 21:40:01,971INFO[com.Davi.poems.tools.authorSource]-用时 11ms
+
+
+2017-05-11 21:40:02,554INFO[com.Davi.poems.tools.tangSource]-用时 582ms
+
+
+2017-05-11 21:40:02,593INFO[com.Davi.poems.tools.wordCountSource]-用时 39ms
+
+
+2017-05-11 22:05:26,677INFO[com.Davi.poems.gui.Controller]-输入字符串 杜甫&****汉
+
+
+2017-05-11 22:05:26,752INFO[com.Davi.poems.gui.Controller]-执行开始时间差74ms
+
+
+2017-05-11 22:05:26,752INFO[com.Davi.poems.gui.Controller]-point is 0
+
+
+2017-05-11 22:05:26,752INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 20
+
+
+2017-05-11 22:05:26,752INFO[com.Davi.poems.gui.Controller]-执行开始时间差74ms
+
+
+2017-05-11 22:05:43,173INFO[com.Davi.poems.gui.Controller]-生成文件:诗词结果.txt 文件路径:A:\Users\David\Desktop\诗词结果.txt
+
+
+2017-05-11 22:08:03,660INFO[com.Davi.poems.gui.Controller]-输入字符串 李白|王维&***风*
+
+
+2017-05-11 22:08:03,722INFO[com.Davi.poems.gui.Controller]-执行开始时间差62ms
+
+
+2017-05-11 22:08:03,722INFO[com.Davi.poems.gui.Controller]-point is 1
+
+
+2017-05-11 22:08:03,722INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 96
+
+
+2017-05-11 22:08:03,722INFO[com.Davi.poems.gui.Controller]-执行开始时间差62ms
+
+
+2017-05-11 22:09:46,692INFO[com.Davi.poems.gui.Controller]-输入字符串 [青白]****
+
+
+2017-05-11 22:09:47,399INFO[com.Davi.poems.gui.Controller]-执行开始时间差707ms
+
+
+2017-05-11 22:09:47,400INFO[com.Davi.poems.gui.Controller]-point is 2
+
+
+2017-05-11 22:09:47,400INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 2449
+
+
+2017-05-11 22:09:47,400INFO[com.Davi.poems.gui.Controller]-执行开始时间差708ms
+
+
+2017-05-11 22:10:04,355INFO[com.Davi.poems.gui.Controller]-输入字符串 [青白]******
+
+
+2017-05-11 22:10:04,756INFO[com.Davi.poems.gui.Controller]-执行开始时间差400ms
+
+
+2017-05-11 22:10:04,757INFO[com.Davi.poems.gui.Controller]-point is 3
+
+
+2017-05-11 22:10:04,757INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 1921
+
+
+2017-05-11 22:10:04,757INFO[com.Davi.poems.gui.Controller]-执行开始时间差401ms
+
+
+2017-05-11 22:10:29,915INFO[com.Davi.poems.gui.Controller]-输入字符串 [水火]******
+
+
+2017-05-11 22:10:30,319INFO[com.Davi.poems.gui.Controller]-执行开始时间差404ms
+
+
+2017-05-11 22:10:30,319INFO[com.Davi.poems.gui.Controller]-point is 4
+
+
+2017-05-11 22:10:30,319INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 899
+
+
+2017-05-11 22:10:30,319INFO[com.Davi.poems.gui.Controller]-执行开始时间差404ms
+
+
+2017-05-11 22:11:53,570INFO[com.Davi.poems.gui.Controller]-输入字符串 *（hong）***（ping）*
+
+
+2017-05-11 22:12:09,655INFO[com.Davi.poems.gui.Controller]-执行开始时间差16085ms
+
+
+2017-05-11 22:12:09,655INFO[com.Davi.poems.gui.Controller]-point is 5
+
+
+2017-05-11 22:12:09,655INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 6
+
+
+2017-05-11 22:12:09,655INFO[com.Davi.poems.gui.Controller]-执行开始时间差16085ms
+
+
+2017-05-11 22:14:37,665INFO[com.Davi.poems.gui.Controller]-输入字符串 ppzzpzz
+
+
+2017-05-11 22:14:52,818INFO[com.Davi.poems.gui.Controller]-执行开始时间差15153ms
+
+
+2017-05-11 22:14:52,818INFO[com.Davi.poems.gui.Controller]-point is 6
+
+
+2017-05-11 22:14:52,818INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 386
+
+
+2017-05-11 22:14:52,818INFO[com.Davi.poems.gui.Controller]-执行开始时间差15153ms
+
+
+2017-05-11 22:15:55,777INFO[com.Davi.poems.gui.Controller]-输入字符串 王大伟&****a
+
+
+2017-05-11 22:15:55,777ERROR[com.Davi.poems.tools.analyze]-输入作者有误或者未收录
+
+
+2017-05-11 22:15:55,777ERROR[com.Davi.poems.gui.Controller]-输入作者有误或者未收录
+
+
+2017-05-11 22:16:02,168INFO[com.Davi.poems.gui.Controller]-输入字符串 王大伟
+
+
+2017-05-11 22:16:02,356INFO[com.Davi.poems.gui.Controller]-执行开始时间差188ms
+
+
+2017-05-11 22:16:02,356INFO[com.Davi.poems.gui.Controller]-point is 7
+
+
+2017-05-11 22:16:02,356INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 0
+
+
+2017-05-11 22:16:02,356INFO[com.Davi.poems.gui.Controller]-执行开始时间差188ms
+
+
+2017-05-11 22:16:07,192INFO[com.Davi.poems.gui.Controller]-输入字符串 王大伟
+
+
+2017-05-11 22:16:07,369INFO[com.Davi.poems.gui.Controller]-执行开始时间差177ms
+
+
+2017-05-11 22:16:07,370INFO[com.Davi.poems.gui.Controller]-point is 8
+
+
+2017-05-11 22:16:07,370INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 0
+
+
+2017-05-11 22:16:07,370INFO[com.Davi.poems.gui.Controller]-执行开始时间差178ms
+
+
+2017-05-11 22:16:15,465INFO[com.Davi.poems.gui.Controller]-输入字符串 王大伟&*****
+
+
+2017-05-11 22:16:15,465ERROR[com.Davi.poems.tools.analyze]-输入作者有误或者未收录
+
+
+2017-05-11 22:16:15,465ERROR[com.Davi.poems.gui.Controller]-输入作者有误或者未收录
+
+
+2017-05-11 22:16:28,025INFO[com.Davi.poems.gui.Controller]-输入字符串 A&*****
+
+
+2017-05-11 22:16:28,025ERROR[com.Davi.poems.tools.analyze]-输入作者有误或者未收录
+
+
+2017-05-11 22:16:28,025ERROR[com.Davi.poems.gui.Controller]-输入作者有误或者未收录
+
+
+2017-05-11 22:16:48,336INFO[com.Davi.poems.gui.Controller]-输入字符串 ****a
+
+
+2017-05-11 22:16:48,750INFO[com.Davi.poems.gui.Controller]-执行开始时间差413ms
+
+
+2017-05-11 22:16:48,750INFO[com.Davi.poems.gui.Controller]-point is 0
+
+
+2017-05-11 22:16:48,750INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 2583
+
+
+2017-05-11 22:16:48,750INFO[com.Davi.poems.gui.Controller]-执行开始时间差413ms
+
+
+2017-05-11 22:16:53,152INFO[com.Davi.poems.gui.Controller]-输入字符串 ******a
+
+
+2017-05-11 22:16:53,457INFO[com.Davi.poems.gui.Controller]-执行开始时间差305ms
+
+
+2017-05-11 22:16:53,457INFO[com.Davi.poems.gui.Controller]-point is 1
+
+
+2017-05-11 22:16:53,457INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 2151
+
+
+2017-05-11 22:16:53,457INFO[com.Davi.poems.gui.Controller]-执行开始时间差305ms
+
+
+2017-05-11 22:17:01,920INFO[com.Davi.poems.gui.Controller]-输入字符串 **a****
+
+
+2017-05-11 22:17:02,247INFO[com.Davi.poems.gui.Controller]-执行开始时间差326ms
+
+
+2017-05-11 22:17:02,247INFO[com.Davi.poems.gui.Controller]-point is 2
+
+
+2017-05-11 22:17:02,247INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 194
+
+
+2017-05-11 22:17:02,247INFO[com.Davi.poems.gui.Controller]-执行开始时间差326ms
+
+
+2017-05-11 22:17:12,313INFO[com.Davi.poems.gui.Controller]-输入字符串 **a**
+
+
+2017-05-11 22:17:12,707INFO[com.Davi.poems.gui.Controller]-执行开始时间差394ms
+
+
+2017-05-11 22:17:12,707INFO[com.Davi.poems.gui.Controller]-point is 3
+
+
+2017-05-11 22:17:12,707INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 337
+
+
+2017-05-11 22:17:12,707INFO[com.Davi.poems.gui.Controller]-执行开始时间差394ms
+
+
+2017-05-11 22:17:42,184INFO[com.Davi.poems.gui.Controller]-输入字符串 白居易&**a**
+
+
+2017-05-11 22:17:42,213INFO[com.Davi.poems.gui.Controller]-执行开始时间差29ms
+
+
+2017-05-11 22:17:42,213INFO[com.Davi.poems.gui.Controller]-point is 4
+
+
+2017-05-11 22:17:42,213INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 11
+
+
+2017-05-11 22:17:42,213INFO[com.Davi.poems.gui.Controller]-执行开始时间差29ms
+
+
+2017-05-11 22:23:21,766INFO[com.Davi.poems.gui.Controller]-模糊匹配结果数量： 0
+
+
+2017-05-11 22:23:26,920INFO[com.Davi.poems.gui.Controller]-模糊匹配结果数量： 0
+
+
+2017-05-11 22:23:29,965INFO[com.Davi.poems.gui.Controller]-模糊匹配结果数量： 173
+
+
+2017-05-11 22:23:44,254INFO[com.Davi.poems.gui.Controller]-模糊匹配结果数量： 2
+
+
+2017-05-11 22:24:04,840INFO[com.Davi.poems.gui.Controller]-模糊匹配结果数量： 7
+
+
+2017-05-11 22:24:50,110INFO[com.Davi.poems.gui.Controller]-模糊匹配结果数量： 4
+
+
+2017-05-11 22:28:10,166INFO[com.Davi.poems.gui.Controller]-模糊匹配结果数量： 4
+
+
+2017-05-11 22:28:36,094INFO[com.Davi.poems.gui.Controller]-模糊匹配结果数量： 9000
+
+
+2017-05-11 22:29:27,969INFO[com.Davi.poems.gui.Controller]-模糊匹配结果数量： 70
+
+
+2017-05-11 22:36:42,886INFO[com.Davi.poems.tools.wordSource]-用时 307ms
+
+
+2017-05-11 22:36:42,969INFO[com.Davi.poems.tools.pzSource]-用时 80ms
+
+
+2017-05-11 22:36:43,017INFO[com.Davi.poems.tools.kindSource]-用时 46ms
+
+
+2017-05-11 22:36:43,039INFO[com.Davi.poems.tools.authorSource]-用时 21ms
+
+
+2017-05-11 22:36:44,217INFO[com.Davi.poems.tools.tangSource]-用时 1177ms
+
+
+2017-05-11 22:36:44,245INFO[com.Davi.poems.tools.wordCountSource]-用时 27ms
+
+
+2017-05-11 22:36:47,359INFO[com.Davi.poems.tools.wordSource]-用时 34ms
+
+
+2017-05-11 22:36:47,409INFO[com.Davi.poems.tools.pzSource]-用时 50ms
+
+
+2017-05-11 22:36:47,422INFO[com.Davi.poems.tools.kindSource]-用时 13ms
+
+
+2017-05-11 22:36:47,430INFO[com.Davi.poems.tools.authorSource]-用时 8ms
+
+
+2017-05-11 22:36:48,051INFO[com.Davi.poems.tools.tangSource]-用时 621ms
+
+
+2017-05-11 22:36:48,069INFO[com.Davi.poems.tools.wordCountSource]-用时 18ms
+
+
+2017-05-11 22:37:12,520INFO[com.Davi.poems.gui.Controller]-模糊匹配结果数量： 0
+
+
+2017-05-11 22:37:20,658ERROR[com.Davi.poems.tools.analyze]-输入作者有误或者未收录
+
+
+2017-05-11 22:39:38,404INFO[com.Davi.poems.gui.Controller]-模糊匹配结果数量： 3
+
+
+2017-05-11 23:17:48,447INFO[com.Davi.poems.gui.Controller]-模糊匹配结果数量： 0
+
+
+2017-05-11 23:19:40,329INFO[com.Davi.poems.gui.Controller]-模糊匹配结果数量： 354
+
+
+2017-05-11 23:35:22,131INFO[com.Davi.poems.gui.Controller]-模糊匹配结果数量： 14118
+
+
+2017-05-11 23:35:35,530INFO[com.Davi.poems.gui.Controller]-模糊匹配结果数量： 14118
+
+
+2017-05-11 23:36:08,333INFO[com.Davi.poems.gui.Controller]-模糊匹配结果数量： 11385
+
+
+2017-05-12 07:53:57,622INFO[com.Davi.poems.tools.wordSource]-用时 331ms
+
+
+2017-05-12 07:53:57,703INFO[com.Davi.poems.tools.pzSource]-用时 77ms
+
+
+2017-05-12 07:53:57,787INFO[com.Davi.poems.tools.kindSource]-用时 83ms
+
+
+2017-05-12 07:53:57,807INFO[com.Davi.poems.tools.authorSource]-用时 18ms
+
+
+2017-05-12 07:53:58,589INFO[com.Davi.poems.tools.tangSource]-用时 780ms
+
+
+2017-05-12 07:53:58,611INFO[com.Davi.poems.tools.wordCountSource]-用时 21ms
+
+
+2017-05-12 07:54:03,021INFO[com.Davi.poems.tools.wordSource]-用时 58ms
+
+
+2017-05-12 07:54:03,065INFO[com.Davi.poems.tools.pzSource]-用时 43ms
+
+
+2017-05-12 07:54:03,076INFO[com.Davi.poems.tools.kindSource]-用时 11ms
+
+
+2017-05-12 07:54:03,084INFO[com.Davi.poems.tools.authorSource]-用时 7ms
+
+
+2017-05-12 07:54:03,867INFO[com.Davi.poems.tools.tangSource]-用时 783ms
+
+
+2017-05-12 07:54:03,885INFO[com.Davi.poems.tools.wordCountSource]-用时 18ms
+
+
+2017-05-12 07:55:07,520INFO[com.Davi.poems.gui.Controller]-对偶匹配结果数量： 69
+
+
+2017-05-12 07:56:40,530INFO[com.Davi.poems.gui.Controller]-对偶匹配结果数量： 0
+
+
+2017-05-12 07:57:37,211INFO[com.Davi.poems.tools.wordSource]-用时 49ms
+
+
+2017-05-12 07:57:37,229INFO[com.Davi.poems.tools.pzSource]-用时 18ms
+
+
+2017-05-12 07:57:37,237INFO[com.Davi.poems.tools.kindSource]-用时 8ms
+
+
+2017-05-12 07:57:37,244INFO[com.Davi.poems.tools.authorSource]-用时 7ms
+
+
+2017-05-12 07:57:37,543INFO[com.Davi.poems.tools.tangSource]-用时 299ms
+
+
+2017-05-12 07:57:37,559INFO[com.Davi.poems.tools.wordCountSource]-用时 16ms
+
+
+2017-05-12 07:57:47,878INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 74ms
+
+
+2017-05-12 07:57:48,099INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 221ms
+
+
+2017-05-12 07:57:48,166INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 67ms
+
+
+2017-05-12 07:57:48,208INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 42ms
+
+
+2017-05-12 07:57:48,339INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 131ms
+
+
+2017-05-12 08:01:07,883INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 23ms
+
+
+2017-05-12 08:01:07,907INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 24ms
+
+
+2017-05-12 08:01:07,924INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 17ms
+
+
+2017-05-12 08:01:07,936INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 12ms
+
+
+2017-05-12 08:01:07,944INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 8ms
+
+
+2017-05-12 08:05:03,709INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 564ms
+
+
+2017-05-12 08:05:05,508INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 1799ms
+
+
+2017-05-12 08:05:06,162INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 654ms
+
+
+2017-05-12 08:05:06,349INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 187ms
+
+
+2017-05-12 08:05:06,460INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 111ms
+
+
+2017-05-12 08:06:14,461INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 43ms
+
+
+2017-05-12 08:06:14,496INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 34ms
+
+
+2017-05-12 08:06:14,622INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 126ms
+
+
+2017-05-12 08:06:14,741INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 119ms
+
+
+2017-05-12 08:06:14,814INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 73ms
+
+
+2017-05-12 08:07:31,568INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 438ms
+
+
+2017-05-12 08:07:31,585INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 17ms
+
+
+2017-05-12 08:07:31,680INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 95ms
+
+
+2017-05-12 08:07:31,874INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 194ms
+
+
+2017-05-12 08:07:32,019INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 145ms
+
+
+2017-05-12 08:10:27,152INFO[com.Davi.poems.tools.analyze]-NshrotSegment生成对偶句所用时间 Time 62ms
+
+
+2017-05-12 08:10:27,247INFO[com.Davi.poems.tools.analyze]-NshrotSegment生成对偶句所用时间 Time 94ms
+
+
+2017-05-12 08:10:27,294INFO[com.Davi.poems.tools.analyze]-NshrotSegment生成对偶句所用时间 Time 46ms
+
+
+2017-05-12 08:10:27,410INFO[com.Davi.poems.tools.analyze]-NshrotSegment生成对偶句所用时间 Time 115ms
+
+
+2017-05-12 08:10:27,490INFO[com.Davi.poems.tools.analyze]-NshrotSegment生成对偶句所用时间 Time 80ms
+
+
+2017-05-12 08:12:10,300INFO[com.Davi.poems.tools.analyze]-DjistraShrotSegment生成对偶句所用时间 Time 109ms
+
+
+2017-05-12 08:12:10,317INFO[com.Davi.poems.tools.analyze]-DjistraShrotSegment生成对偶句所用时间 Time 17ms
+
+
+2017-05-12 08:12:10,334INFO[com.Davi.poems.tools.analyze]-DjistraShrotSegment生成对偶句所用时间 Time 17ms
+
+
+2017-05-12 08:12:10,568INFO[com.Davi.poems.tools.analyze]-DjistraShrotSegment生成对偶句所用时间 Time 234ms
+
+
+2017-05-12 08:12:10,614INFO[com.Davi.poems.tools.analyze]-DjistraShrotSegment生成对偶句所用时间 Time 46ms
+
+
+2017-05-12 08:14:55,084INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 126ms
+
+
+2017-05-12 08:14:55,375INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 291ms
+
+
+2017-05-12 08:14:55,512INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 137ms
+
+
+2017-05-12 08:14:55,722INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 210ms
+
+
+2017-05-12 08:14:56,128INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 406ms
+
+
+2017-05-12 08:14:59,722INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 69ms
+
+
+2017-05-12 08:14:59,805INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 83ms
+
+
+2017-05-12 08:14:59,932INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 127ms
+
+
+2017-05-12 08:15:00,313INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 381ms
+
+
+2017-05-12 08:15:00,830INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 517ms
+
+
+2017-05-12 08:15:09,180INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 38ms
+
+
+2017-05-12 08:15:09,236INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 56ms
+
+
+2017-05-12 08:15:09,772INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 536ms
+
+
+2017-05-12 08:15:10,070INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 298ms
+
+
+2017-05-12 08:15:10,219INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 149ms
+
+
+2017-05-12 08:15:14,459INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 373ms
+
+
+2017-05-12 08:15:14,895INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 436ms
+
+
+2017-05-12 08:15:14,953INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 58ms
+
+
+2017-05-12 08:15:15,198INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 245ms
+
+
+2017-05-12 08:15:15,379INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 181ms
+
+
+2017-05-12 08:18:36,660INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 77ms
+
+
+2017-05-12 08:18:36,718INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 58ms
+
+
+2017-05-12 08:18:36,977INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 259ms
+
+
+2017-05-12 08:18:37,377INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 400ms
+
+
+2017-05-12 08:18:37,819INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 442ms
+
+
+2017-05-12 08:20:22,592INFO[com.Davi.poems.tools.analyze]-NshrotSegment生成对偶句所用时间 Time 42ms
+
+
+2017-05-12 08:20:22,650INFO[com.Davi.poems.tools.analyze]-NshrotSegment生成对偶句所用时间 Time 58ms
+
+
+2017-05-12 08:20:22,822INFO[com.Davi.poems.tools.analyze]-NshrotSegment生成对偶句所用时间 Time 172ms
+
+
+2017-05-12 08:20:22,986INFO[com.Davi.poems.tools.analyze]-NshrotSegment生成对偶句所用时间 Time 163ms
+
+
+2017-05-12 08:20:23,114INFO[com.Davi.poems.tools.analyze]-NshrotSegment生成对偶句所用时间 Time 127ms
+
+
+2017-05-12 08:22:06,456INFO[com.Davi.poems.tools.analyze]-DjistraShrotSegment生成对偶句所用时间 Time 125ms
+
+
+2017-05-12 08:22:06,558INFO[com.Davi.poems.tools.analyze]-DjistraShrotSegment生成对偶句所用时间 Time 102ms
+
+
+2017-05-12 08:22:06,740INFO[com.Davi.poems.tools.analyze]-DjistraShrotSegment生成对偶句所用时间 Time 182ms
+
+
+2017-05-12 08:22:06,886INFO[com.Davi.poems.tools.analyze]-DjistraShrotSegment生成对偶句所用时间 Time 145ms
+
+
+2017-05-12 08:22:06,912INFO[com.Davi.poems.tools.analyze]-DjistraShrotSegment生成对偶句所用时间 Time 26ms
+
+
+2017-05-12 09:13:09,957INFO[com.Davi.poems.net.myHttpClient]-INPUT: %E6%9D%8E%E7%99%BD%7C%E6%9D%9C%E7%94%AB%26%E6%A1%83%E8%8A%B1*****
+
+
+2017-05-12 09:14:00,991INFO[com.Davi.poems.net.myHttpClient]-INPUT: %E6%9D%8E%E7%99%BD%7C%E6%9D%9C%E7%94%AB%26%E6%A1%83%E8%8A%B1*****
+
+
+2017-05-12 09:14:03,120INFO[com.Davi.poems.net.myHttpClient]-
+这首诗的题目是赠汪伦（白游泾县桃花潭，村人汪伦常酝美酒以待白）
+这首诗的作者是李白
+这首诗的内容是： 李白乘舟将欲行，忽闻岸上踏歌声。桃花潭水深千尺，不及汪伦送我情。
+对偶句是：null
+ 权重是0
+
+这首诗的题目是山中问答
+这首诗的作者是李白
+这首诗的内容是： 问余何意栖碧山，笑而不答心自闲。桃花流水窅然去，别有天地非人间。
+对偶句是：null
+ 权重是0
+
+这首诗的题目是东鲁门泛舟二首
+这首诗的作者是李白
+这首诗的内容是： 日落沙明天倒开，波摇石动水萦回。轻舟泛月寻溪转，疑是山阴雪后来。水作青龙盘石堤，桃花夹岸鲁门西。若教月下乘舟去，何啻风流到剡溪。
+对偶句是：null
+ 权重是0
+
+这首诗的题目是曲江对酒
+这首诗的作者是杜甫
+这首诗的内容是： 苑外江头坐不归，水精春殿转霏微。桃花细逐杨花落，黄鸟时兼白鸟飞。纵饮久判人共弃，懒朝真与世相违。吏情更觉沧洲远，老大悲伤未拂衣。
+对偶句是：null
+ 权重是0
+
+这首诗的题目是江畔独步寻花七绝句
+这首诗的作者是杜甫
+这首诗的内容是： 江上被花恼不彻，无处告诉只颠狂。走觅南邻爱酒伴，经旬出饮独空床。稠花乱蕊畏江滨，行步欹危实怕春。诗酒尚堪驱使在，未须料理白头人。江深竹静两三家，多事红花映白花。报答春光知有处，应须美酒送生涯。东望少城花满烟，百花高楼更可怜。谁能载酒开金盏，唤取佳人舞绣筵。黄师塔前江水东，春光懒困倚微风。桃花一簇开无主，可爱深红爱浅红。黄四娘家花满蹊，千朵万朵压枝低。留连戏蝶时时舞，自在娇莺恰恰啼。不是爱花即肯死，只恐花尽老相催。繁枝容易纷纷落，嫩叶商量细细开。
+对偶句是：null
+ 权重是0
+
+这首诗的题目是昼梦
+这首诗的作者是杜甫
+这首诗的内容是： 二月饶睡昏昏然，不独夜短昼分眠。桃花气暖眼自醉，春渚日落梦相牵。故乡门巷荆棘底，中原君臣豺虎边。安得务农息战斗，普天无吏横索钱。
+对偶句是：null
+ 权重是0
+
+
+
+2017-05-12 09:14:03,121INFO[com.Davi.poems.net.myHttpClient]-返回 200
+
+
+2017-05-12 19:08:34,610INFO[com.Davi.poems.tools.wordSource]-用时 400ms
+
+
+2017-05-12 19:08:34,779INFO[com.Davi.poems.tools.pzSource]-用时 159ms
+
+
+2017-05-12 19:08:34,840INFO[com.Davi.poems.tools.kindSource]-用时 60ms
+
+
+2017-05-12 19:08:34,859INFO[com.Davi.poems.tools.authorSource]-用时 18ms
+
+
+2017-05-12 19:08:35,799INFO[com.Davi.poems.tools.tangSource]-用时 938ms
+
+
+2017-05-12 19:08:35,824INFO[com.Davi.poems.tools.wordCountSource]-用时 24ms
+
+
+2017-05-12 19:09:03,181INFO[com.Davi.poems.tools.wordSource]-用时 55ms
+
+
+2017-05-12 19:09:03,241INFO[com.Davi.poems.tools.pzSource]-用时 59ms
+
+
+2017-05-12 19:09:03,255INFO[com.Davi.poems.tools.kindSource]-用时 13ms
+
+
+2017-05-12 19:09:03,263INFO[com.Davi.poems.tools.authorSource]-用时 8ms
+
+
+2017-05-12 19:09:04,084INFO[com.Davi.poems.tools.tangSource]-用时 820ms
+
+
+2017-05-12 19:09:04,102INFO[com.Davi.poems.tools.wordCountSource]-用时 18ms
+
+
+2017-05-12 19:09:52,385INFO[com.Davi.poems.gui.Controller]-模糊匹配结果数量： 119
+
+
+2017-05-16 10:19:14,078INFO[com.Davi.poems.tools.wordSource]-用时 352ms
+
+
+2017-05-16 10:19:14,154INFO[com.Davi.poems.tools.pzSource]-用时 72ms
+
+
+2017-05-16 10:19:14,278INFO[com.Davi.poems.tools.kindSource]-用时 123ms
+
+
+2017-05-16 10:19:14,295INFO[com.Davi.poems.tools.authorSource]-用时 16ms
+
+
+2017-05-16 10:19:15,179INFO[com.Davi.poems.tools.tangSource]-用时 883ms
+
+
+2017-05-16 10:19:15,202INFO[com.Davi.poems.tools.wordCountSource]-用时 22ms
+
+
+2017-05-16 10:19:19,068INFO[com.Davi.poems.tools.wordSource]-用时 44ms
+
+
+2017-05-16 10:19:19,139INFO[com.Davi.poems.tools.pzSource]-用时 71ms
+
+
+2017-05-16 10:19:19,154INFO[com.Davi.poems.tools.kindSource]-用时 15ms
+
+
+2017-05-16 10:19:19,164INFO[com.Davi.poems.tools.authorSource]-用时 10ms
+
+
+2017-05-16 10:19:19,862INFO[com.Davi.poems.tools.tangSource]-用时 698ms
+
+
+2017-05-16 10:19:19,880INFO[com.Davi.poems.tools.wordCountSource]-用时 18ms
+
+
+2017-05-16 10:19:43,015INFO[com.Davi.poems.gui.Controller]-模糊匹配结果数量： 1
+
+
+2017-05-17 18:18:25,611INFO[com.Davi.poems.tools.wordSource]-用时 233ms
+
+
+2017-05-17 18:18:25,665INFO[com.Davi.poems.tools.pzSource]-用时 50ms
+
+
+2017-05-17 18:18:25,698INFO[com.Davi.poems.tools.kindSource]-用时 31ms
+
+
+2017-05-17 18:18:25,714INFO[com.Davi.poems.tools.authorSource]-用时 14ms
+
+
+2017-05-17 18:18:26,585INFO[com.Davi.poems.tools.tangSource]-用时 869ms
+
+
+2017-05-17 18:18:26,615INFO[com.Davi.poems.tools.wordCountSource]-用时 28ms
+
+
+2017-05-17 18:44:52,828INFO[com.Davi.poems.tools.wordSource]-用时 309ms
+
+
+2017-05-17 18:44:52,959INFO[com.Davi.poems.tools.pzSource]-用时 128ms
+
+
+2017-05-17 18:44:53,138INFO[com.Davi.poems.tools.kindSource]-用时 178ms
+
+
+2017-05-17 18:44:53,176INFO[com.Davi.poems.tools.authorSource]-用时 37ms
+
+
+2017-05-17 18:44:54,404INFO[com.Davi.poems.tools.tangSource]-用时 1227ms
+
+
+2017-05-17 18:44:54,436INFO[com.Davi.poems.tools.wordCountSource]-用时 31ms
+
+
+2017-05-17 18:45:23,260INFO[com.Davi.poems.tools.wordSource]-用时 35ms
+
+
+2017-05-17 18:45:23,305INFO[com.Davi.poems.tools.pzSource]-用时 45ms
+
+
+2017-05-17 18:45:23,316INFO[com.Davi.poems.tools.kindSource]-用时 11ms
+
+
+2017-05-17 18:45:23,324INFO[com.Davi.poems.tools.authorSource]-用时 8ms
+
+
+2017-05-17 18:45:24,149INFO[com.Davi.poems.tools.tangSource]-用时 825ms
+
+
+2017-05-17 18:45:24,168INFO[com.Davi.poems.tools.wordCountSource]-用时 18ms
+
+
+2017-05-17 18:45:41,532INFO[com.Davi.poems.gui.Controller]-输入字符串 李白&酒****
+
+
+2017-05-17 18:45:41,596INFO[com.Davi.poems.gui.Controller]-执行开始时间差62ms
+
+
+2017-05-17 18:45:41,597INFO[com.Davi.poems.gui.Controller]-point is 0
+
+
+2017-05-17 18:45:41,597INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 12
+
+
+2017-05-17 18:49:32,100INFO[com.Davi.poems.tools.wordSource]-用时 257ms
+
+
+2017-05-17 18:49:32,158INFO[com.Davi.poems.tools.pzSource]-用时 56ms
+
+
+2017-05-17 18:49:32,218INFO[com.Davi.poems.tools.kindSource]-用时 59ms
+
+
+2017-05-17 18:49:32,238INFO[com.Davi.poems.tools.authorSource]-用时 19ms
+
+
+2017-05-17 18:49:33,397INFO[com.Davi.poems.tools.tangSource]-用时 1158ms
+
+
+2017-05-17 18:49:33,421INFO[com.Davi.poems.tools.wordCountSource]-用时 23ms
+
+
+2017-05-17 18:49:35,746INFO[com.Davi.poems.tools.wordSource]-用时 34ms
+
+
+2017-05-17 18:49:35,805INFO[com.Davi.poems.tools.pzSource]-用时 59ms
+
+
+2017-05-17 18:49:35,817INFO[com.Davi.poems.tools.kindSource]-用时 12ms
+
+
+2017-05-17 18:49:35,825INFO[com.Davi.poems.tools.authorSource]-用时 8ms
+
+
+2017-05-17 18:49:36,567INFO[com.Davi.poems.tools.tangSource]-用时 742ms
+
+
+2017-05-17 18:49:36,587INFO[com.Davi.poems.tools.wordCountSource]-用时 20ms
+
+
+2017-05-17 18:52:08,707INFO[com.Davi.poems.tools.wordSource]-用时 279ms
+
+
+2017-05-17 18:52:08,772INFO[com.Davi.poems.tools.pzSource]-用时 63ms
+
+
+2017-05-17 18:52:08,811INFO[com.Davi.poems.tools.kindSource]-用时 38ms
+
+
+2017-05-17 18:52:08,826INFO[com.Davi.poems.tools.authorSource]-用时 15ms
+
+
+2017-05-17 18:52:09,896INFO[com.Davi.poems.tools.tangSource]-用时 1068ms
+
+
+2017-05-17 18:52:09,927INFO[com.Davi.poems.tools.wordCountSource]-用时 30ms
+
+
+2017-05-17 18:52:12,593INFO[com.Davi.poems.tools.wordSource]-用时 34ms
+
+
+2017-05-17 18:52:12,641INFO[com.Davi.poems.tools.pzSource]-用时 48ms
+
+
+2017-05-17 18:52:12,654INFO[com.Davi.poems.tools.kindSource]-用时 13ms
+
+
+2017-05-17 18:52:12,662INFO[com.Davi.poems.tools.authorSource]-用时 7ms
+
+
+2017-05-17 18:52:13,413INFO[com.Davi.poems.tools.tangSource]-用时 750ms
+
+
+2017-05-17 18:52:13,431INFO[com.Davi.poems.tools.wordCountSource]-用时 18ms
+
+
+2017-05-17 18:52:24,617INFO[com.Davi.poems.gui.Controller]-输入字符串 酒****
+
+
+2017-05-17 18:52:25,260INFO[com.Davi.poems.gui.Controller]-执行开始时间差641ms
+
+
+2017-05-17 18:52:25,260INFO[com.Davi.poems.gui.Controller]-point is 0
+
+
+2017-05-17 18:52:25,261INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 438
+
+
+2017-05-17 19:07:50,486INFO[com.Davi.poems.tools.wordSource]-用时 254ms
+
+
+2017-05-17 19:07:50,556INFO[com.Davi.poems.tools.pzSource]-用时 67ms
+
+
+2017-05-17 19:07:50,596INFO[com.Davi.poems.tools.kindSource]-用时 39ms
+
+
+2017-05-17 19:07:50,612INFO[com.Davi.poems.tools.authorSource]-用时 15ms
+
+
+2017-05-17 19:07:51,716INFO[com.Davi.poems.tools.tangSource]-用时 1101ms
+
+
+2017-05-17 19:07:51,752INFO[com.Davi.poems.tools.wordCountSource]-用时 35ms
+
+
+2017-05-17 19:07:54,183INFO[com.Davi.poems.tools.wordSource]-用时 38ms
+
+
+2017-05-17 19:07:54,204INFO[com.Davi.poems.tools.pzSource]-用时 20ms
+
+
+2017-05-17 19:07:54,214INFO[com.Davi.poems.tools.kindSource]-用时 10ms
+
+
+2017-05-17 19:07:54,222INFO[com.Davi.poems.tools.authorSource]-用时 7ms
+
+
+2017-05-17 19:07:55,042INFO[com.Davi.poems.tools.tangSource]-用时 819ms
+
+
+2017-05-17 19:07:55,063INFO[com.Davi.poems.tools.wordCountSource]-用时 21ms
+
+
+2017-05-17 19:08:11,484INFO[com.Davi.poems.gui.Controller]-输入字符串 pzppz
+
+
+2017-05-17 19:08:26,625INFO[com.Davi.poems.gui.Controller]-执行开始时间差15141ms
+
+
+2017-05-17 19:08:26,626INFO[com.Davi.poems.gui.Controller]-point is 0
+
+
+2017-05-17 19:08:26,626INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 12509
+
+
+2017-05-17 19:08:26,626INFO[com.Davi.poems.gui.Controller]-执行开始时间差15142ms
+
+
+2017-05-17 19:10:33,010INFO[com.Davi.poems.gui.Controller]-输入字符串 pzppz
+
+
+2017-05-17 19:10:48,114INFO[com.Davi.poems.gui.Controller]-执行开始时间差15103ms
+
+
+2017-05-17 19:10:48,114INFO[com.Davi.poems.gui.Controller]-point is 1
+
+
+2017-05-17 19:10:48,115INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 12509
+
+
+2017-05-17 19:10:48,115INFO[com.Davi.poems.gui.Controller]-执行开始时间差15104ms
+
+
+2017-05-17 19:11:48,616INFO[com.Davi.poems.gui.Controller]-模糊匹配结果数量： 22987
+
+
+2017-05-17 19:12:15,504INFO[com.Davi.poems.tools.wordSource]-用时 271ms
+
+
+2017-05-17 19:12:15,567INFO[com.Davi.poems.tools.pzSource]-用时 60ms
+
+
+2017-05-17 19:12:15,605INFO[com.Davi.poems.tools.kindSource]-用时 37ms
+
+
+2017-05-17 19:12:15,622INFO[com.Davi.poems.tools.authorSource]-用时 16ms
+
+
+2017-05-17 19:12:16,636INFO[com.Davi.poems.tools.tangSource]-用时 1013ms
+
+
+2017-05-17 19:12:16,664INFO[com.Davi.poems.tools.wordCountSource]-用时 27ms
+
+
+2017-05-17 19:12:20,223INFO[com.Davi.poems.tools.wordSource]-用时 40ms
+
+
+2017-05-17 19:12:20,248INFO[com.Davi.poems.tools.pzSource]-用时 23ms
+
+
+2017-05-17 19:12:20,263INFO[com.Davi.poems.tools.kindSource]-用时 15ms
+
+
+2017-05-17 19:12:20,276INFO[com.Davi.poems.tools.authorSource]-用时 13ms
+
+
+2017-05-17 19:12:20,824INFO[com.Davi.poems.tools.tangSource]-用时 548ms
+
+
+2017-05-17 19:12:20,841INFO[com.Davi.poems.tools.wordCountSource]-用时 17ms
+
+
+2017-05-17 19:12:24,209INFO[com.Davi.poems.gui.Controller]-输入字符串 pzppz
+
+
+2017-05-17 19:12:34,212ERROR[com.Davi.poems.gui.Controller]-超时 取消任务
+
+
+2017-05-17 19:12:34,212ERROR[com.Davi.poems.gui.Controller]-超时 取消任务OK
+
+
+2017-05-17 19:12:38,943INFO[com.Davi.poems.gui.Controller]-执行开始时间差14733ms
+
+
+2017-05-17 19:12:38,943INFO[com.Davi.poems.gui.Controller]-point is 0
+
+
+2017-05-17 19:12:38,943INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 12509
+
+
+2017-05-17 19:12:38,943INFO[com.Davi.poems.gui.Controller]-执行开始时间差14733ms
+
+
+2017-05-17 19:18:27,858INFO[com.Davi.poems.tools.wordSource]-用时 274ms
+
+
+2017-05-17 19:18:27,916INFO[com.Davi.poems.tools.pzSource]-用时 55ms
+
+
+2017-05-17 19:18:27,968INFO[com.Davi.poems.tools.kindSource]-用时 51ms
+
+
+2017-05-17 19:18:27,990INFO[com.Davi.poems.tools.authorSource]-用时 20ms
+
+
+2017-05-17 19:18:29,069INFO[com.Davi.poems.tools.tangSource]-用时 1078ms
+
+
+2017-05-17 19:18:29,095INFO[com.Davi.poems.tools.wordCountSource]-用时 25ms
+
+
+2017-05-17 19:18:32,648INFO[com.Davi.poems.tools.wordSource]-用时 36ms
+
+
+2017-05-17 19:18:32,700INFO[com.Davi.poems.tools.pzSource]-用时 52ms
+
+
+2017-05-17 19:18:32,711INFO[com.Davi.poems.tools.kindSource]-用时 11ms
+
+
+2017-05-17 19:18:32,719INFO[com.Davi.poems.tools.authorSource]-用时 8ms
+
+
+2017-05-17 19:18:33,300INFO[com.Davi.poems.tools.tangSource]-用时 581ms
+
+
+2017-05-17 19:18:33,320INFO[com.Davi.poems.tools.wordCountSource]-用时 19ms
+
+
+2017-05-17 19:18:38,334INFO[com.Davi.poems.gui.Controller]-输入字符串 pzppz
+
+
+2017-05-17 19:18:48,337ERROR[com.Davi.poems.gui.Controller]-超时 取消任务
+
+
+2017-05-17 19:18:48,337ERROR[com.Davi.poems.gui.Controller]-超时 取消任务OK
+
+
+2017-05-17 19:18:52,594INFO[com.Davi.poems.gui.Controller]-执行开始时间差14259ms
+
+
+2017-05-17 19:18:52,594INFO[com.Davi.poems.gui.Controller]-point is 0
+
+
+2017-05-17 19:18:52,595INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 12509
+
+
+2017-05-17 19:18:52,595INFO[com.Davi.poems.gui.Controller]-执行开始时间差14260ms
+
+
+2017-05-17 19:26:13,755INFO[com.Davi.poems.tools.wordSource]-用时 291ms
+
+
+2017-05-17 19:26:13,822INFO[com.Davi.poems.tools.pzSource]-用时 64ms
+
+
+2017-05-17 19:26:13,868INFO[com.Davi.poems.tools.kindSource]-用时 45ms
+
+
+2017-05-17 19:26:13,885INFO[com.Davi.poems.tools.authorSource]-用时 16ms
+
+
+2017-05-17 19:26:15,004INFO[com.Davi.poems.tools.tangSource]-用时 1118ms
+
+
+2017-05-17 19:26:15,034INFO[com.Davi.poems.tools.wordCountSource]-用时 29ms
+
+
+2017-05-17 19:26:26,864INFO[com.Davi.poems.tools.wordSource]-用时 279ms
+
+
+2017-05-17 19:26:26,938INFO[com.Davi.poems.tools.pzSource]-用时 71ms
+
+
+2017-05-17 19:26:26,979INFO[com.Davi.poems.tools.kindSource]-用时 40ms
+
+
+2017-05-17 19:26:27,001INFO[com.Davi.poems.tools.authorSource]-用时 21ms
+
+
+2017-05-17 19:26:28,048INFO[com.Davi.poems.tools.tangSource]-用时 1046ms
+
+
+2017-05-17 19:26:28,086INFO[com.Davi.poems.tools.wordCountSource]-用时 37ms
+
+
+2017-05-17 19:26:30,605INFO[com.Davi.poems.tools.wordSource]-用时 36ms
+
+
+2017-05-17 19:26:30,630INFO[com.Davi.poems.tools.pzSource]-用时 25ms
+
+
+2017-05-17 19:26:30,641INFO[com.Davi.poems.tools.kindSource]-用时 11ms
+
+
+2017-05-17 19:26:30,650INFO[com.Davi.poems.tools.authorSource]-用时 9ms
+
+
+2017-05-17 19:26:31,434INFO[com.Davi.poems.tools.tangSource]-用时 784ms
+
+
+2017-05-17 19:26:31,459INFO[com.Davi.poems.tools.wordCountSource]-用时 24ms
+
+
+2017-05-17 19:26:35,783INFO[com.Davi.poems.gui.Controller]-输入字符串 pzppz
+
+
+2017-05-17 19:26:40,785ERROR[com.Davi.poems.gui.Controller]-超时 取消任务
+
+
+2017-05-17 19:26:40,785ERROR[com.Davi.poems.gui.Controller]-超时 取消任务OK
+
+
+2017-05-17 19:26:50,464INFO[com.Davi.poems.gui.Controller]-执行开始时间差14680ms
+
+
+2017-05-17 19:26:50,464INFO[com.Davi.poems.gui.Controller]-point is 0
+
+
+2017-05-17 19:26:50,464INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 12509
+
+
+2017-05-17 19:26:50,465INFO[com.Davi.poems.gui.Controller]-执行开始时间差14681ms
+
+
+2017-05-17 19:32:10,501INFO[com.Davi.poems.tools.wordSource]-用时 280ms
+
+
+2017-05-17 19:32:10,561INFO[com.Davi.poems.tools.pzSource]-用时 58ms
+
+
+2017-05-17 19:32:10,624INFO[com.Davi.poems.tools.kindSource]-用时 62ms
+
+
+2017-05-17 19:32:10,641INFO[com.Davi.poems.tools.authorSource]-用时 16ms
+
+
+2017-05-17 19:32:11,869INFO[com.Davi.poems.tools.tangSource]-用时 1227ms
+
+
+2017-05-17 19:32:11,893INFO[com.Davi.poems.tools.wordCountSource]-用时 23ms
+
+
+2017-05-17 19:32:14,058INFO[com.Davi.poems.tools.wordSource]-用时 44ms
+
+
+2017-05-17 19:32:14,144INFO[com.Davi.poems.tools.pzSource]-用时 85ms
+
+
+2017-05-17 19:32:14,154INFO[com.Davi.poems.tools.kindSource]-用时 10ms
+
+
+2017-05-17 19:32:14,161INFO[com.Davi.poems.tools.authorSource]-用时 7ms
+
+
+2017-05-17 19:32:14,909INFO[com.Davi.poems.tools.tangSource]-用时 748ms
+
+
+2017-05-17 19:32:14,928INFO[com.Davi.poems.tools.wordCountSource]-用时 18ms
+
+
+2017-05-17 19:32:18,313INFO[com.Davi.poems.gui.Controller]-输入字符串 pzppz
+
+
+2017-05-17 19:32:23,315ERROR[com.Davi.poems.gui.Controller]-超时 取消任务
+
+
+2017-05-17 19:32:23,315ERROR[com.Davi.poems.gui.Controller]-超时 取消任务OK
+
+
+2017-05-17 19:32:32,979INFO[com.Davi.poems.gui.Controller]-执行开始时间差14665ms
+
+
+2017-05-17 19:32:32,979INFO[com.Davi.poems.gui.Controller]-point is 0
+
+
+2017-05-17 19:32:32,979INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 12509
+
+
+2017-05-17 19:32:32,979INFO[com.Davi.poems.gui.Controller]-执行开始时间差14665ms
+
+
+2017-05-17 19:34:31,654INFO[com.Davi.poems.tools.wordSource]-用时 259ms
+
+
+2017-05-17 19:34:31,720INFO[com.Davi.poems.tools.pzSource]-用时 63ms
+
+
+2017-05-17 19:34:31,777INFO[com.Davi.poems.tools.kindSource]-用时 56ms
+
+
+2017-05-17 19:34:31,800INFO[com.Davi.poems.tools.authorSource]-用时 21ms
+
+
+2017-05-17 19:34:32,883INFO[com.Davi.poems.tools.tangSource]-用时 1082ms
+
+
+2017-05-17 19:34:32,908INFO[com.Davi.poems.tools.wordCountSource]-用时 24ms
+
+
+2017-05-17 19:34:37,854INFO[com.Davi.poems.tools.wordSource]-用时 33ms
+
+
+2017-05-17 19:34:37,905INFO[com.Davi.poems.tools.pzSource]-用时 51ms
+
+
+2017-05-17 19:34:37,919INFO[com.Davi.poems.tools.kindSource]-用时 13ms
+
+
+2017-05-17 19:34:37,927INFO[com.Davi.poems.tools.authorSource]-用时 8ms
+
+
+2017-05-17 19:34:38,498INFO[com.Davi.poems.tools.tangSource]-用时 571ms
+
+
+2017-05-17 19:34:38,517INFO[com.Davi.poems.tools.wordCountSource]-用时 19ms
+
+
+2017-05-17 19:34:47,472INFO[com.Davi.poems.gui.Controller]-输入字符串 pzppz
+
+
+2017-05-17 19:34:52,473ERROR[com.Davi.poems.gui.Controller]-超时 取消任务
+
+
+2017-05-17 19:34:52,473ERROR[com.Davi.poems.gui.Controller]-超时 取消任务OK
+
+
+2017-05-17 19:35:01,952INFO[com.Davi.poems.gui.Controller]-执行开始时间差14479ms
+
+
+2017-05-17 19:35:01,952INFO[com.Davi.poems.gui.Controller]-point is 0
+
+
+2017-05-17 19:35:01,952INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 12509
+
+
+2017-05-17 19:35:01,952INFO[com.Davi.poems.gui.Controller]-执行开始时间差14479ms
+
+
+2017-05-17 19:54:59,813INFO[com.Davi.poems.tools.wordSource]-用时 291ms
+
+
+2017-05-17 19:54:59,881INFO[com.Davi.poems.tools.pzSource]-用时 66ms
+
+
+2017-05-17 19:54:59,921INFO[com.Davi.poems.tools.kindSource]-用时 39ms
+
+
+2017-05-17 19:54:59,939INFO[com.Davi.poems.tools.authorSource]-用时 17ms
+
+
+2017-05-17 19:55:01,216INFO[com.Davi.poems.tools.tangSource]-用时 1275ms
+
+
+2017-05-17 19:55:01,244INFO[com.Davi.poems.tools.wordCountSource]-用时 26ms
+
+
+2017-05-17 19:55:07,057INFO[com.Davi.poems.tools.wordSource]-用时 45ms
+
+
+2017-05-17 19:55:07,084INFO[com.Davi.poems.tools.pzSource]-用时 27ms
+
+
+2017-05-17 19:55:07,095INFO[com.Davi.poems.tools.kindSource]-用时 11ms
+
+
+2017-05-17 19:55:07,109INFO[com.Davi.poems.tools.authorSource]-用时 14ms
+
+
+2017-05-17 19:55:07,943INFO[com.Davi.poems.tools.tangSource]-用时 834ms
+
+
+2017-05-17 19:55:07,962INFO[com.Davi.poems.tools.wordCountSource]-用时 19ms
+
+
+2017-05-17 19:55:22,663INFO[com.Davi.poems.gui.Controller]-输入字符串 pzppz
+
+
+2017-05-17 19:55:27,666ERROR[com.Davi.poems.gui.Controller]-超时 取消任务
+
+
+2017-05-17 19:55:27,666ERROR[com.Davi.poems.gui.Controller]-超时 取消任务OK
+
+
+2017-05-17 19:55:38,889INFO[com.Davi.poems.gui.Controller]-执行开始时间差16225ms
+
+
+2017-05-17 19:55:38,889INFO[com.Davi.poems.gui.Controller]-point is 0
+
+
+2017-05-17 19:55:38,889INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 12509
+
+
+2017-05-17 19:56:10,079INFO[com.Davi.poems.gui.Controller]-输入字符串 李白&酒****
+
+
+2017-05-17 19:56:10,131INFO[com.Davi.poems.gui.Controller]-执行开始时间差52ms
+
+
+2017-05-17 19:56:10,131INFO[com.Davi.poems.gui.Controller]-point is 1
+
+
+2017-05-17 19:56:10,131INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 12
+
+
+2017-05-17 19:59:46,633INFO[com.Davi.poems.tools.wordSource]-用时 281ms
+
+
+2017-05-17 19:59:46,689INFO[com.Davi.poems.tools.pzSource]-用时 53ms
+
+
+2017-05-17 19:59:46,723INFO[com.Davi.poems.tools.kindSource]-用时 33ms
+
+
+2017-05-17 19:59:46,740INFO[com.Davi.poems.tools.authorSource]-用时 16ms
+
+
+2017-05-17 19:59:47,714INFO[com.Davi.poems.tools.tangSource]-用时 973ms
+
+
+2017-05-17 19:59:47,739INFO[com.Davi.poems.tools.wordCountSource]-用时 24ms
+
+
+2017-05-17 19:59:52,906INFO[com.Davi.poems.tools.wordSource]-用时 40ms
+
+
+2017-05-17 19:59:52,933INFO[com.Davi.poems.tools.pzSource]-用时 26ms
+
+
+2017-05-17 19:59:52,944INFO[com.Davi.poems.tools.kindSource]-用时 11ms
+
+
+2017-05-17 19:59:52,953INFO[com.Davi.poems.tools.authorSource]-用时 9ms
+
+
+2017-05-17 19:59:53,761INFO[com.Davi.poems.tools.tangSource]-用时 808ms
+
+
+2017-05-17 19:59:53,781INFO[com.Davi.poems.tools.wordCountSource]-用时 20ms
+
+
+2017-05-17 20:00:02,429INFO[com.Davi.poems.gui.Controller]-输入字符串 pzppz
+
+
+2017-05-17 20:00:07,432ERROR[com.Davi.poems.gui.Controller]-超时 取消任务
+
+
+2017-05-17 20:00:07,432ERROR[com.Davi.poems.gui.Controller]-超时 取消任务OK
+
+
+2017-05-17 20:00:18,097INFO[com.Davi.poems.gui.Controller]-执行开始时间差15667ms
+
+
+2017-05-17 20:00:18,097INFO[com.Davi.poems.gui.Controller]-point is 0
+
+
+2017-05-17 20:00:18,097INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 12509
+
+
+2017-05-17 20:11:29,822INFO[com.Davi.poems.tools.wordSource]-用时 260ms
+
+
+2017-05-17 20:11:29,887INFO[com.Davi.poems.tools.pzSource]-用时 63ms
+
+
+2017-05-17 20:11:29,924INFO[com.Davi.poems.tools.kindSource]-用时 36ms
+
+
+2017-05-17 20:11:29,942INFO[com.Davi.poems.tools.authorSource]-用时 17ms
+
+
+2017-05-17 20:11:31,033INFO[com.Davi.poems.tools.tangSource]-用时 1089ms
+
+
+2017-05-17 20:11:31,055INFO[com.Davi.poems.tools.wordCountSource]-用时 21ms
+
+
+2017-05-17 20:11:33,228INFO[com.Davi.poems.tools.wordSource]-用时 47ms
+
+
+2017-05-17 20:11:33,255INFO[com.Davi.poems.tools.pzSource]-用时 26ms
+
+
+2017-05-17 20:11:33,265INFO[com.Davi.poems.tools.kindSource]-用时 10ms
+
+
+2017-05-17 20:11:33,272INFO[com.Davi.poems.tools.authorSource]-用时 7ms
+
+
+2017-05-17 20:11:34,101INFO[com.Davi.poems.tools.tangSource]-用时 828ms
+
+
+2017-05-17 20:11:34,121INFO[com.Davi.poems.tools.wordCountSource]-用时 20ms
+
+
+2017-05-17 20:11:37,800INFO[com.Davi.poems.gui.Controller]-输入字符串 pzppz
+
+
+2017-05-17 20:11:42,802ERROR[com.Davi.poems.gui.Controller]-超时 取消任务
+
+
+2017-05-17 20:11:42,802ERROR[com.Davi.poems.gui.Controller]-超时 取消任务OK
+
+
+2017-05-17 20:11:53,027INFO[com.Davi.poems.gui.Controller]-执行开始时间差15226ms
+
+
+2017-05-17 20:11:53,027INFO[com.Davi.poems.gui.Controller]-point is 0
+
+
+2017-05-17 20:11:53,027INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 12509
+
+
+2017-05-17 20:11:53,027INFO[com.Davi.poems.gui.Controller]-执行开始时间差15226ms
+
+
+2017-05-17 20:13:19,034INFO[com.Davi.poems.tools.wordSource]-用时 260ms
+
+
+2017-05-17 20:13:19,113INFO[com.Davi.poems.tools.pzSource]-用时 77ms
+
+
+2017-05-17 20:13:19,152INFO[com.Davi.poems.tools.kindSource]-用时 37ms
+
+
+2017-05-17 20:13:19,169INFO[com.Davi.poems.tools.authorSource]-用时 16ms
+
+
+2017-05-17 20:13:20,457INFO[com.Davi.poems.tools.tangSource]-用时 1286ms
+
+
+2017-05-17 20:13:20,481INFO[com.Davi.poems.tools.wordCountSource]-用时 23ms
+
+
+2017-05-17 20:13:49,811INFO[com.Davi.poems.tools.wordSource]-用时 274ms
+
+
+2017-05-17 20:13:49,880INFO[com.Davi.poems.tools.pzSource]-用时 67ms
+
+
+2017-05-17 20:13:49,918INFO[com.Davi.poems.tools.kindSource]-用时 37ms
+
+
+2017-05-17 20:13:49,937INFO[com.Davi.poems.tools.authorSource]-用时 18ms
+
+
+2017-05-17 20:13:51,051INFO[com.Davi.poems.tools.tangSource]-用时 1112ms
+
+
+2017-05-17 20:13:51,084INFO[com.Davi.poems.tools.wordCountSource]-用时 32ms
+
+
+2017-05-17 20:13:53,147INFO[com.Davi.poems.tools.wordSource]-用时 54ms
+
+
+2017-05-17 20:13:53,210INFO[com.Davi.poems.tools.pzSource]-用时 63ms
+
+
+2017-05-17 20:13:53,223INFO[com.Davi.poems.tools.kindSource]-用时 13ms
+
+
+2017-05-17 20:13:53,234INFO[com.Davi.poems.tools.authorSource]-用时 11ms
+
+
+2017-05-17 20:13:54,004INFO[com.Davi.poems.tools.tangSource]-用时 769ms
+
+
+2017-05-17 20:13:54,024INFO[com.Davi.poems.tools.wordCountSource]-用时 20ms
+
+
+2017-05-17 20:13:57,183INFO[com.Davi.poems.gui.Controller]-输入字符串 pzppz
+
+
+2017-05-17 20:14:02,185ERROR[com.Davi.poems.gui.Controller]-超时 取消任务
+
+
+2017-05-17 20:14:02,185ERROR[com.Davi.poems.gui.Controller]-超时 取消任务OK
+
+
+2017-05-17 20:14:12,355INFO[com.Davi.poems.gui.Controller]-执行开始时间差15171ms
+
+
+2017-05-17 20:14:12,355INFO[com.Davi.poems.gui.Controller]-point is 0
+
+
+2017-05-17 20:14:12,355INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 12509
+
+
+2017-05-17 20:14:12,355INFO[com.Davi.poems.gui.Controller]-执行开始时间差15171ms
+
+
+2017-05-17 20:18:39,332INFO[com.Davi.poems.tools.wordSource]-用时 275ms
+
+
+2017-05-17 20:18:39,409INFO[com.Davi.poems.tools.pzSource]-用时 74ms
+
+
+2017-05-17 20:18:39,447INFO[com.Davi.poems.tools.kindSource]-用时 38ms
+
+
+2017-05-17 20:18:39,467INFO[com.Davi.poems.tools.authorSource]-用时 19ms
+
+
+2017-05-17 20:18:40,627INFO[com.Davi.poems.tools.tangSource]-用时 1159ms
+
+
+2017-05-17 20:18:40,656INFO[com.Davi.poems.tools.wordCountSource]-用时 28ms
+
+
+2017-05-17 20:18:42,626INFO[com.Davi.poems.tools.wordSource]-用时 48ms
+
+
+2017-05-17 20:18:42,680INFO[com.Davi.poems.tools.pzSource]-用时 53ms
+
+
+2017-05-17 20:18:42,695INFO[com.Davi.poems.tools.kindSource]-用时 15ms
+
+
+2017-05-17 20:18:42,705INFO[com.Davi.poems.tools.authorSource]-用时 9ms
+
+
+2017-05-17 20:18:43,436INFO[com.Davi.poems.tools.tangSource]-用时 731ms
+
+
+2017-05-17 20:18:43,456INFO[com.Davi.poems.tools.wordCountSource]-用时 19ms
+
+
+2017-05-17 20:18:50,965INFO[com.Davi.poems.gui.Controller]-输入字符串 pzppz
+
+
+2017-05-17 20:18:55,967ERROR[com.Davi.poems.gui.Controller]-超时 取消任务
+
+
+2017-05-17 20:19:06,904INFO[com.Davi.poems.gui.Controller]-执行开始时间差15938ms
+
+
+2017-05-17 20:19:06,905INFO[com.Davi.poems.gui.Controller]-point is 0
+
+
+2017-05-17 20:19:06,905INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 12509
+
+
+2017-05-17 20:19:06,905INFO[com.Davi.poems.gui.Controller]-执行开始时间差15939ms
+
+
+2017-05-17 20:23:21,944INFO[com.Davi.poems.tools.wordSource]-用时 270ms
+
+
+2017-05-17 20:23:22,017INFO[com.Davi.poems.tools.pzSource]-用时 71ms
+
+
+2017-05-17 20:23:22,063INFO[com.Davi.poems.tools.kindSource]-用时 45ms
+
+
+2017-05-17 20:23:22,085INFO[com.Davi.poems.tools.authorSource]-用时 21ms
+
+
+2017-05-17 20:23:23,141INFO[com.Davi.poems.tools.tangSource]-用时 1055ms
+
+
+2017-05-17 20:23:23,177INFO[com.Davi.poems.tools.wordCountSource]-用时 35ms
+
+
+2017-05-17 20:23:25,565INFO[com.Davi.poems.tools.wordSource]-用时 36ms
+
+
+2017-05-17 20:23:25,613INFO[com.Davi.poems.tools.pzSource]-用时 48ms
+
+
+2017-05-17 20:23:25,624INFO[com.Davi.poems.tools.kindSource]-用时 10ms
+
+
+2017-05-17 20:23:25,632INFO[com.Davi.poems.tools.authorSource]-用时 8ms
+
+
+2017-05-17 20:23:26,439INFO[com.Davi.poems.tools.tangSource]-用时 806ms
+
+
+2017-05-17 20:23:26,460INFO[com.Davi.poems.tools.wordCountSource]-用时 21ms
+
+
+2017-05-17 20:23:30,499INFO[com.Davi.poems.gui.Controller]-输入字符串 pzppz
+
+
+2017-05-17 20:23:35,501ERROR[com.Davi.poems.gui.Controller]-超时 取消任务
+
+
+2017-05-17 20:23:35,501INFO[com.Davi.poems.gui.Controller]-Cancelled
+
+
+2017-05-17 20:23:45,790INFO[com.Davi.poems.gui.Controller]-执行开始时间差15290ms
+
+
+2017-05-17 20:23:45,790INFO[com.Davi.poems.gui.Controller]-point is 0
+
+
+2017-05-17 20:23:45,790INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 12509
+
+
+2017-05-17 20:23:45,790INFO[com.Davi.poems.gui.Controller]-执行开始时间差15290ms
+
+
+2017-05-17 20:24:48,323INFO[com.Davi.poems.tools.wordSource]-用时 279ms
+
+
+2017-05-17 20:24:48,402INFO[com.Davi.poems.tools.pzSource]-用时 76ms
+
+
+2017-05-17 20:24:48,446INFO[com.Davi.poems.tools.kindSource]-用时 43ms
+
+
+2017-05-17 20:24:48,472INFO[com.Davi.poems.tools.authorSource]-用时 25ms
+
+
+2017-05-17 20:24:49,667INFO[com.Davi.poems.tools.tangSource]-用时 1194ms
+
+
+2017-05-17 20:24:49,699INFO[com.Davi.poems.tools.wordCountSource]-用时 31ms
+
+
+2017-05-17 20:24:52,081INFO[com.Davi.poems.tools.wordSource]-用时 40ms
+
+
+2017-05-17 20:24:52,109INFO[com.Davi.poems.tools.pzSource]-用时 27ms
+
+
+2017-05-17 20:24:52,121INFO[com.Davi.poems.tools.kindSource]-用时 12ms
+
+
+2017-05-17 20:24:52,129INFO[com.Davi.poems.tools.authorSource]-用时 8ms
+
+
+2017-05-17 20:24:52,740INFO[com.Davi.poems.tools.tangSource]-用时 611ms
+
+
+2017-05-17 20:24:52,760INFO[com.Davi.poems.tools.wordCountSource]-用时 19ms
+
+
+2017-05-17 20:24:56,171INFO[com.Davi.poems.gui.Controller]-输入字符串 pzppz
+
+
+2017-05-17 20:25:01,172ERROR[com.Davi.poems.gui.Controller]-超时 取消任务
+
+
+2017-05-17 20:25:01,172INFO[com.Davi.poems.gui.Controller]-Cancelled
+
+
+2017-05-17 20:25:11,988INFO[com.Davi.poems.gui.Controller]-执行开始时间差15816ms
+
+
+2017-05-17 20:25:11,988INFO[com.Davi.poems.gui.Controller]-point is 0
+
+
+2017-05-17 20:25:11,988INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 12509
+
+
+2017-05-17 20:25:11,988INFO[com.Davi.poems.gui.Controller]-执行开始时间差15816ms
+
+
+2017-05-17 20:32:08,306INFO[com.Davi.poems.tools.wordSource]-用时 267ms
+
+
+2017-05-17 20:32:08,379INFO[com.Davi.poems.tools.pzSource]-用时 71ms
+
+
+2017-05-17 20:32:08,415INFO[com.Davi.poems.tools.kindSource]-用时 35ms
+
+
+2017-05-17 20:32:08,432INFO[com.Davi.poems.tools.authorSource]-用时 16ms
+
+
+2017-05-17 20:32:09,507INFO[com.Davi.poems.tools.tangSource]-用时 1074ms
+
+
+2017-05-17 20:32:09,533INFO[com.Davi.poems.tools.wordCountSource]-用时 25ms
+
+
+2017-05-17 20:32:12,617INFO[com.Davi.poems.tools.wordSource]-用时 37ms
+
+
+2017-05-17 20:32:12,677INFO[com.Davi.poems.tools.pzSource]-用时 59ms
+
+
+2017-05-17 20:32:12,689INFO[com.Davi.poems.tools.kindSource]-用时 12ms
+
+
+2017-05-17 20:32:12,698INFO[com.Davi.poems.tools.authorSource]-用时 9ms
+
+
+2017-05-17 20:32:13,518INFO[com.Davi.poems.tools.tangSource]-用时 820ms
+
+
+2017-05-17 20:32:13,540INFO[com.Davi.poems.tools.wordCountSource]-用时 21ms
+
+
+2017-05-17 20:32:17,944INFO[com.Davi.poems.gui.Controller]-输入字符串 pzppz
+
+
+2017-05-17 20:32:22,945ERROR[com.Davi.poems.gui.Controller]-超时 取消任务
+
+
+2017-05-17 20:32:22,945INFO[com.Davi.poems.gui.Controller]-Cancelled
+
+
+2017-05-17 20:32:32,833INFO[com.Davi.poems.gui.Controller]-执行开始时间差14888ms
+
+
+2017-05-17 20:32:32,833INFO[com.Davi.poems.gui.Controller]-point is 0
+
+
+2017-05-17 20:32:32,833INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 12509
+
+
+2017-05-17 20:32:32,833INFO[com.Davi.poems.gui.Controller]-执行开始时间差14888ms
+
+
+2017-05-17 20:32:32,850INFO[com.Davi.poems.gui.Controller]-flushed
+
+
+2017-05-17 20:33:36,935INFO[com.Davi.poems.tools.wordSource]-用时 269ms
+
+
+2017-05-17 20:33:37,014INFO[com.Davi.poems.tools.pzSource]-用时 76ms
+
+
+2017-05-17 20:33:37,059INFO[com.Davi.poems.tools.kindSource]-用时 44ms
+
+
+2017-05-17 20:33:37,077INFO[com.Davi.poems.tools.authorSource]-用时 17ms
+
+
+2017-05-17 20:33:38,248INFO[com.Davi.poems.tools.tangSource]-用时 1169ms
+
+
+2017-05-17 20:33:38,277INFO[com.Davi.poems.tools.wordCountSource]-用时 28ms
+
+
+2017-05-17 20:33:40,872INFO[com.Davi.poems.tools.wordSource]-用时 35ms
+
+
+2017-05-17 20:33:40,929INFO[com.Davi.poems.tools.pzSource]-用时 57ms
+
+
+2017-05-17 20:33:40,949INFO[com.Davi.poems.tools.kindSource]-用时 20ms
+
+
+2017-05-17 20:33:40,964INFO[com.Davi.poems.tools.authorSource]-用时 15ms
+
+
+2017-05-17 20:33:41,748INFO[com.Davi.poems.tools.tangSource]-用时 784ms
+
+
+2017-05-17 20:33:41,769INFO[com.Davi.poems.tools.wordCountSource]-用时 21ms
+
+
+2017-05-17 20:33:45,719INFO[com.Davi.poems.gui.Controller]-输入字符串 pzppz
+
+
+2017-05-17 20:33:46,720ERROR[com.Davi.poems.gui.Controller]-超时 取消任务
+
+
+2017-05-17 20:33:46,720INFO[com.Davi.poems.gui.Controller]-Cancelled
+
+
+2017-05-17 20:34:01,339INFO[com.Davi.poems.gui.Controller]-执行开始时间差15619ms
+
+
+2017-05-17 20:34:01,339INFO[com.Davi.poems.gui.Controller]-point is 0
+
+
+2017-05-17 20:34:01,339INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 12509
+
+
+2017-05-17 20:34:01,339INFO[com.Davi.poems.gui.Controller]-执行开始时间差15619ms
+
+
+2017-05-17 20:34:01,354INFO[com.Davi.poems.gui.Controller]-flushed
+
+
+2017-05-17 20:34:41,266INFO[com.Davi.poems.tools.wordSource]-用时 281ms
+
+
+2017-05-17 20:34:41,339INFO[com.Davi.poems.tools.pzSource]-用时 70ms
+
+
+2017-05-17 20:34:41,376INFO[com.Davi.poems.tools.kindSource]-用时 36ms
+
+
+2017-05-17 20:34:41,391INFO[com.Davi.poems.tools.authorSource]-用时 15ms
+
+
+2017-05-17 20:34:42,569INFO[com.Davi.poems.tools.tangSource]-用时 1177ms
+
+
+2017-05-17 20:34:42,599INFO[com.Davi.poems.tools.wordCountSource]-用时 28ms
+
+
+2017-05-17 20:34:44,702INFO[com.Davi.poems.tools.wordSource]-用时 35ms
+
+
+2017-05-17 20:34:44,724INFO[com.Davi.poems.tools.pzSource]-用时 22ms
+
+
+2017-05-17 20:34:44,734INFO[com.Davi.poems.tools.kindSource]-用时 10ms
+
+
+2017-05-17 20:34:44,743INFO[com.Davi.poems.tools.authorSource]-用时 9ms
+
+
+2017-05-17 20:34:45,613INFO[com.Davi.poems.tools.tangSource]-用时 870ms
+
+
+2017-05-17 20:34:45,635INFO[com.Davi.poems.tools.wordCountSource]-用时 22ms
+
+
+2017-05-17 20:34:48,823INFO[com.Davi.poems.gui.Controller]-输入字符串 pzppz
+
+
+2017-05-17 20:34:49,824ERROR[com.Davi.poems.gui.Controller]-超时 取消任务
+
+
+2017-05-17 20:34:49,824INFO[com.Davi.poems.gui.Controller]-Cancelled
+
+
+2017-05-17 20:35:04,406INFO[com.Davi.poems.gui.Controller]-执行开始时间差15582ms
+
+
+2017-05-17 20:35:04,406INFO[com.Davi.poems.gui.Controller]-point is 0
+
+
+2017-05-17 20:35:04,406INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 12509
+
+
+2017-05-17 20:35:04,406INFO[com.Davi.poems.gui.Controller]-执行开始时间差15582ms
+
+
+2017-05-17 20:35:04,422INFO[com.Davi.poems.gui.Controller]-flushed
+
+
+2017-05-17 20:53:23,994INFO[com.Davi.poems.tools.wordSource]-用时 265ms
+
+
+2017-05-17 20:53:24,060INFO[com.Davi.poems.tools.pzSource]-用时 64ms
+
+
+2017-05-17 20:53:24,118INFO[com.Davi.poems.tools.kindSource]-用时 57ms
+
+
+2017-05-17 20:53:24,141INFO[com.Davi.poems.tools.authorSource]-用时 22ms
+
+
+2017-05-17 20:53:25,282INFO[com.Davi.poems.tools.tangSource]-用时 1140ms
+
+
+2017-05-17 20:53:25,308INFO[com.Davi.poems.tools.wordCountSource]-用时 25ms
+
+
+2017-05-17 20:53:27,270INFO[com.Davi.poems.tools.wordSource]-用时 35ms
+
+
+2017-05-17 20:53:27,325INFO[com.Davi.poems.tools.pzSource]-用时 55ms
+
+
+2017-05-17 20:53:27,337INFO[com.Davi.poems.tools.kindSource]-用时 12ms
+
+
+2017-05-17 20:53:27,348INFO[com.Davi.poems.tools.authorSource]-用时 11ms
+
+
+2017-05-17 20:53:28,112INFO[com.Davi.poems.tools.tangSource]-用时 764ms
+
+
+2017-05-17 20:53:28,130INFO[com.Davi.poems.tools.wordCountSource]-用时 18ms
+
+
+2017-05-17 20:53:31,479INFO[com.Davi.poems.gui.Controller]-输入字符串 pzppz
+
+
+2017-05-17 20:53:32,480ERROR[com.Davi.poems.gui.Controller]-超时 取消任务
+
+
+2017-05-17 20:53:32,480INFO[com.Davi.poems.gui.Controller]-Cancelled
+
+
+2017-05-17 20:53:46,103INFO[com.Davi.poems.gui.Controller]-执行开始时间差14623ms
+
+
+2017-05-17 20:53:46,103INFO[com.Davi.poems.gui.Controller]-point is 0
+
+
+2017-05-17 20:53:46,103INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 12509
+
+
+2017-05-17 20:53:46,103INFO[com.Davi.poems.gui.Controller]-执行开始时间差14623ms
+
+
+2017-05-17 20:53:46,121INFO[com.Davi.poems.gui.Controller]-flushed
+
+
+2017-05-17 20:55:19,369INFO[com.Davi.poems.tools.wordSource]-用时 268ms
+
+
+2017-05-17 20:55:19,457INFO[com.Davi.poems.tools.pzSource]-用时 85ms
+
+
+2017-05-17 20:55:19,506INFO[com.Davi.poems.tools.kindSource]-用时 48ms
+
+
+2017-05-17 20:55:19,535INFO[com.Davi.poems.tools.authorSource]-用时 28ms
+
+
+2017-05-17 20:55:20,584INFO[com.Davi.poems.tools.tangSource]-用时 1048ms
+
+
+2017-05-17 20:55:20,619INFO[com.Davi.poems.tools.wordCountSource]-用时 34ms
+
+
+2017-05-17 20:55:22,710INFO[com.Davi.poems.tools.wordSource]-用时 35ms
+
+
+2017-05-17 20:55:22,737INFO[com.Davi.poems.tools.pzSource]-用时 26ms
+
+
+2017-05-17 20:55:22,749INFO[com.Davi.poems.tools.kindSource]-用时 12ms
+
+
+2017-05-17 20:55:22,758INFO[com.Davi.poems.tools.authorSource]-用时 9ms
+
+
+2017-05-17 20:55:23,389INFO[com.Davi.poems.tools.tangSource]-用时 631ms
+
+
+2017-05-17 20:55:23,408INFO[com.Davi.poems.tools.wordCountSource]-用时 19ms
+
+
+2017-05-17 20:55:27,549INFO[com.Davi.poems.gui.Controller]-输入字符串 pzppz
+
+
+2017-05-17 20:55:28,551ERROR[com.Davi.poems.gui.Controller]-超时 取消任务
+
+
+2017-05-17 20:55:28,551INFO[com.Davi.poems.gui.Controller]-Cancelled
+
+
+2017-05-17 20:55:42,621INFO[com.Davi.poems.gui.Controller]-执行开始时间差15071ms
+
+
+2017-05-17 20:55:42,621INFO[com.Davi.poems.gui.Controller]-point is 0
+
+
+2017-05-17 20:55:42,621INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 12509
+
+
+2017-05-17 20:55:42,621INFO[com.Davi.poems.gui.Controller]-执行开始时间差15071ms
+
+
+2017-05-17 20:55:42,637INFO[com.Davi.poems.gui.Controller]-flushed
+
+
+2017-05-17 20:55:51,510INFO[com.Davi.poems.gui.Controller]-输入字符串 pzppz
+
+
+2017-05-17 20:55:52,511ERROR[com.Davi.poems.gui.Controller]-超时 取消任务
+
+
+2017-05-17 20:55:52,511INFO[com.Davi.poems.gui.Controller]-Cancelled
+
+
+2017-05-17 20:56:04,949INFO[com.Davi.poems.gui.Controller]-输入字符串 李白
+
+
+2017-05-17 20:56:05,132INFO[com.Davi.poems.gui.Controller]-执行开始时间差183ms
+
+
+2017-05-17 20:56:05,133INFO[com.Davi.poems.gui.Controller]-point is 1
+
+
+2017-05-17 20:56:05,133INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 0
+
+
+2017-05-17 20:56:05,133INFO[com.Davi.poems.gui.Controller]-执行开始时间差184ms
+
+
+2017-05-17 20:56:05,134INFO[com.Davi.poems.gui.Controller]-flushed
+
+
+2017-05-17 20:56:06,737INFO[com.Davi.poems.gui.Controller]-执行开始时间差15227ms
+
+
+2017-05-17 20:56:06,737INFO[com.Davi.poems.gui.Controller]-point is 2
+
+
+2017-05-17 20:56:06,737INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 12509
+
+
+2017-05-17 20:56:06,737INFO[com.Davi.poems.gui.Controller]-执行开始时间差15227ms
+
+
+2017-05-17 20:56:06,790INFO[com.Davi.poems.gui.Controller]-flushed
+
+
+2017-05-17 20:56:10,670INFO[com.Davi.poems.gui.Controller]-输入字符串 李白
+
+
+2017-05-17 20:56:10,848INFO[com.Davi.poems.gui.Controller]-执行开始时间差178ms
+
+
+2017-05-17 20:56:10,848INFO[com.Davi.poems.gui.Controller]-point is 3
+
+
+2017-05-17 20:56:10,848INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 0
+
+
+2017-05-17 20:56:10,848INFO[com.Davi.poems.gui.Controller]-执行开始时间差178ms
+
+
+2017-05-17 20:56:10,849INFO[com.Davi.poems.gui.Controller]-flushed
+
+
+2017-05-17 20:56:25,805INFO[com.Davi.poems.gui.Controller]-输入字符串 李白*****
+
+
+2017-05-17 20:56:26,194INFO[com.Davi.poems.gui.Controller]-执行开始时间差388ms
+
+
+2017-05-17 20:56:26,194INFO[com.Davi.poems.gui.Controller]-point is 4
+
+
+2017-05-17 20:56:26,194INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 15
+
+
+2017-05-17 20:56:26,196INFO[com.Davi.poems.gui.Controller]-执行开始时间差390ms
+
+
+2017-05-17 20:56:26,196INFO[com.Davi.poems.gui.Controller]-flushed
+
+
+2017-05-17 21:02:01,017INFO[com.Davi.poems.tools.wordSource]-用时 244ms
+
+
+2017-05-17 21:02:01,086INFO[com.Davi.poems.tools.pzSource]-用时 67ms
+
+
+2017-05-17 21:02:01,126INFO[com.Davi.poems.tools.kindSource]-用时 39ms
+
+
+2017-05-17 21:02:01,147INFO[com.Davi.poems.tools.authorSource]-用时 20ms
+
+
+2017-05-17 21:02:02,196INFO[com.Davi.poems.tools.tangSource]-用时 1048ms
+
+
+2017-05-17 21:02:02,233INFO[com.Davi.poems.tools.wordCountSource]-用时 36ms
+
+
+2017-05-17 21:02:04,770INFO[com.Davi.poems.tools.wordSource]-用时 34ms
+
+
+2017-05-17 21:02:04,796INFO[com.Davi.poems.tools.pzSource]-用时 26ms
+
+
+2017-05-17 21:02:04,807INFO[com.Davi.poems.tools.kindSource]-用时 11ms
+
+
+2017-05-17 21:02:04,817INFO[com.Davi.poems.tools.authorSource]-用时 10ms
+
+
+2017-05-17 21:02:05,647INFO[com.Davi.poems.tools.tangSource]-用时 830ms
+
+
+2017-05-17 21:02:05,667INFO[com.Davi.poems.tools.wordCountSource]-用时 20ms
+
+
+2017-05-17 21:02:10,434INFO[com.Davi.poems.gui.Controller]-输入字符串 pzppz
+
+
+2017-05-17 21:02:11,436ERROR[com.Davi.poems.gui.Controller]-超时 取消任务
+
+
+2017-05-17 21:02:11,436INFO[com.Davi.poems.gui.Controller]-Cancelled
+
+
+2017-05-17 21:02:26,447INFO[com.Davi.poems.gui.Controller]-执行开始时间差16012ms
+
+
+2017-05-17 21:02:26,447INFO[com.Davi.poems.gui.Controller]-point is 0
+
+
+2017-05-17 21:02:26,447INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 12509
+
+
+2017-05-17 21:02:26,447INFO[com.Davi.poems.gui.Controller]-执行开始时间差16012ms
+
+
+2017-05-17 21:02:26,480INFO[com.Davi.poems.gui.Controller]-flushed
+
+
+2017-05-17 22:01:22,035INFO[com.Davi.poems.tools.wordSource]-用时 262ms
+
+
+2017-05-17 22:01:22,110INFO[com.Davi.poems.tools.pzSource]-用时 72ms
+
+
+2017-05-17 22:01:22,147INFO[com.Davi.poems.tools.kindSource]-用时 36ms
+
+
+2017-05-17 22:01:22,168INFO[com.Davi.poems.tools.authorSource]-用时 20ms
+
+
+2017-05-17 22:01:23,421INFO[com.Davi.poems.tools.tangSource]-用时 1252ms
+
+
+2017-05-17 22:01:23,448INFO[com.Davi.poems.tools.wordCountSource]-用时 26ms
+
+
+2017-05-17 22:01:25,995INFO[com.Davi.poems.tools.wordSource]-用时 44ms
+
+
+2017-05-17 22:01:26,023INFO[com.Davi.poems.tools.pzSource]-用时 28ms
+
+
+2017-05-17 22:01:26,039INFO[com.Davi.poems.tools.kindSource]-用时 16ms
+
+
+2017-05-17 22:01:26,051INFO[com.Davi.poems.tools.authorSource]-用时 11ms
+
+
+2017-05-17 22:01:26,866INFO[com.Davi.poems.tools.tangSource]-用时 815ms
+
+
+2017-05-17 22:01:26,885INFO[com.Davi.poems.tools.wordCountSource]-用时 19ms
+
+
+2017-05-17 22:01:41,735INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 255ms
+
+
+2017-05-17 22:01:41,735INFO[com.Davi.poems.gui.Controller]-执行开始时间差492ms
+
+
+2017-05-17 22:01:46,615INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 125ms
+
+
+2017-05-17 22:01:46,915INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 300ms
+
+
+2017-05-17 22:01:47,088INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 172ms
+
+
+2017-05-17 22:01:47,255INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 167ms
+
+
+2017-05-17 22:01:47,387INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 131ms
+
+
+2017-05-17 22:01:47,458INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 70ms
+
+
+2017-05-17 22:01:47,491ERROR[com.Davi.poems.gui.Controller]-超时 取消任务
+
+
+2017-05-17 22:01:47,517INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 59ms
+
+
+2017-05-17 22:01:47,669INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 152ms
+
+
+2017-05-17 22:01:47,713INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 44ms
+
+
+2017-05-17 22:01:47,732INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 19ms
+
+
+2017-05-17 22:01:47,733INFO[com.Davi.poems.gui.Controller]-执行开始时间差1243ms
+
+
+2017-05-17 22:01:51,331INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 97ms
+
+
+2017-05-17 22:01:51,454INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 123ms
+
+
+2017-05-17 22:01:51,927INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 473ms
+
+
+2017-05-17 22:01:52,004INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 77ms
+
+
+2017-05-17 22:01:52,114INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 110ms
+
+
+2017-05-17 22:01:52,234ERROR[com.Davi.poems.gui.Controller]-超时 取消任务
+
+
+2017-05-17 22:01:52,289INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 174ms
+
+
+2017-05-17 22:01:52,536INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 247ms
+
+
+2017-05-17 22:01:52,564INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 28ms
+
+
+2017-05-17 22:01:52,650INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 85ms
+
+
+2017-05-17 22:01:52,747INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 96ms
+
+
+2017-05-17 22:01:52,831INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 84ms
+
+
+2017-05-17 22:01:53,024INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 192ms
+
+
+2017-05-17 22:01:53,072INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 48ms
+
+
+2017-05-17 22:01:53,131INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 59ms
+
+
+2017-05-17 22:01:53,275INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 143ms
+
+
+2017-05-17 22:01:53,296INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 21ms
+
+
+2017-05-17 22:01:53,351INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 55ms
+
+
+2017-05-17 22:01:53,380INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 29ms
+
+
+2017-05-17 22:01:53,453INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 73ms
+
+
+2017-05-17 22:01:53,684INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 231ms
+
+
+2017-05-17 22:01:53,684INFO[com.Davi.poems.gui.Controller]-执行开始时间差2450ms
+
+
+2017-05-17 22:01:57,936INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 55ms
+
+
+2017-05-17 22:01:58,018INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 82ms
+
+
+2017-05-17 22:01:58,126INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 108ms
+
+
+2017-05-17 22:01:58,297INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 171ms
+
+
+2017-05-17 22:01:58,320INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 23ms
+
+
+2017-05-17 22:01:58,373INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 53ms
+
+
+2017-05-17 22:01:58,537INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 164ms
+
+
+2017-05-17 22:01:58,676INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 139ms
+
+
+2017-05-17 22:01:58,873INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 197ms
+
+
+2017-05-17 22:01:58,883ERROR[com.Davi.poems.gui.Controller]-超时 取消任务
+
+
+2017-05-17 22:01:59,200INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 327ms
+
+
+2017-05-17 22:01:59,536INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 336ms
+
+
+2017-05-17 22:01:59,621INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 85ms
+
+
+2017-05-17 22:01:59,752INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 131ms
+
+
+2017-05-17 22:01:59,828INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 76ms
+
+
+2017-05-17 22:02:00,002INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 174ms
+
+
+2017-05-17 22:02:00,085INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 83ms
+
+
+2017-05-17 22:02:00,456INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 371ms
+
+
+2017-05-17 22:02:00,603INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 146ms
+
+
+2017-05-17 22:02:00,623INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 20ms
+
+
+2017-05-17 22:02:00,748INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 125ms
+
+
+2017-05-17 22:02:00,833INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 85ms
+
+
+2017-05-17 22:02:00,879INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 46ms
+
+
+2017-05-17 22:02:00,940INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 61ms
+
+
+2017-05-17 22:02:01,003INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 63ms
+
+
+2017-05-17 22:02:01,305INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 302ms
+
+
+2017-05-17 22:02:01,348INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 43ms
+
+
+2017-05-17 22:02:01,631INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 283ms
+
+
+2017-05-17 22:02:01,687INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 56ms
+
+
+2017-05-17 22:02:01,789INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 102ms
+
+
+2017-05-17 22:02:01,984INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 195ms
+
+
+2017-05-17 22:02:02,019INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 35ms
+
+
+2017-05-17 22:02:02,108INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 88ms
+
+
+2017-05-17 22:02:02,263INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 155ms
+
+
+2017-05-17 22:02:02,413INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 150ms
+
+
+2017-05-17 22:02:02,599INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 186ms
+
+
+2017-05-17 22:02:02,654INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 55ms
+
+
+2017-05-17 22:02:02,716INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 62ms
+
+
+2017-05-17 22:02:02,747INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 31ms
+
+
+2017-05-17 22:02:02,813INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 66ms
+
+
+2017-05-17 22:02:02,856INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 43ms
+
+
+2017-05-17 22:02:03,120INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 264ms
+
+
+2017-05-17 22:02:03,210INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 89ms
+
+
+2017-05-17 22:02:03,375INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 165ms
+
+
+2017-05-17 22:02:03,449INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 74ms
+
+
+2017-05-17 22:02:03,488INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 39ms
+
+
+2017-05-17 22:02:03,735INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 247ms
+
+
+2017-05-17 22:02:03,744INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 8ms
+
+
+2017-05-17 22:02:03,770INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 51ms
+
+
+2017-05-17 22:02:03,839INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 69ms
+
+
+2017-05-17 22:02:03,964INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 220ms
+
+
+2017-05-17 22:02:03,982INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 143ms
+
+
+2017-05-17 22:02:04,021INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 57ms
+
+
+2017-05-17 22:02:04,066INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 84ms
+
+
+2017-05-17 22:02:04,102INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 81ms
+
+
+2017-05-17 22:02:04,250INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 148ms
+
+
+2017-05-17 22:02:04,396INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 330ms
+
+
+2017-05-17 22:02:04,424INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 174ms
+
+
+2017-05-17 22:02:04,446INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 50ms
+
+
+2017-05-17 22:02:04,455INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 31ms
+
+
+2017-05-17 22:02:04,516INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 60ms
+
+
+2017-05-17 22:02:04,523INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 77ms
+
+
+2017-05-17 22:02:04,540INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 17ms
+
+
+2017-05-17 22:02:04,613INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 97ms
+
+
+2017-05-17 22:02:04,712INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 172ms
+
+
+2017-05-17 22:02:04,724INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 110ms
+
+
+2017-05-17 22:02:04,893INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 169ms
+
+
+2017-05-17 22:02:04,933INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 220ms
+
+
+2017-05-17 22:02:05,034INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 101ms
+
+
+2017-05-17 22:02:05,064INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 171ms
+
+
+2017-05-17 22:02:05,088INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 53ms
+
+
+2017-05-17 22:02:05,137INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 73ms
+
+
+2017-05-17 22:02:05,205INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 116ms
+
+
+2017-05-17 22:02:05,219INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 82ms
+
+
+2017-05-17 22:02:05,336INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 131ms
+
+
+2017-05-17 22:02:05,433INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 96ms
+
+
+2017-05-17 22:02:05,473INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 254ms
+
+
+2017-05-17 22:02:05,537INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 64ms
+
+
+2017-05-17 22:02:05,616INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 183ms
+
+
+2017-05-17 22:02:05,634INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 97ms
+
+
+2017-05-17 22:02:05,687INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 71ms
+
+
+2017-05-17 22:02:05,744INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 57ms
+
+
+2017-05-17 22:02:05,804INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 60ms
+
+
+2017-05-17 22:02:05,814INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 180ms
+
+
+2017-05-17 22:02:05,845INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 41ms
+
+
+2017-05-17 22:02:05,891INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 77ms
+
+
+2017-05-17 22:02:06,010INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 164ms
+
+
+2017-05-17 22:02:06,120INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 229ms
+
+
+2017-05-17 22:02:06,364INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 354ms
+
+
+2017-05-17 22:02:06,402INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 282ms
+
+
+2017-05-17 22:02:06,450INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 48ms
+
+
+2017-05-17 22:02:06,486INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 122ms
+
+
+2017-05-17 22:02:06,542INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 92ms
+
+
+2017-05-17 22:02:06,600INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 114ms
+
+
+2017-05-17 22:02:06,646INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 45ms
+
+
+2017-05-17 22:02:06,711INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 169ms
+
+
+2017-05-17 22:02:06,786INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 75ms
+
+
+2017-05-17 22:02:06,856INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 210ms
+
+
+2017-05-17 22:02:06,942INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 156ms
+
+
+2017-05-17 22:02:07,022INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 166ms
+
+
+2017-05-17 22:02:07,091INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 68ms
+
+
+2017-05-17 22:02:07,175INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 84ms
+
+
+2017-05-17 22:02:07,248INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 306ms
+
+
+2017-05-17 22:02:07,266INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 91ms
+
+
+2017-05-17 22:02:07,300INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 34ms
+
+
+2017-05-17 22:02:07,352INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 52ms
+
+
+2017-05-17 22:02:07,409INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 161ms
+
+
+2017-05-17 22:02:07,411INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 58ms
+
+
+2017-05-17 22:02:07,481INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 72ms
+
+
+2017-05-17 22:02:07,536INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 54ms
+
+
+2017-05-17 22:02:07,639INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 228ms
+
+
+2017-05-17 22:02:07,673INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 137ms
+
+
+2017-05-17 22:02:07,783INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 110ms
+
+
+2017-05-17 22:02:07,783INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 144ms
+
+
+2017-05-17 22:02:07,892INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 109ms
+
+
+2017-05-17 22:02:07,917INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 134ms
+
+
+2017-05-17 22:02:08,094INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 201ms
+
+
+2017-05-17 22:02:08,185INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 90ms
+
+
+2017-05-17 22:02:08,239INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 322ms
+
+
+2017-05-17 22:02:08,281INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 96ms
+
+
+2017-05-17 22:02:08,331INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 50ms
+
+
+2017-05-17 22:02:08,340INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 101ms
+
+
+2017-05-17 22:02:08,448INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 117ms
+
+
+2017-05-17 22:02:08,571INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 123ms
+
+
+2017-05-17 22:02:08,576INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 236ms
+
+
+2017-05-17 22:02:08,633INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 62ms
+
+
+2017-05-17 22:02:08,702INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 69ms
+
+
+2017-05-17 22:02:08,772INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 69ms
+
+
+2017-05-17 22:02:08,792INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 216ms
+
+
+2017-05-17 22:02:08,854INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 82ms
+
+
+2017-05-17 22:02:08,980INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 188ms
+
+
+2017-05-17 22:02:09,033INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 178ms
+
+
+2017-05-17 22:02:09,054INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 74ms
+
+
+2017-05-17 22:02:09,089INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 56ms
+
+
+2017-05-17 22:02:09,105INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 16ms
+
+
+2017-05-17 22:02:09,172INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 118ms
+
+
+2017-05-17 22:02:09,292INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 120ms
+
+
+2017-05-17 22:02:09,353INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 61ms
+
+
+2017-05-17 22:02:09,366INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 261ms
+
+
+2017-05-17 22:02:09,395INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 28ms
+
+
+2017-05-17 22:02:09,452INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 57ms
+
+
+2017-05-17 22:02:09,504INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 151ms
+
+
+2017-05-17 22:02:09,545INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 93ms
+
+
+2017-05-17 22:02:09,586INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 41ms
+
+
+2017-05-17 22:02:09,634INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 48ms
+
+
+2017-05-17 22:02:09,661INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 156ms
+
+
+2017-05-17 22:02:09,697INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 36ms
+
+
+2017-05-17 22:02:09,761INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 126ms
+
+
+2017-05-17 22:02:09,859INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 97ms
+
+
+2017-05-17 22:02:09,882INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 185ms
+
+
+2017-05-17 22:02:10,072INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 190ms
+
+
+2017-05-17 22:02:10,118INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 46ms
+
+
+2017-05-17 22:02:10,164INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 304ms
+
+
+2017-05-17 22:02:10,280INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 162ms
+
+
+2017-05-17 22:02:10,453INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 289ms
+
+
+2017-05-17 22:02:10,458INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 178ms
+
+
+2017-05-17 22:02:10,477INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 24ms
+
+
+2017-05-17 22:02:10,546INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 88ms
+
+
+2017-05-17 22:02:10,572INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 26ms
+
+
+2017-05-17 22:02:10,719INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 147ms
+
+
+2017-05-17 22:02:10,785INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 66ms
+
+
+2017-05-17 22:02:10,785INFO[com.Davi.poems.gui.Controller]-执行开始时间差12904ms
+
+
+2017-05-17 22:02:10,843INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 366ms
+
+
+2017-05-17 22:02:10,867INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 24ms
+
+
+2017-05-17 22:02:10,903INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 36ms
+
+
+2017-05-17 22:02:11,002INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 99ms
+
+
+2017-05-17 22:02:11,268INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 266ms
+
+
+2017-05-17 22:02:11,293INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 25ms
+
+
+2017-05-17 22:02:11,344INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 51ms
+
+
+2017-05-17 22:02:11,571INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 227ms
+
+
+2017-05-17 22:02:11,641INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 70ms
+
+
+2017-05-17 22:02:11,736INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 95ms
+
+
+2017-05-17 22:02:11,885INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 149ms
+
+
+2017-05-17 22:02:12,000INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 115ms
+
+
+2017-05-17 22:02:12,252INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 252ms
+
+
+2017-05-17 22:02:12,281INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 29ms
+
+
+2017-05-17 22:02:12,304INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 23ms
+
+
+2017-05-17 22:02:12,451INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 147ms
+
+
+2017-05-17 22:02:12,545INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 94ms
+
+
+2017-05-17 22:02:12,621INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 76ms
+
+
+2017-05-17 22:02:12,633INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 12ms
+
+
+2017-05-17 22:02:12,694INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 61ms
+
+
+2017-05-17 22:02:12,742INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 48ms
+
+
+2017-05-17 22:02:12,795INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 53ms
+
+
+2017-05-17 22:02:12,812INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 17ms
+
+
+2017-05-17 22:02:12,850INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 37ms
+
+
+2017-05-17 22:02:12,966INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 116ms
+
+
+2017-05-17 22:02:13,124INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 158ms
+
+
+2017-05-17 22:02:13,230INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 106ms
+
+
+2017-05-17 22:02:13,239INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 9ms
+
+
+2017-05-17 22:02:13,623INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 384ms
+
+
+2017-05-17 22:02:13,722INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 99ms
+
+
+2017-05-17 22:02:13,806INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 84ms
+
+
+2017-05-17 22:02:13,816INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 10ms
+
+
+2017-05-17 22:02:13,951INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 135ms
+
+
+2017-05-17 22:02:14,005INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 54ms
+
+
+2017-05-17 22:02:14,046INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 41ms
+
+
+2017-05-17 22:02:14,151INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 105ms
+
+
+2017-05-17 22:02:14,192INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 41ms
+
+
+2017-05-17 22:02:14,295INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 102ms
+
+
+2017-05-17 22:02:14,325INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 30ms
+
+
+2017-05-17 22:02:14,732INFO[com.Davi.poems.tools.analyze]-NLPSegment生成对偶句所用时间 Time 407ms
+
+
+2017-05-17 22:02:17,665INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 39ms
+
+
+2017-05-17 22:02:17,702INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 37ms
+
+
+2017-05-17 22:02:17,795INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 93ms
+
+
+2017-05-17 22:02:17,945INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 149ms
+
+
+2017-05-17 22:02:18,036INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 91ms
+
+
+2017-05-17 22:02:18,064INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 27ms
+
+
+2017-05-17 22:02:18,188INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 120ms
+
+
+2017-05-17 22:02:18,253INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 65ms
+
+
+2017-05-17 22:02:18,434INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 181ms
+
+
+2017-05-17 22:02:18,570INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 136ms
+
+
+2017-05-17 22:02:18,627ERROR[com.Davi.poems.gui.Controller]-超时 取消任务
+
+
+2017-05-17 22:02:18,646INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 76ms
+
+
+2017-05-17 22:02:18,853INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 207ms
+
+
+2017-05-17 22:02:18,950INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 97ms
+
+
+2017-05-17 22:02:18,988INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 38ms
+
+
+2017-05-17 22:02:19,024INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 36ms
+
+
+2017-05-17 22:02:19,199INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 175ms
+
+
+2017-05-17 22:02:19,333INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 133ms
+
+
+2017-05-17 22:02:19,559INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 226ms
+
+
+2017-05-17 22:02:19,729INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 170ms
+
+
+2017-05-17 22:02:19,809INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 80ms
+
+
+2017-05-17 22:02:19,903INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 93ms
+
+
+2017-05-17 22:02:19,965INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 62ms
+
+
+2017-05-17 22:02:20,177INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 212ms
+
+
+2017-05-17 22:02:20,334INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 157ms
+
+
+2017-05-17 22:02:20,369INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 35ms
+
+
+2017-05-17 22:02:20,397INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 28ms
+
+
+2017-05-17 22:02:20,423INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 26ms
+
+
+2017-05-17 22:02:20,445INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 22ms
+
+
+2017-05-17 22:02:20,563INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 118ms
+
+
+2017-05-17 22:02:20,753INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 190ms
+
+
+2017-05-17 22:02:20,771INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 18ms
+
+
+2017-05-17 22:02:21,056INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 284ms
+
+
+2017-05-17 22:02:21,142INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 86ms
+
+
+2017-05-17 22:02:21,359INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 217ms
+
+
+2017-05-17 22:02:21,567INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 208ms
+
+
+2017-05-17 22:02:21,683INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 116ms
+
+
+2017-05-17 22:02:21,744INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 61ms
+
+
+2017-05-17 22:02:21,876INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 132ms
+
+
+2017-05-17 22:02:22,021INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 145ms
+
+
+2017-05-17 22:02:22,072INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 50ms
+
+
+2017-05-17 22:02:22,135INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 63ms
+
+
+2017-05-17 22:02:22,160INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 25ms
+
+
+2017-05-17 22:02:22,172INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 12ms
+
+
+2017-05-17 22:02:22,184INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 12ms
+
+
+2017-05-17 22:02:22,413INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 229ms
+
+
+2017-05-17 22:02:22,517INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 104ms
+
+
+2017-05-17 22:02:22,620INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 103ms
+
+
+2017-05-17 22:02:22,814INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 194ms
+
+
+2017-05-17 22:02:22,892INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 78ms
+
+
+2017-05-17 22:02:22,948INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 56ms
+
+
+2017-05-17 22:02:23,049INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 101ms
+
+
+2017-05-17 22:02:23,255INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 206ms
+
+
+2017-05-17 22:02:23,301INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 46ms
+
+
+2017-05-17 22:02:23,484INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 183ms
+
+
+2017-05-17 22:02:23,731INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 247ms
+
+
+2017-05-17 22:02:23,962INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 231ms
+
+
+2017-05-17 22:02:24,090INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 128ms
+
+
+2017-05-17 22:02:24,240INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 150ms
+
+
+2017-05-17 22:02:24,342INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 102ms
+
+
+2017-05-17 22:02:24,389INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 47ms
+
+
+2017-05-17 22:02:24,522INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 133ms
+
+
+2017-05-17 22:02:24,575INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 53ms
+
+
+2017-05-17 22:02:24,694INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 119ms
+
+
+2017-05-17 22:02:24,833INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 139ms
+
+
+2017-05-17 22:02:25,004INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 171ms
+
+
+2017-05-17 22:02:25,157INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 153ms
+
+
+2017-05-17 22:02:25,327INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 170ms
+
+
+2017-05-17 22:02:25,420INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 93ms
+
+
+2017-05-17 22:02:25,623INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 203ms
+
+
+2017-05-17 22:02:25,708INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 85ms
+
+
+2017-05-17 22:02:25,756INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 48ms
+
+
+2017-05-17 22:02:25,888INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 132ms
+
+
+2017-05-17 22:02:26,201INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 313ms
+
+
+2017-05-17 22:02:26,230INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 29ms
+
+
+2017-05-17 22:02:26,349INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 119ms
+
+
+2017-05-17 22:02:26,415INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 66ms
+
+
+2017-05-17 22:02:26,937INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 522ms
+
+
+2017-05-17 22:02:26,963INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 26ms
+
+
+2017-05-17 22:02:27,057INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 94ms
+
+
+2017-05-17 22:02:27,228INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 171ms
+
+
+2017-05-17 22:02:27,626INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 398ms
+
+
+2017-05-17 22:02:27,799INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 172ms
+
+
+2017-05-17 22:02:27,827INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 28ms
+
+
+2017-05-17 22:02:27,918INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 91ms
+
+
+2017-05-17 22:02:27,994INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 76ms
+
+
+2017-05-17 22:02:28,365INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 371ms
+
+
+2017-05-17 22:02:28,411INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 46ms
+
+
+2017-05-17 22:02:28,425INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 14ms
+
+
+2017-05-17 22:02:28,476INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 51ms
+
+
+2017-05-17 22:02:28,499INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 23ms
+
+
+2017-05-17 22:02:28,588INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 89ms
+
+
+2017-05-17 22:02:28,859INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 271ms
+
+
+2017-05-17 22:02:28,897INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 38ms
+
+
+2017-05-17 22:02:28,967INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 70ms
+
+
+2017-05-17 22:02:29,147INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 180ms
+
+
+2017-05-17 22:02:29,192INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 45ms
+
+
+2017-05-17 22:02:29,566INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 374ms
+
+
+2017-05-17 22:02:29,643INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 77ms
+
+
+2017-05-17 22:02:29,759INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 116ms
+
+
+2017-05-17 22:02:29,898INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 139ms
+
+
+2017-05-17 22:02:29,898INFO[com.Davi.poems.gui.Controller]-执行开始时间差12272ms
+
+
+2017-05-17 22:08:13,961INFO[com.Davi.poems.tools.wordSource]-用时 251ms
+
+
+2017-05-17 22:08:14,024INFO[com.Davi.poems.tools.pzSource]-用时 61ms
+
+
+2017-05-17 22:08:14,059INFO[com.Davi.poems.tools.kindSource]-用时 34ms
+
+
+2017-05-17 22:08:14,075INFO[com.Davi.poems.tools.authorSource]-用时 14ms
+
+
+2017-05-17 22:08:15,196INFO[com.Davi.poems.tools.tangSource]-用时 1120ms
+
+
+2017-05-17 22:08:15,234INFO[com.Davi.poems.tools.wordCountSource]-用时 37ms
+
+
+2017-05-17 22:08:23,246INFO[com.Davi.poems.tools.wordSource]-用时 35ms
+
+
+2017-05-17 22:08:23,267INFO[com.Davi.poems.tools.pzSource]-用时 21ms
+
+
+2017-05-17 22:08:23,281INFO[com.Davi.poems.tools.kindSource]-用时 14ms
+
+
+2017-05-17 22:08:23,288INFO[com.Davi.poems.tools.authorSource]-用时 7ms
+
+
+2017-05-17 22:08:24,185INFO[com.Davi.poems.tools.tangSource]-用时 897ms
+
+
+2017-05-17 22:08:24,210INFO[com.Davi.poems.tools.wordCountSource]-用时 25ms
+
+
+2017-05-17 22:08:29,681ERROR[com.Davi.poems.gui.Controller]-超时 取消任务
+
+
+2017-05-17 22:08:43,057INFO[com.Davi.poems.gui.Controller]-模糊匹配结果数量： 63
+
+
+2017-05-17 22:08:43,057INFO[com.Davi.poems.gui.Controller]-执行开始时间差14377ms
+
+
+2017-05-17 22:09:17,367ERROR[com.Davi.poems.gui.Controller]-超时 取消任务
+
+
+2017-05-17 22:09:18,919INFO[com.Davi.poems.gui.Controller]-输入字符串 [李杜]白
+
+
+2017-05-17 22:09:19,139INFO[com.Davi.poems.gui.Controller]-point is 1
+
+
+2017-05-17 22:09:19,140INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 0
+
+
+2017-05-17 22:09:19,140INFO[com.Davi.poems.gui.Controller]-执行开始时间差221ms
+
+
+2017-05-17 22:09:32,022INFO[com.Davi.poems.gui.Controller]-模糊匹配结果数量： 63
+
+
+2017-05-17 22:09:32,022INFO[com.Davi.poems.gui.Controller]-执行开始时间差15656ms
+
+
+2017-05-17 22:10:49,142INFO[com.Davi.poems.tools.wordSource]-用时 276ms
+
+
+2017-05-17 22:10:49,206INFO[com.Davi.poems.tools.pzSource]-用时 62ms
+
+
+2017-05-17 22:10:49,238INFO[com.Davi.poems.tools.kindSource]-用时 31ms
+
+
+2017-05-17 22:10:49,252INFO[com.Davi.poems.tools.authorSource]-用时 13ms
+
+
+2017-05-17 22:10:50,436INFO[com.Davi.poems.tools.tangSource]-用时 1183ms
+
+
+2017-05-17 22:10:50,472INFO[com.Davi.poems.tools.wordCountSource]-用时 35ms
+
+
+2017-05-17 22:11:22,911INFO[com.Davi.poems.tools.wordSource]-用时 261ms
+
+
+2017-05-17 22:11:23,000INFO[com.Davi.poems.tools.pzSource]-用时 86ms
+
+
+2017-05-17 22:11:23,031INFO[com.Davi.poems.tools.kindSource]-用时 30ms
+
+
+2017-05-17 22:11:23,049INFO[com.Davi.poems.tools.authorSource]-用时 17ms
+
+
+2017-05-17 22:11:24,197INFO[com.Davi.poems.tools.tangSource]-用时 1147ms
+
+
+2017-05-17 22:11:24,226INFO[com.Davi.poems.tools.wordCountSource]-用时 28ms
+
+
+2017-05-17 22:11:31,276INFO[com.Davi.poems.tools.wordSource]-用时 50ms
+
+
+2017-05-17 22:11:31,300INFO[com.Davi.poems.tools.pzSource]-用时 24ms
+
+
+2017-05-17 22:11:31,311INFO[com.Davi.poems.tools.kindSource]-用时 11ms
+
+
+2017-05-17 22:11:31,319INFO[com.Davi.poems.tools.authorSource]-用时 8ms
+
+
+2017-05-17 22:11:32,155INFO[com.Davi.poems.tools.tangSource]-用时 836ms
+
+
+2017-05-17 22:11:32,174INFO[com.Davi.poems.tools.wordCountSource]-用时 19ms
+
+
+2017-05-17 22:11:40,160ERROR[com.Davi.poems.gui.Controller]-超时 取消任务
+
+
+2017-05-17 22:11:47,125INFO[com.Davi.poems.gui.Controller]-输入字符串 李白****
+
+
+2017-05-17 22:11:53,615INFO[com.Davi.poems.gui.Controller]-模糊匹配结果数量： 63
+
+
+2017-05-17 22:11:53,615INFO[com.Davi.poems.gui.Controller]-执行开始时间差14456ms
+
+
+2017-05-17 22:15:02,157INFO[com.Davi.poems.tools.wordSource]-用时 282ms
+
+
+2017-05-17 22:15:02,224INFO[com.Davi.poems.tools.pzSource]-用时 65ms
+
+
+2017-05-17 22:15:02,259INFO[com.Davi.poems.tools.kindSource]-用时 34ms
+
+
+2017-05-17 22:15:02,273INFO[com.Davi.poems.tools.authorSource]-用时 13ms
+
+
+2017-05-17 22:15:03,326INFO[com.Davi.poems.tools.tangSource]-用时 1051ms
+
+
+2017-05-17 22:15:03,362INFO[com.Davi.poems.tools.wordCountSource]-用时 34ms
+
+
+2017-05-17 22:15:11,053INFO[com.Davi.poems.tools.wordSource]-用时 36ms
+
+
+2017-05-17 22:15:11,082INFO[com.Davi.poems.tools.pzSource]-用时 28ms
+
+
+2017-05-17 22:15:11,095INFO[com.Davi.poems.tools.kindSource]-用时 13ms
+
+
+2017-05-17 22:15:11,106INFO[com.Davi.poems.tools.authorSource]-用时 11ms
+
+
+2017-05-17 22:15:11,811INFO[com.Davi.poems.tools.tangSource]-用时 705ms
+
+
+2017-05-17 22:15:11,830INFO[com.Davi.poems.tools.wordCountSource]-用时 19ms
+
+
+2017-05-17 22:15:20,721INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 215ms
+
+
+2017-05-17 22:15:20,815INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 94ms
+
+
+2017-05-17 22:15:20,926INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 111ms
+
+
+2017-05-17 22:15:21,006INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 80ms
+
+
+2017-05-17 22:15:21,120INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 114ms
+
+
+2017-05-17 22:15:21,216INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 93ms
+
+
+2017-05-17 22:15:21,235INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 19ms
+
+
+2017-05-17 22:15:21,246ERROR[com.Davi.poems.gui.Controller]-超时 取消任务
+
+
+2017-05-17 22:15:21,357INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 122ms
+
+
+2017-05-17 22:15:21,438INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 80ms
+
+
+2017-05-17 22:15:21,489INFO[com.Davi.poems.tools.analyze]-normalSegment生成对偶句所用时间 Time 51ms
+
+
+2017-05-17 22:15:21,490INFO[com.Davi.poems.gui.Controller]-执行开始时间差1245ms
+
+
+2017-05-17 22:22:29,381INFO[com.Davi.poems.tools.wordSource]-用时 65ms
+
+
+2017-05-17 22:22:29,400INFO[com.Davi.poems.tools.pzSource]-用时 19ms
+
+
+2017-05-17 22:22:29,411INFO[com.Davi.poems.tools.kindSource]-用时 11ms
+
+
+2017-05-17 22:22:29,420INFO[com.Davi.poems.tools.authorSource]-用时 9ms
+
+
+2017-05-17 22:22:29,816INFO[com.Davi.poems.tools.tangSource]-用时 396ms
+
+
+2017-05-17 22:22:29,836INFO[com.Davi.poems.tools.wordCountSource]-用时 20ms
+
+
+2017-05-17 22:22:38,826ERROR[com.Davi.poems.gui.Controller]-超时 取消任务
+
+
+2017-05-17 22:23:30,108INFO[com.Davi.poems.gui.Controller]-对偶匹配结果数量： 11
+
+
+2017-05-17 22:23:30,109INFO[com.Davi.poems.gui.Controller]-执行开始时间差52284ms
+
+
+2017-05-17 22:23:37,417INFO[com.Davi.poems.tools.wordSource]-用时 22ms
+
+
+2017-05-17 22:23:37,430INFO[com.Davi.poems.tools.pzSource]-用时 12ms
+
+
+2017-05-17 22:23:37,438INFO[com.Davi.poems.tools.kindSource]-用时 8ms
+
+
+2017-05-17 22:23:37,444INFO[com.Davi.poems.tools.authorSource]-用时 6ms
+
+
+2017-05-17 22:23:37,755INFO[com.Davi.poems.tools.tangSource]-用时 311ms
+
+
+2017-05-17 22:23:37,767INFO[com.Davi.poems.tools.wordCountSource]-用时 12ms
+
+
+2017-05-17 22:23:41,338ERROR[com.Davi.poems.gui.Controller]-超时 取消任务
+
+
+2017-05-17 22:23:43,896INFO[com.Davi.poems.gui.Controller]-输入字符串 空山新雨后
+
+
+2017-05-17 22:23:44,501INFO[com.Davi.poems.gui.Controller]-point is 0
+
+
+2017-05-17 22:23:44,501INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 1
+
+
+2017-05-17 22:23:44,501INFO[com.Davi.poems.gui.Controller]-执行开始时间差604ms
+
+
+2017-05-17 22:23:52,665INFO[com.Davi.poems.gui.Controller]-模糊匹配结果数量： 1
+
+
+2017-05-17 22:23:52,665INFO[com.Davi.poems.gui.Controller]-执行开始时间差12328ms
+
+
+2017-05-17 22:23:59,032INFO[com.Davi.poems.gui.Controller]-输入字符串 
+
+
+2017-05-17 22:23:59,211INFO[com.Davi.poems.gui.Controller]-point is 2
+
+
+2017-05-17 22:23:59,211INFO[com.Davi.poems.gui.Controller]-精确匹配结果数量： 955
+
+
+2017-05-17 22:23:59,211INFO[com.Davi.poems.gui.Controller]-执行开始时间差178ms

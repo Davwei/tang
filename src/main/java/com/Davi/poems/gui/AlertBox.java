@@ -23,7 +23,7 @@ import java.util.ArrayList;
 /**
  * Created by David on 2017/3/17.
  */
-public class AlertBox {
+public class AlertBox{
     public AlertBox(){
 
     }
@@ -80,6 +80,7 @@ public class AlertBox {
         }
         return resultBuilder.toString();
     }
+
     class saveToFile implements javafx.event.EventHandler{
         Logger logger = Logger.getLogger(saveToFile.class);
         tangClass tmp ;
