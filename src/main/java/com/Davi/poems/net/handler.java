@@ -14,9 +14,7 @@ import java.net.URLDecoder;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.Davi.poems.basic.operation.isSearch;
-import static com.Davi.poems.basic.operation.pairMatch;
-import static com.Davi.poems.basic.operation.possibleSearch;
+import static com.Davi.poems.basic.operation.*;
 
 /**
  * Created by David on 2017/4/12.
@@ -46,8 +44,15 @@ public class handler {
                 op = pairMatch;
                 result = az.pairMatch(inputString);
                 break;
+            case "pairGetNormal":
+                op = pairGetNormal;
+                result = new ArrayList<>();
+                tangClass tmp = new tangClass();
+                tmp.setPairs(az.nomalSegment(inputString));
+                result.add(tmp);
+                break;
             default:
-               throw new myException("未知操作");
+               throw new myException("未知操作或不支持的操作");
 
         }
         event e = new event(op,inputString);

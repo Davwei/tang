@@ -32,6 +32,12 @@ public class analyze {
     //private createOrderWordsList cowl;
     private wordCountSource wcs;
 
+    public void setOutTime(long outTime) {
+        this.outTime = outTime;
+    }
+
+    private long outTime = 1*1000;
+
     private char[] SET = {'？', '?', '|', '&', '[', ']', '{', '}', '*', '(', ')', '（', '）', '+'};
 
     private char[] spliter = {'？', '?', '。', '，', '\n'};
@@ -336,9 +342,16 @@ public class analyze {
         return result;
     }
 
-    private void formate(String keyWord) {
-        String input = keyWord.toLowerCase();
-
+    private boolean isChineseStr(String keyWord) {
+        boolean isChStr = true;
+        for (int i = 0; i < keyWord.length(); i++) {
+            if (isChinese(keyWord.charAt(i))){
+                    isChStr = true;
+            }else {
+                isChStr = false;
+            }
+        }
+        return isChStr;
     }
 
 
@@ -1091,14 +1104,19 @@ public class analyze {
      * NomalSegment分词实现的对偶生成
      */
     public String nomalSegment(String input) throws myException {
+        if (!isChineseStr(input))
+            throw new myException("非法输入");
         List<Term> resultTmp = HanLP.segment(input);
         List<String> resultString = new LinkedList<>();
         long start = System.currentTimeMillis();
         for (int i = 0; i < resultTmp.size(); i++) {
             //System.out.print(t.word + " & ");
             String tmp = "";
-
-            while (true) {
+            long startTime = System.currentTimeMillis();
+            boolean isOutTime = true;
+            while (isOutTime) {
+                if (System.currentTimeMillis()-startTime > outTime)
+                    throw new myException("任务超时");
                 tmp = getPair(resultTmp.get(i).word);
                 System.out.println("tmp word is"+tmp+" "+ HanLP.segment(tmp).size());
                 System.out.println(HanLP.segment(tmp).get(0) + "  "+resultTmp.get(i)+resultTmp.get(i).nature );
@@ -1140,6 +1158,8 @@ public class analyze {
      * @throws myException
      */
     public String NLPSegment(String input) throws myException{
+        if (!isChineseStr(input))
+            throw new myException("非法输入");
         List<Term> resultTmp = NLPTokenizer.segment(input);
         List<String> resultString = new LinkedList<>();
         long start = System.currentTimeMillis();
@@ -1147,7 +1167,11 @@ public class analyze {
             //System.out.print(t.word + " & ");
             String tmp = "";
 
-            while (true) {
+            long startTime = System.currentTimeMillis();
+            boolean isOutTime = true;
+            while (isOutTime) {
+                if (System.currentTimeMillis()-startTime > outTime)
+                    throw new myException("任务超时");
                 tmp = getPair(resultTmp.get(i).word);
                 //System.out.println(HanLP.segment(tmp).size());
                 //System.out.println(HanLP.segment(tmp).get(0));
@@ -1182,6 +1206,8 @@ public class analyze {
     }
 
     public String NshortSegment(String input) throws myException {
+        if (!isChineseStr(input))
+            throw new myException("非法输入");
         Segment nShortSegment = new NShortSegment().enableCustomDictionary(false).enablePlaceRecognize(true).enableOrganizationRecognize(true);
         List<Term> resultTmp = nShortSegment.seg(input);
         List<String> resultString = new LinkedList<>();
@@ -1190,7 +1216,11 @@ public class analyze {
             //System.out.print(t.word + " & ");
             String tmp = "";
 
-            while (true) {
+            long startTime = System.currentTimeMillis();
+            boolean isOutTime = true;
+            while (isOutTime) {
+                if (System.currentTimeMillis()-startTime > outTime)
+                    throw new myException("任务超时");
                 tmp = getPair(resultTmp.get(i).word);
                 //System.out.println(HanLP.segment(tmp).size());
                 //System.out.println(HanLP.segment(tmp).get(0));
@@ -1227,6 +1257,8 @@ public class analyze {
 
     }
     public String DijkstraShortSegment(String input)throws myException{
+        if (!isChineseStr(input))
+            throw new myException("非法输入");
         Segment DijkstraSegment = new DijkstraSegment().enableCustomDictionary(false).enablePlaceRecognize(true).enableOrganizationRecognize(true);
         List<Term> resultTmp = DijkstraSegment.seg(input);
         List<String> resultString = new LinkedList<>();
@@ -1235,7 +1267,11 @@ public class analyze {
             //System.out.print(t.word + " & ");
             String tmp = "";
 
-            while (true) {
+            long startTime = System.currentTimeMillis();
+            boolean isOutTime = true;
+            while (isOutTime) {
+                if (System.currentTimeMillis()-startTime > outTime)
+                    throw new myException("任务超时");
                 tmp = getPair(resultTmp.get(i).word);
                 //System.out.println(HanLP.segment(tmp).size());
                 //System.out.println(HanLP.segment(tmp).get(0));

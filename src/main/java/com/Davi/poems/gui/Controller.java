@@ -45,6 +45,7 @@ public class Controller {
 
     public void setApp(Main application) {
         this.application = application;
+        service = new ThreadPoolExecutor(1,5,timeout,TimeUnit.SECONDS,new LinkedBlockingQueue<Runnable>());
     }
 
     @FXML
@@ -85,11 +86,11 @@ public class Controller {
     public static Media media;
     public static MediaPlayer mp;
     public static boolean bgmIsOn = false;
-    public int timeout = 1;
+    public int timeout = 2;//线程锁界面的时间？
     protected getResultSetThread result1;
 
     protected MusicThread m = new MusicThread(this);
-    protected threadPool threadPools = new threadPool();
+    //protected threadPool threadPools = new threadPool();
 
     private int pairsNumber = 5;
 
@@ -140,7 +141,6 @@ public class Controller {
         result1 = new getResultSetThread(this,input,operation.isSearch);
         //result1.run();
 
-        service = Executors.newFixedThreadPool(1);
         Future future = service.submit(result1);
 
         try {
@@ -152,9 +152,11 @@ public class Controller {
         } catch (TimeoutException e) {
             logger.error("超时 取消任务");
             future.cancel(true);
+            //service.shutdownNow();
         } finally {
-            System.out.println("线程容器结束");
-            service.shutdown();
+            //System.out.println("线程容器结束");
+
+
         }
 
         //resultArray = az.match(input);
@@ -185,7 +187,7 @@ public class Controller {
         resultArray = new ArrayList<>();
 
         result1 = new getResultSetThread(this,input,operation.possibleSearch);
-        service = Executors.newFixedThreadPool(1);
+
         Future future = service.submit(result1);
 
         try {
@@ -198,8 +200,8 @@ public class Controller {
             logger.error("超时 取消任务");
             future.cancel(true);
         } finally {
-            System.out.println("线程容器结束");
-            service.shutdown();
+            //System.out.println("线程容器结束");
+            //service.shutdown();
         }
 
 
@@ -240,7 +242,7 @@ public class Controller {
         resultArray = new ArrayList<>();
 
         result1 = new getResultSetThread(this,input,operation.pairMatch);
-        service = Executors.newFixedThreadPool(1);
+
         Future future = service.submit(result1);
 
         try {
@@ -253,8 +255,8 @@ public class Controller {
             logger.error("超时 取消任务");
             future.cancel(true);
         } finally {
-            System.out.println("线程容器结束");
-            service.shutdown();
+            //System.out.println("线程容器结束");
+            //service.shutdown();
         }
 
 
@@ -294,7 +296,7 @@ public class Controller {
         String input = getPairFieldArea.getText().trim();
         resultArray = new ArrayList<>();
         result1 = new getResultSetThread(this,input,operation.pairGetNormal);
-        service = Executors.newFixedThreadPool(1);
+        //service = Executors.newFixedThreadPool(1);
         Future future = service.submit(result1);
 
         try {
@@ -307,8 +309,14 @@ public class Controller {
             logger.error("超时 取消任务");
             future.cancel(true);
         } finally {
-            System.out.println("线程容器结束");
-            service.shutdown();
+            //System.out.println("线程容器结束");
+            //service.shutdown();
+            /*if (service.isShutdown()){
+                //service = Executors.newFixedThreadPool(1);
+                System.out.println("service is down");
+            }else {
+                System.out.println(service.isTerminated()?"yes":"no");
+            }*/
         }
 
 
@@ -336,8 +344,30 @@ public class Controller {
 
     @FXML
     public void getPairsNLP(ActionEvent event) throws myException {
-        //ArrayList<tangClass> result = new ArrayList<tangClass>();
-        if (isNumeric(numberArea.getText().trim()))
+
+        String input = getPairFieldArea.getText().trim();
+        resultArray = new ArrayList<>();
+        result1 = new getResultSetThread(this,input,operation.pairGetNLP);
+        //service = Executors.newFixedThreadPool(1);
+        Future future = service.submit(result1);
+
+        try {
+            future.get(timeout*1000, TimeUnit.MILLISECONDS);//超时设置
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        } catch (TimeoutException e) {
+            logger.error("超时 取消任务");
+            future.cancel(true);
+        } finally {
+            //System.out.println("线程容器结束");
+            //service.shutdown();
+        }
+
+
+
+        /*if (isNumeric(numberArea.getText().trim()))
             pairsNumber = Integer.valueOf(numberArea.getText().trim());
         else
             new AlertBox().display("请输入数字");
@@ -355,13 +385,33 @@ public class Controller {
             pairColumnGP.setCellValueFactory(cellData -> cellData.getValue().pairProperty());
         } catch (myException m) {
             new AlertBox().display("错误: " + m.getMessage());
-        }
+        }*/
     }
 
     @FXML
     public void getPairsNShort(ActionEvent event) throws myException {
-        //ArrayList<tangClass> result = new ArrayList<tangClass>();
-        if (isNumeric(numberArea.getText().trim()))
+        String input = getPairFieldArea.getText().trim();
+        resultArray = new ArrayList<>();
+        result1 = new getResultSetThread(this,input,operation.pairGetNShortPath);
+        //service = Executors.newFixedThreadPool(1);
+        Future future = service.submit(result1);
+
+        try {
+            future.get(timeout*1000, TimeUnit.MILLISECONDS);//超时设置
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        } catch (TimeoutException e) {
+            logger.error("超时 取消任务");
+            future.cancel(true);
+        } finally {
+            //System.out.println("线程容器结束");
+            //service.shutdown();
+        }
+
+
+        /*if (isNumeric(numberArea.getText().trim()))
             pairsNumber = Integer.valueOf(numberArea.getText().trim());
         else
             new AlertBox().display("请输入数字");
@@ -379,13 +429,32 @@ public class Controller {
             pairColumnGP.setCellValueFactory(cellData -> cellData.getValue().pairProperty());
         } catch (myException m) {
             new AlertBox().display("错误: " + m.getMessage());
-        }
+        }*/
     }
 
     @FXML
     public void getPairsDijstra(ActionEvent event) throws myException {
-        //ArrayList<tangClass> result = new ArrayList<tangClass>();
-        if (isNumeric(numberArea.getText().trim()))
+        String input = getPairFieldArea.getText().trim();
+        resultArray = new ArrayList<>();
+        result1 = new getResultSetThread(this,input,operation.pairGetDijkstraPath);
+        //service = Executors.newFixedThreadPool(1);
+        Future future = service.submit(result1);
+
+        try {
+            future.get(timeout*1000, TimeUnit.MILLISECONDS);//超时设置
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        } catch (TimeoutException e) {
+            logger.error("超时 取消任务");
+            future.cancel(true);
+        } finally {
+            //System.out.println("线程容器结束");
+            //service.shutdown();
+        }
+
+        /*if (isNumeric(numberArea.getText().trim()))
             pairsNumber = Integer.valueOf(numberArea.getText().trim());
         else
             new AlertBox().display("请输入数字");
@@ -403,7 +472,7 @@ public class Controller {
             pairColumnGP.setCellValueFactory(cellData -> cellData.getValue().pairProperty());
         } catch (myException m) {
             new AlertBox().display("错误: " + m.getMessage());
-        }
+        }*/
     }
 
 
@@ -612,8 +681,9 @@ public class Controller {
         }
 
 
-
         private void isSearchMethod(String input) throws myException {
+
+
 
             synchronized (c.resultArray) {
                 //TODO 检查方法类卡住页面的原因，并改进
@@ -655,6 +725,7 @@ public class Controller {
             }
         }
         private void pairGetMethodNormal(String input) throws myException {
+
             synchronized (c.resultArray){
                 if (isNumeric(c.numberArea.getText().trim()))
                     c.pairsNumber = Integer.valueOf(c.numberArea.getText().trim());
@@ -668,6 +739,55 @@ public class Controller {
                 }
             }
         }
+
+
+
+        private void pairGetMethodNLP (String input) throws myException {
+            synchronized (c.resultArray){
+                if (isNumeric(numberArea.getText().trim()))
+                    pairsNumber = Integer.valueOf(numberArea.getText().trim());
+                else
+                    c.showAlertBox("请输入数字");
+
+                for (int i = 0; i < c.pairsNumber; i++) {
+                    tangClass tmp = new tangClass();
+                    tmp.setPairs(c.az.NLPSegment(input));
+                    c.resultArray.add(tmp);
+                }
+            }
+        }
+
+        private void pairGetMethodNShortPath(String input) throws myException {
+
+            synchronized (c.resultArray){
+                if (isNumeric(c.numberArea.getText().trim()))
+                    c.pairsNumber = Integer.valueOf(c.numberArea.getText().trim());
+                else
+                    c.showAlertBox("请输入数字");
+
+                for (int i = 0; i < c.pairsNumber; i++) {
+                    tangClass tmp = new tangClass();
+                    tmp.setPairs(c.az.NshortSegment(input));
+                    c.resultArray.add(tmp);
+                }
+            }
+        }
+        private void pairGetMethodDijkstraShortPath(String input) throws myException {
+
+            synchronized (c.resultArray){
+                if (isNumeric(c.numberArea.getText().trim()))
+                    c.pairsNumber = Integer.valueOf(c.numberArea.getText().trim());
+                else
+                    c.showAlertBox("请输入数字");
+                for (int i = 0; i < c.pairsNumber; i++) {
+                    tangClass tmp = new tangClass();
+                    tmp.setPairs(c.az.DijkstraShortSegment(input));
+                    c.resultArray.add(tmp);
+                }
+            }
+        }
+
+
 
         private void isSearchMethodFlush() {
 
@@ -727,6 +847,23 @@ public class Controller {
                         logger.info("执行开始时间差" + (System.currentTimeMillis() - start) + "ms");
                         pairGetMethodFlush();
                         break;
+                    case pairGetNLP:
+                        pairGetMethodNLP(input);
+                        logger.info("执行开始时间差" + (System.currentTimeMillis() - start) + "ms");
+                        pairGetMethodFlush();
+                        break;
+                    case pairGetNShortPath:
+                        pairGetMethodNShortPath(input);
+                        logger.info("执行开始时间差" + (System.currentTimeMillis() - start) + "ms");
+                        pairGetMethodFlush();
+                        break;
+                    case pairGetDijkstraPath:
+                        pairGetMethodDijkstraShortPath(input);
+                        logger.info("执行开始时间差" + (System.currentTimeMillis() - start) + "ms");
+                        pairGetMethodFlush();
+                        break;
+                    default:
+                        throw new myException("未知操作");
                 }
 
             } catch (myException e) {
