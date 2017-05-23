@@ -23,7 +23,7 @@ public class toTextFile {
 
     }
     public void fillFile(File e) throws IOException {
-        //TODO 完成arrayList的保存工作
+        //完成arrayList的保存工作
         fileOutputStream = new FileOutputStream(e);
         bufferedOutputStream = new BufferedOutputStream(fileOutputStream);
 

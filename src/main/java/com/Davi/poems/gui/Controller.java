@@ -292,7 +292,6 @@ public class Controller {
 
     @FXML
     public void getPairsNormal(ActionEvent event) throws myException {
-        //TODO 规范输入值
         String input = getPairFieldArea.getText().trim();
         resultArray = new ArrayList<>();
         result1 = new getResultSetThread(this,input,operation.pairGetNormal);
@@ -477,64 +476,76 @@ public class Controller {
 
 
     @FXML
-    public void getOnePorm(javafx.scene.input.MouseEvent e) throws Exception {
+    public void getOnePorm(javafx.scene.input.MouseEvent e){
 
-        tableData td = this.resultTable.getSelectionModel().getSelectedItem();
-        if (td == null) {
-            throw new myException("空输入");
+        try {
+            tableData td = this.resultTable.getSelectionModel().getSelectedItem();
+            if (td == null) {
+                throw new myException("空输入");
+            }
+            String author = td.getAuthor();
+            String title = td.getTitle();
+            String context = td.getContext();
+            if (author != null && title != null && context != null) {
+                tangClass tmp = new tangClass();
+                tmp.setAuther(author);
+                tmp.setTitle(title);
+                tmp.setContext(context);
+                new AlertBox().displayPorms(tmp);
+
+            } else {
+                throw new myException("空输入");
+            }
+
+        }catch (Exception exc){
+            this.showAlertBox(exc.getMessage());
         }
-        String author = td.getAuthor();
-        String title = td.getTitle();
-        String context = td.getContext();
-        if (author != null && title != null && context != null) {
-            tangClass tmp = new tangClass();
-            tmp.setAuther(author);
-            tmp.setTitle(title);
-            tmp.setContext(context);
-            new AlertBox().displayPorms(tmp);
-
-        } else {
-            throw new myException("空输入");
-        }
-
 
     }
 
     @FXML
-    public void getOnePair(javafx.scene.input.MouseEvent e) throws Exception {
+    public void getOnePair(javafx.scene.input.MouseEvent e) {
 
-        pairData pd = this.resultTableP.getSelectionModel().getSelectedItem();
+        try {
+            pairData pd = this.resultTableP.getSelectionModel().getSelectedItem();
 
-        if (pd == null) {
-            throw new myException("空输入");
+            if (pd == null) {
+                throw new myException("空输入");
+            }
+            String author = pd.getAuthor();
+            String title = pd.getTitle();
+            String context = pd.getPair();
+            if (author != null && title != null && context != null) {
+                tangClass tmp = new tangClass();
+                tmp.setAuther(author);
+                tmp.setTitle(title);
+                tmp.setContext(context);
+                new AlertBox().displayPorms(tmp);
+            } else
+                this.showAlertBox("空输入");
+        }catch (Exception exc){
+            this.showAlertBox(exc.getMessage());
         }
-        String author = pd.getAuthor();
-        String title = pd.getTitle();
-        String context = pd.getPair();
-        if (author != null && title != null && context != null) {
-            tangClass tmp = new tangClass();
-            tmp.setAuther(author);
-            tmp.setTitle(title);
-            tmp.setContext(context);
-            new AlertBox().displayPorms(tmp);
-        } else
-            throw new myException("空输入");
 
     }
 
     @FXML
     public void getPairFromGP(javafx.scene.input.MouseEvent e) throws Exception {
 
-        pairData pd = this.resultTableGP.getSelectionModel().getSelectedItem();
+        try {
+            pairData pd = this.resultTableGP.getSelectionModel().getSelectedItem();
 
-        if (pd != null) {
-            String context = pd.getPair();
-            tangClass tmp = new tangClass();
-            tmp.setTitle("对偶生成");
-            tmp.setContext(context);
-            new AlertBox().displayPorms(tmp);
-        } else
-            throw new myException("空输入");
+            if (pd != null) {
+                String context = pd.getPair();
+                tangClass tmp = new tangClass();
+                tmp.setTitle("对偶生成");
+                tmp.setContext(context);
+                new AlertBox().displayPorms(tmp);
+            } else
+                throw new myException("空输入");
+        }catch (Exception exc){
+            this.showAlertBox(exc.getMessage());
+        }
 
     }
 
@@ -686,7 +697,7 @@ public class Controller {
 
 
             synchronized (c.resultArray) {
-                //TODO 检查方法类卡住页面的原因，并改进
+
                 c.resultArray = c.az.match(input);
                 int point = (c.pointIsSearch + c.pointPairSearch + c.pointPossibleSearch) % 9;
                 logger.info("point is " + point);

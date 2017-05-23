@@ -26,7 +26,7 @@ import java.util.Iterator;
 /**
  * Created by David on 2017/4/9.
  * 为了筛选常用字
- * TODO ：每一次排序用时44s+ 提高运行效率需要改进算法
+ * 每一次排序用时44s+ 提高运行效率可以改进算法
  */
 public class createOrderWordsList {
 

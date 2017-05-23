@@ -33,10 +33,10 @@ public class analyze {
     private wordCountSource wcs;
 
     public void setOutTime(long outTime) {
-        this.outTime = outTime;
+        this.outTime = outTime*1000;
     }
 
-    private long outTime = 1*1000;
+    private long outTime = 5*1000;
 
     private char[] SET = {'？', '?', '|', '&', '[', ']', '{', '}', '*', '(', ')', '（', '）', '+'};
 
@@ -434,7 +434,7 @@ public class analyze {
             isPinYin = true;
         }
         //3 判断词性
-        //todo: 完成词性
+        //词性部分可以使用分词的手法进行分词
         boolean isCiXing = true;
 
 
@@ -666,7 +666,7 @@ public class analyze {
             tmpArray = new String[1];
             tmpArray[0] = context;
         }
-        //TODO：从input中去掉？号
+
         int length = getLengthFromRubbish(context);
 
         int count = 0;
@@ -920,7 +920,7 @@ public class analyze {
                         tangClass intoResult = new tangClass();
                         intoResult.setAuther(tmp.getAuther());
                         intoResult.setTitle(tmp.getTitle());
-                        System.out.println(tmpArray[i]);
+                        //System.out.println(tmpArray[i]);
                         intoResult.setPairs(tmpArray[i]);
                         intoResult.setPairsWeight(pairsWeight);
                         result.add(intoResult);
@@ -991,7 +991,7 @@ public class analyze {
     /**
      * 获得自动生成的对偶句
      * 注释掉的是随机声称pz对字，新方法采用统计学方法，对于全部数据的字出现频率进行统计，随机生成的单字不仅照顾平仄，而且照顾出现概率
-     * TODO: 下一步增加分词的功能，将分词后的诗句进行对偶生成，com.Davi.poems.segment
+     * 增加分词的功能，将分词后的诗句进行对偶生成，com.Davi.poems.segment
      *
      * @param input
      * @return
@@ -1118,8 +1118,8 @@ public class analyze {
                 if (System.currentTimeMillis()-startTime > outTime)
                     throw new myException("任务超时");
                 tmp = getPair(resultTmp.get(i).word);
-                System.out.println("tmp word is"+tmp+" "+ HanLP.segment(tmp).size());
-                System.out.println(HanLP.segment(tmp).get(0) + "  "+resultTmp.get(i)+resultTmp.get(i).nature );
+                //System.out.println("tmp word is"+tmp+" "+ HanLP.segment(tmp).size());
+                //System.out.println(HanLP.segment(tmp).get(0) + "  "+resultTmp.get(i)+resultTmp.get(i).nature );
                 if (i == resultTmp.size() - 1){
                     //TODO 此处在生成诗句的时候可以限制首颔颈尾的韵脚情况
                     if (isSameSubject(HanLP.segment(tmp).get(0).nature, resultTmp.get(i).nature)) {
